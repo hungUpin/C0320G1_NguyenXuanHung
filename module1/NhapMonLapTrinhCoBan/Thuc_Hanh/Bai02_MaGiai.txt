@@ -1,0 +1,8 @@
+Begin
+Random N (0,9)
+Input M
+If (N==M)
+Display ("Du doan dung")
+Else
+Display("Du doan sai")
+End
