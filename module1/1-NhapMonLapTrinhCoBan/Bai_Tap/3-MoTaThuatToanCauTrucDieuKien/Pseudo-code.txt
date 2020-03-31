@@ -1,0 +1,13 @@
+BEGIN
+	INPUT a,b,c
+	MAX = a
+	IF (a>b) and (a>c)
+	MAX = a
+	 ELSE IF (b<c)
+ 	 MAX = c
+ 	 ELSE
+ 	 MAX = b 
+ 	 END IF
+	END IF
+	PRINT("Giá trị lớn nhất là: " +MAX)
+END

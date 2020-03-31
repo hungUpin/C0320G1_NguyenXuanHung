@@ -1,0 +1,5 @@
+BEGIN
+INPUT diemToan,diemLy,diemHoa
+diemTrungBinh = (diemToan+diemLy+diemHoa)/3
+DISPLAY "Diem Trung Binh la:" +diemTrungBinh
+END
