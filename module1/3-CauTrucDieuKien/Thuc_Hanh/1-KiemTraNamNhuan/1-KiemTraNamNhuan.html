@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra năm nhuận</title>
+</head>
+<body>
+Năm: <br/>
+<input id ="year" type="text" name="year"></body><br/>
+<button type="button" onclick="namNhuan();">Xác nhận</button><br/><br/><br/>
+<font color="blue"> <div id="result"></div></font>
+<script>
+    let year;
+    function namNhuan()
+    {
+    year =parseInt(document.getElementById("year").value);
+    if(year %4==0)
+        {
+            if (year % 100 == 0)
+            {
+
+                if (year % 400 == 0)
+                {
+                    document.getElementById("result").innerText = year+" "+"Năm nhuận";
+                }
+                else
+                {
+                    document.getElementById("result").innerText = year+" "+ "Không là năm nhuận";
+                }
+            }
+            else
+            {
+                document.getElementById("result").innerText = year+" "+ "Năm nhuận";
+            }
+        }
+        else
+        {
+            document.getElementById("result").innerText = year+" "+ "Không là năm nhuận";
+        }
+
+    }
+</script>
+</body>
+</html>

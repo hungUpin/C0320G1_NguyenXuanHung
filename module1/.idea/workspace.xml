@@ -3,12 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0fa7c5cc-aa32-4493-bd26-5f47cddd4ffd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NhapMonLapTrinhCoBan/Bai_Tap/BaiTapThuatToanDiemTB.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NhapMonLapTrinhCoBan/Bai_Tap/abc.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NhapMonLapTrinhCoBan/Thuc_Hanh/Bai01_FlowChart.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NhapMonLapTrinhCoBan/Thuc_Hanh/Bai01_MaGiai.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NhapMonLapTrinhCoBan/Thuc_Hanh/Bai02_FlowChart.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NhapMonLapTrinhCoBan/Thuc_Hanh/Bai02_MaGiai.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2-Bien_KieuDuLieu_ToanTu/Thuc_Hanh/1-KhaiBaoVaSuDungBien/khaiBaoVaSuDungBien.html" beforeDir="false" afterPath="$PROJECT_DIR$/2-Bien_KieuDuLieu_ToanTu/Thuc_Hanh/1-KhaiBaoVaSuDungBien/khaiBaoVaSuDungBien.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +36,15 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.idea/module1.iml" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\C0320G1_Nguyen_Xuan_Hung\module1\3-CauTrucDieuKien\Thuc_Hanh\4-LuyenTapCauTrucSwitchCase" />
+      <recent name="D:\C0320G1_Nguyen_Xuan_Hung\module1\3-CauTrucDieuKien\Thuc_Hanh\3-LuyenTapCauTrucIfElseIf" />
+      <recent name="D:\C0320G1_Nguyen_Xuan_Hung\module1\3-CauTrucDieuKien\Thuc_Hanh\2-LuyenTapCauTrucIfElse" />
+      <recent name="D:\C0320G1_Nguyen_Xuan_Hung\module1\3-CauTrucDieuKien\Thuc_Hanh\1-KiemTraNamNhuan" />
+      <recent name="D:\C0320G1_Nguyen_Xuan_Hung\module1\2-Bien_KieuDuLieu_ToanTu\Bai_Tap\UngDungMayTinh" />
+    </key>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -60,7 +64,8 @@
       <workItem from="1585212685597" duration="1845000" />
       <workItem from="1585234027967" duration="2631000" />
       <workItem from="1585562909666" duration="751000" />
-      <workItem from="1585626381471" duration="395000" />
+      <workItem from="1585626381471" duration="17490000" />
+      <workItem from="1585705057460" duration="17517000" />
     </task>
     <servers />
   </component>
@@ -72,5 +77,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="120" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1585127143577" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1585628820318">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1585628820318" />
   </component>
 </project>

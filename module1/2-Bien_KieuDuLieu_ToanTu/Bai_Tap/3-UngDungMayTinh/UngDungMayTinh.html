@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng máy tính</title>
+</head>
+<body>
+<h2>CACULATER</h2>
+<input id="firstNum" type="text" name="firstNum">
+<input id="secondNum" type="text" name="secondNum"><br/><br/>
+
+<button type="button" onclick="tinhToan('Add');">Addition(+)</button>
+<button type="button" onclick="tinhToan('Sub');">Subtraction(-)</button>
+<button type="button" onclick="tinhToan('Mul');">Multiplication(X)</button>
+<button type="button" onclick="tinhToan('Dev');">Devison(/)</button><br/><br/><br/><br/>
+
+<div id="result"></div>
+<script>
+    //let num1=document.getElementById("firstNum");
+    //let num2=document.getElementById("secondNum");
+    let num1=document.getElementById("firstNum");
+    let num2=document.getElementById("secondNum");
+    let no1,no2;
+    function tinhToan(operator)
+    {
+
+        if(operator=='Add')
+        {
+             no1 = parseInt(num1.value);
+             no2 = parseInt(num2.value);
+            document.getElementById("result").innerText = ("Result: " + (no1 + no2));
+        }
+        if(operator=='Sub')
+        {
+             no1 = parseInt(num1.value);
+             no2 = parseInt(num2.value);
+            document.getElementById("result").innerText="Result: " +(no1-no2);
+        }
+        if(operator=='Mul')
+        {
+             no1 = parseInt(num1.value);
+             no2 = parseInt(num2.value);
+            document.getElementById("result").innerText="Result: " +(no1*no2);
+        }
+        if(operator=='Dev')
+        {
+             no1 = parseInt(num1.value);
+             no2 = parseInt(num2.value);
+            if(no2===0)
+            {
+                alert("Không thể chia 1 số cho 0. Vui lòng nhập lại")
+            }
+
+            else document.getElementById("result").innerText="Result: " +(no1/no2);
+        }
+    }
+
+
+
+</script>
+</body>
+</html>

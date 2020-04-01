@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 03</title>
+</head>
+<body>
+<script>
+    let doC= parseInt(prompt("Mời bạn nhập Độ C: "));
+    while (Number.isNaN(doC)==true)
+    {
+        confirm("Nhập sai kiểu dữ liệu! Mời nhập lại!!!")
+        doC= parseInt(prompt("Mời bạn nhập Độ C: "));
+    }
+
+
+        let doF=(9*doC+160)/5;
+        alert("Độ F: " +doF);
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng chuyển đổi tiền tệ</title>
+</head>
+<body>
+
+<form>
+    <h3>ĐÂY LÀ CHƯƠNG TRÌNH CHUYỂN ĐỔI TIỀN TỆ</h3>
+    Amount:<br>
+      <input id="amount" type="text" name="amount"><br/>
+    From Currency:<br>
+    <select id = "fromCurrency">
+        <option value="vietnam">Việt Nam</option>
+        <option value="usd">USD</option>
+        <option>EURO</option>
+    </select><br/>
+    To Currency <br>
+        <select id="toCurrency">
+            <option value="vietnam">Việt Nam</option>
+            <option value="usd" selected>USD</option>
+            <option>EURO</option>
+        </select><br/>
+    <button type="button" onclick="convert()">Convert</button><br/>
+    <font color = blue><div id="result"></div></font>
+    <script>
+
+        function convert()
+        {
+            let amount= document.getElementById("amount").value;
+        let fromCu=document.getElementById("fromCurrency").value;
+        let toCu=document.getElementById("toCurrency").value;
+        if(fromCu==="vietnam"&&toCu==="usd")
+        {
+            document.getElementById("result").innerText="Result: " +amount/23000;
+        }
+            else if(fromCu==="usd"&&toCu==="vietnam")
+            {
+                document.getElementById("result").innerText="Result: " +amount*23000;
+            }
+            else if(fromCu==="vietnam"&&toCu==="EURO")
+            {
+                document.getElementById("result").innerText=("Result: ") +amount/38000;
+            }
+            else if(fromCu==="EURO"&&toCu==="vietnam")
+            {
+                document.getElementById("result").innerText=("Result: ") +amount*38000;
+            }
+            else if(fromCu==="usd"&&toCu==="EURO")
+            {
+                document.getElementById("result").innerText=("Result: ") +amount*0.91;
+            }
+            else if(fromCu==="EURO"&&toCu==="usd")
+            {
+                document.getElementById("result").innerText=("Result: ") +amount/0.91;
+            }
+
+        else
+        {
+            document.getElementById("result").innerText=("Please select exactly type of currency to convert!!!");
+        }
+
+        }
+    </script>
+
+</form>
+
+</body>
+</html>
