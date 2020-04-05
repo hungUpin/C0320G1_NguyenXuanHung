@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra A chia hết   không?</title>
+</head>
+<body>
+Số a:
+<input id="a" type="text"><br><br>
+Số b:
+<input id="b" type="text"><br><br>
+<input type="button" onclick="kiemTra();" value="Kiểm Tra"><br><br>
+<div style="color:  blue" id="result"></div>
+<script>
+    function kiemTra()
+    {
+    let a = parseInt(document.getElementById("a").value);
+    let b= parseInt(document.getElementById("b").value);
+    if(a%b===0) document.getElementById("result").innerText= "a chia hết cho b";
+    else  document.getElementById("result").innerText= "a không chia hết cho b";
+    }
+</script>
+</body>
+</html>

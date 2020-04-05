@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yêu cầu 1</title>
+</head>
+<body>
+<script>
+let name = prompt("Input name:");
+let idNumber= prompt("Input Id number:");
+let email = prompt("Input email:");
+let address=prompt("Input address:");
+let typeOfCustomer= prompt("Input type of customer");
+let discount = prompt("input discount");
+let quantityIncluded = prompt("Input quantity included:");
+let rentDays = prompt("Input rent days:");
+let typeOfService = prompt("Input type of service: ");
+let roomType = prompt("Input room type: ");
+let payment = typeOfService*rentDays*(1-discount/100);
+alert(payment);
+</script>
+</body>
+</html>

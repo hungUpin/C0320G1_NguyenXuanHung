@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính chỉ số cân nặng cơ thể</title>
+</head>
+<body>
+<font color="blue"> <h3>TÍNH CHỈ SỐ CÂN NẶNG CƠ THỂ</h3></font> <br/>
+Weight: <br>
+<input id="weight" type="text" name="cân nặng"><br>
+Height: <br>
+<input id="height" type="text" name="chiều cao"><br>
+<button type="button" onclick="count()">Submit</button><br>
+<div id = "result" ></div>
+<script>
+    let weight = document.getElementById("weight");
+    let height = document.getElementById("height");
+    function count()
+    {
+
+    let ibm = parseInt(weight.value)/(parseFloat(height.value)*parseFloat(height.value));
+    if(ibm<18)
+    document.getElementById("result").innerText="Underweight";
+    else if (ibm<25)
+    {
+        document.getElementById("result").innerText="Normal";
+    }
+    else if (ibm<30)
+    {
+        document.getElementById("result").innerText="Overweight";
+    }
+    else
+    {
+        document.getElementById("result").innerText="Obese";
+    }
+    }
+</script>
+</body>
+</html>

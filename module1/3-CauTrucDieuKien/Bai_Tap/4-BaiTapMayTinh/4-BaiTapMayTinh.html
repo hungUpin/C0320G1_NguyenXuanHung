@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập máy tính đơn giản</title>
+</head>
+<body>
+
+    <input id="display" type="textbox" style="text-align:right;width: 110px"disabled/><br><br>
+
+    <table>
+
+        <tr>
+            <td>
+                <button  onclick="act('1')">1</button>
+            </td>
+            <td>
+                <button  onclick="act('2')">2</button>
+            </td>
+            <td>
+                <button onclick="act('3')">3</button>
+            </td>
+            <td>
+                <button  onclick="act('+')">+</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button  onclick="act('4')">4</button>
+            </td>
+            <td>
+                <button  onclick="act('5')">5</button>
+            </td>
+            <td>
+                <button  onclick="act('6')">6</button>
+            </td>
+            <td>
+                <button  onclick="act('+')">-</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button  onclick="act('7')">7</button>
+            </td>
+            <td>
+                <button  onclick="act('8')">8</button>
+            </td>
+            <td>
+                <button  onclick="act('9')">9</button>
+            </td>
+            <td>
+                <button  onclick="act('*')">X</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button  onclick="act('C')">C</button>
+            </td>
+            <td>
+                <button  onclick="act('0')">0</button>
+            </td>
+            <td>
+                <button  onclick="result()">=</button>
+            </td>
+            <td>
+                <button onclick="act('/')">/</button>
+            </td>
+        </tr>
+
+    </table>
+
+<script>
+    function act(operator)
+    {
+        if(operator=='C')
+            document.getElementById("display").value='';
+        else
+           document.getElementById("display").value += operator;
+    }
+    function result()
+    {
+    let output = document.getElementById("display").value;
+    document.getElementById("display").value= eval(output);
+    }
+
+</script>
+</body>
+</html>

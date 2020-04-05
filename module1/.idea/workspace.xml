@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0fa7c5cc-aa32-4493-bd26-5f47cddd4ffd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2-Bien_KieuDuLieu_ToanTu/Thuc_Hanh/1-KhaiBaoVaSuDungBien/khaiBaoVaSuDungBien.html" beforeDir="false" afterPath="$PROJECT_DIR$/2-Bien_KieuDuLieu_ToanTu/Thuc_Hanh/1-KhaiBaoVaSuDungBien/khaiBaoVaSuDungBien.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/3-CauTrucDieuKien/Thuc_Hanh/5-LuyenTapVoiToanTu/Bai02.html" beforeDir="false" afterPath="$PROJECT_DIR$/3-CauTrucDieuKien/Thuc_Hanh/5-LuyenTapVoiToanTu/Bai02.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +34,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.idea/module1.iml" />
+    <property name="last_opened_file_path" value="E:/example/test/C0220G1-TranChiHieu/Module1/3-CauTrucDieuKien/BaiTap/6-DoYouLoveMe/DoYouLoveME.html" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -66,6 +66,15 @@
       <workItem from="1585562909666" duration="751000" />
       <workItem from="1585626381471" duration="17490000" />
       <workItem from="1585705057460" duration="17517000" />
+      <workItem from="1585804911093" duration="965000" />
+      <workItem from="1585817011326" duration="2061000" />
+      <workItem from="1585838326306" duration="2710000" />
+      <workItem from="1585876055815" duration="21565000" />
+      <workItem from="1585918310244" duration="1750000" />
+      <workItem from="1585968451200" duration="7694000" />
+      <workItem from="1586002790144" duration="6428000" />
+      <workItem from="1586058463404" duration="5527000" />
+      <workItem from="1586094594240" duration="3019000" />
     </task>
     <servers />
   </component>
@@ -73,13 +82,21 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="463" y="120" key="FileChooserDialogImpl" timestamp="1585127143577">
+    <state x="423" y="166" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586058527046">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="120" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1585127143577" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1585628820318">
+    <state x="423" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1586058527046" />
+    <state x="463" y="120" key="FileChooserDialogImpl" timestamp="1586060630424">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1585628820318" />
+    <state x="463" y="120" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1586060630424" />
+    <state x="339" y="157" key="run.anything.popup" timestamp="1586008814024">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1586008814024" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1586061677634">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1586061677634" />
   </component>
 </project>

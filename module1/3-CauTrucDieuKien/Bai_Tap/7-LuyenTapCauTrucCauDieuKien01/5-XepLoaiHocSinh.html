@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xếp loại học lực học sinh</title>
+</head>
+<body>
+<script>
+    let kt1=parseFloat(prompt("Nhập điểm bài kiểm tra:"));
+    let giuaKi = parseFloat(prompt("Nhập điểm bài giữa kì:"));
+    let cuoiKi = parseFloat(prompt("Nhập điểm bài cuối kì:"));
+    let diemTB= (kt1+ giuaKi*2 +cuoiKi*3 )/6;
+    if (diemTB<5.0 &&diemTB>=3.5) {alert(diemTB+": Học lực kém");}
+    else if(diemTB>=5.0&&diemTB<6.5) {alert(diemTB+ ": Học lực trung bình");}
+    else  if(diemTB>=6.5 && diemTB<8.0) {alert(diemTB+ ": Học lực khá");}
+    else if(diemTB<=10&&diemTB>=8.0) {alert(diemTB+": Học lực giỏi");}
+    else alert(diemTB+": Học lực kém");
+</script>
+</body>
+</html>

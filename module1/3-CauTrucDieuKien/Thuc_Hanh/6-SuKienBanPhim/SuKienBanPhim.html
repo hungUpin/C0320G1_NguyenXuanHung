@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Di chuyển hình ảnh</title>
+</head>
+<body onload="doReady()">
+<img id = "nobita" src="nobita.png" style="position: relative" height="100" width="80"/>
+<script>
+    let element = document.getElementById("nobita");
+
+    function up()
+    {
+        element.style.top= parseInt(element.style.top) -5 + 'px';
+    }
+    function down()
+    {
+        element.style.top=parseInt(element.style.top) +5 +'px';    
+    }
+    function left()
+    {
+        element.style.left =parseInt(element.style.left) -5 +'px';
+    }
+    function right()
+    {
+        element.style.left=parseInt(element.style.left) +5 +'px';
+    }
+    function moveSelection(num)
+    {
+        switch (num.keyCode) {
+            case 37:
+                left();
+                break;
+            case 39:
+                right();
+                break;
+            case 38:
+                up();
+                break;
+            case 40:
+                down();
+                break;
+        }
+    }
+     function doReady()
+     {
+         window.addEventListener('keydown', moveSelection);
+     }
+
+
+</script>
+</body>
+</html>
