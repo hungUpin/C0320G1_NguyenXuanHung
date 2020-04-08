@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra cạnh tam giác</title>
+</head>
+<body>
+<h2>Kiểm tra a,b,c là cạnh của tam giác</h2>
+Cạnh a: &ensp; <input id="a" type="text"><br>
+Cạnh b: &ensp; <input id="b" type="text"><br>
+Cạnh c: &ensp; <input id="c" type="text"><br>
+<button type="button" onclick="check()">Check</button>
+<p id="result"></p>
+<script>
+
+
+    function check()
+    {
+        let a=parseInt(document.getElementById("a").value);
+        let b=parseInt(document.getElementById("b").value);
+        let c=parseInt(document.getElementById("c").value);
+    if(a>0&&b>0&&c>0)
+    {
+        if (a+b>c&&b+c>a&&a+c>b)
+        {
+            document.getElementById("result").innerText= +a +" và " +b +" và " +c +" là cạnh của tam giác";
+
+        }
+        else  document.getElementById("result").innerText=+a+" và "+ b+ " và " +c +" không là cạnh của tam giác";
+    }
+    else  document.getElementById("result").innerText=+a+" và "+ b+ " và " +c +" không là cạnh của tam giác";
+    }
+</script>
+</body>
+</html>

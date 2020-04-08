@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="0fa7c5cc-aa32-4493-bd26-5f47cddd4ffd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/3-CauTrucDieuKien/Thuc_Hanh/5-LuyenTapVoiToanTu/Bai02.html" beforeDir="false" afterPath="$PROJECT_DIR$/3-CauTrucDieuKien/Thuc_Hanh/5-LuyenTapVoiToanTu/Bai02.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/3-CauTrucDieuKien/Bai_Tap/a.html" beforeDir="false" afterPath="$PROJECT_DIR$/3-CauTrucDieuKien/Bai_Tap/a.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KanBan/1-TaoLapThoiQuenLamViecChoHieuQua/1-ThietKeCongViecCaNhan.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/KanBan/1-TaoLapThoiQuenLamViecChoHieuQua/2-SuDungTrello.PNG" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,16 +36,27 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="E:/example/test/C0220G1-TranChiHieu/Module1/3-CauTrucDieuKien/BaiTap/6-DoYouLoveMe/DoYouLoveME.html" />
+    <property name="last_opened_file_path" value="E:/example/test/C0220G1-TranChiHieu/Module1/3-CauTrucDieuKien/BaiTap/8-LuyenTapCauTrucDienKien2/Bai12.html" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\C0320G1_NguyenXuanHung\module1\3-CauTrucDieuKien\Bai_Tap" />
       <recent name="D:\C0320G1_Nguyen_Xuan_Hung\module1\3-CauTrucDieuKien\Thuc_Hanh\4-LuyenTapCauTrucSwitchCase" />
       <recent name="D:\C0320G1_Nguyen_Xuan_Hung\module1\3-CauTrucDieuKien\Thuc_Hanh\3-LuyenTapCauTrucIfElseIf" />
       <recent name="D:\C0320G1_Nguyen_Xuan_Hung\module1\3-CauTrucDieuKien\Thuc_Hanh\2-LuyenTapCauTrucIfElse" />
       <recent name="D:\C0320G1_Nguyen_Xuan_Hung\module1\3-CauTrucDieuKien\Thuc_Hanh\1-KiemTraNamNhuan" />
-      <recent name="D:\C0320G1_Nguyen_Xuan_Hung\module1\2-Bien_KieuDuLieu_ToanTu\Bai_Tap\UngDungMayTinh" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="2-HienThiCacSoNguyenToDauTien.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/module1/4-CauTrucLap/BaiTap/2-HienThiCacSoNguyenToDauTien.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.2-HienThiCacSoNguyenToDauTien.html" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -75,6 +88,14 @@
       <workItem from="1586002790144" duration="6428000" />
       <workItem from="1586058463404" duration="5527000" />
       <workItem from="1586094594240" duration="3019000" />
+      <workItem from="1586134802438" duration="14231000" />
+      <workItem from="1586155061653" duration="4789000" />
+      <workItem from="1586181421328" duration="817000" />
+      <workItem from="1586184798355" duration="62000" />
+      <workItem from="1586186823063" duration="613000" />
+      <workItem from="1586222412594" duration="17337000" />
+      <workItem from="1586260488641" duration="3412000" />
+      <workItem from="1586308015579" duration="1107000" />
     </task>
     <servers />
   </component>
@@ -86,14 +107,86 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="423" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1586058527046" />
-    <state x="463" y="120" key="FileChooserDialogImpl" timestamp="1586060630424">
+    <state x="463" y="120" key="FileChooserDialogImpl" timestamp="1586228657620">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="120" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1586060630424" />
-    <state x="339" y="157" key="run.anything.popup" timestamp="1586008814024">
+    <state x="463" y="120" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1586228657620" />
+    <state width="1308" height="195" key="GridCell.Tab.0.bottom" timestamp="1586263911334">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1586008814024" />
+    <state width="1308" height="195" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586263911334" />
+    <state width="1308" height="195" key="GridCell.Tab.0.center" timestamp="1586263911334">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1308" height="195" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586263911334" />
+    <state width="1308" height="195" key="GridCell.Tab.0.left" timestamp="1586263911334">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1308" height="195" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586263911334" />
+    <state width="1308" height="195" key="GridCell.Tab.0.right" timestamp="1586263911334">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1308" height="195" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586263911334" />
+    <state width="1308" height="195" key="GridCell.Tab.1.bottom" timestamp="1586263911335">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1308" height="195" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586263911335" />
+    <state width="1308" height="195" key="GridCell.Tab.1.center" timestamp="1586263911335">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1308" height="195" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1586263911335" />
+    <state width="1308" height="195" key="GridCell.Tab.1.left" timestamp="1586263911335">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1308" height="195" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1586263911335" />
+    <state width="1308" height="195" key="GridCell.Tab.1.right" timestamp="1586263911335">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1308" height="195" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1586263911335" />
+    <state width="1308" height="195" key="GridCell.Tab.2.bottom" timestamp="1586263911336">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1308" height="195" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586263911336" />
+    <state width="1308" height="195" key="GridCell.Tab.2.center" timestamp="1586263911335">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1308" height="195" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1586263911335" />
+    <state width="1308" height="195" key="GridCell.Tab.2.left" timestamp="1586263911335">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1308" height="195" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1586263911335" />
+    <state width="1308" height="195" key="GridCell.Tab.2.right" timestamp="1586263911335">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1308" height="195" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1586263911335" />
+    <state width="1308" height="195" key="GridCell.Tab.3.bottom" timestamp="1586263911336">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1308" height="195" key="GridCell.Tab.3.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586263911336" />
+    <state width="1308" height="195" key="GridCell.Tab.3.center" timestamp="1586263911336">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1308" height="195" key="GridCell.Tab.3.center/0.0.1366.728@0.0.1366.728" timestamp="1586263911336" />
+    <state width="1308" height="195" key="GridCell.Tab.3.left" timestamp="1586263911336">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1308" height="195" key="GridCell.Tab.3.left/0.0.1366.728@0.0.1366.728" timestamp="1586263911336" />
+    <state width="1308" height="195" key="GridCell.Tab.3.right" timestamp="1586263911336">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1308" height="195" key="GridCell.Tab.3.right/0.0.1366.728@0.0.1366.728" timestamp="1586263911336" />
+    <state x="184" y="0" key="SettingsEditor" timestamp="1586182279085">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1586182279085" />
+    <state x="251" y="89" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1586263417851">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="251" y="89" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1366.728@0.0.1366.728" timestamp="1586263417851" />
+    <state x="339" y="157" key="run.anything.popup" timestamp="1586248656354">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1586248656354" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1586061677634">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chương trình tính thuế thu nhập cá nhân</title>
+</head>
+<body>
+<script>
+    let salary = parseInt(prompt("Mời nhập thu nhập của bạn: "));
+    let tax;
+    if(salary>=900000)
+    {
+        if(salary<=10000000)
+        {
+            tax=salary*10/100-250000;
+        }
+        else if(salary<=18000000)
+        {
+            tax=salary*15/100-750000;
+        }
+        else if(salary<=32000000)
+        {
+            tax=salary*20/100-1650000;
+        }
+        else if(salary<=52000000)
+        {
+            tax=salary*52/100-3250000;
+        }
+        else if(salary<=80000000)
+        {
+            tax=salary*30/100-5850000;
+        }
+        else {tax=salary*35/100-9850000;}
+        alert("Thuế TNCN là: "+tax+" VND");
+    }
+    else
+        {
+            alert("Bạn không cần đóng thuế")
+        }
+</script>
+</body>
+</html>

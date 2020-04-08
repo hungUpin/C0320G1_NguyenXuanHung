@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chương trình tính giá điện</title>
+</head>
+<body>
+<script>
+    let dienSuDung = parseInt(prompt("Mời bạn nhập chỉ số điện đã dùng"));
+    let thanhTien;
+    if (dienSuDung > 0)
+    {
+        if (dienSuDung <= 50)
+        {
+            thanhTien = dienSuDung * 1678;
+        }
+        else if (dienSuDung <= 100)
+        {
+            thanhTien = 50 * 1678 + ((dienSuDung - 50) * 1734);
+        }
+        else if (dienSuDung <= 200)
+        {
+            thanhTien = 50 * 1678 + 50 * 1734 + ((dienSuDung - 100) * 2014);
+        }
+        else
+        {
+            thanhTien = 50 * 1678 + 50 * 1734 + 100 * 2014 + ((dienSuDung - 200) * 2536);
+        }
+        alert("Số tiền đã dùng: " + thanhTien + "VND");
+    }
+    else {alert("Nhập sai điện sử dụng");}
+
+</script>
+</body>
+</html>

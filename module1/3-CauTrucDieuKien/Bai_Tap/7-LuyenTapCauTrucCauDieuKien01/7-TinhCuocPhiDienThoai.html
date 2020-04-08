@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính cước điện thoại bàn</title>
+</head>
+<body>
+<script>
+    let totalCall = parseInt(prompt("Vui lòng nhập số phút đã gọi:"));
+    let totalPayment;
+    if(totalCall<=150)
+        totalPayment=totalCall*600;
+    else if(totalCall>150)
+        totalPayment=150*600+((totalCall-150)*400);
+    else if (totalCall=>200)
+        totalPayment=150*600+150*400+((totalCall-200)*200);
+    alert(totalCall)
+    alert("Tổng số tiền phải trả là: " +(totalPayment+25000) +" VND");
+</script>
+</body>
+</html>

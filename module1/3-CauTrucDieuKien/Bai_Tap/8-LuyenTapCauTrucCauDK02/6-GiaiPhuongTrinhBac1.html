@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc 1</title>
+</head>
+<body>
+<h2>Đây là chương trình giải phương trình bậc 1 (ax+b=0)</h2>
+Số a: <input id="a" type="text"><br>
+Số b:<input id="b" type="text"><br>
+<button type="button" onclick="count()">Click Me!</button>
+<p id="result"></p>
+<script>
+    let a= document.getElementById("a");
+    let b= document.getElementById("b");
+    function count()
+    {
+    if(parseInt(a.value)==0)
+    {
+        document.getElementById("result").innerText = "Phương trình vô số nghiệm";
+    }
+    else
+    {
+        document.getElementById("result").innerText= "Phương trình có nghiệm là: " +(-parseInt(b.value)/parseInt(a.value));
+    }
+    }
+</script>
+</body>
+</html>

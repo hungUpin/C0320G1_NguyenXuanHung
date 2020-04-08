@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra tuổi</title>
+</head>
+<body>
+Tuổi:<br>
+<input id = "age" type="text"><br>
+<button id="buttonCheck" onclick="check()">Check!!</button>
+<p id="result"></p>
+
+<script>
+function check()
+{
+let age= parseInt(document.getElementById("age").value);
+
+if(Number.isNaN(age)==false)
+{
+    if(age<120&&age>0) document.getElementById("result").innerText = +age +" là tuổi 1 người!";
+    else document.getElementById("result").innerText = +age +" không là tuổi 1 người!";
+}
+else
+    document.getElementById("result").innerText = "Nhập sai dữ liệu";
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc 2</title>
+</head>
+<body>
+<h2>Đây là chương trình giải phương trình bậc 2 (ax<sup>2</sup>+bx+c=0)</h2>
+Số a: <input id="a" type="text"><br>
+Số b:<input id="b" type="text"><br>
+Số c:<input id="c" type="text"><br>
+<button type="button" onclick="count()">Click Me!</button>
+<p id="result"></p>
+<script>
+    let numa = document.getElementById("a");
+    let numb = document.getElementById("b");
+    let numc = document.getElementById("c");
+    function count() {
+        let a =parseInt(numa.value);
+        let b=parseInt(numb.value);
+        let c=parseInt(numc.value);
+
+        if (a == 0) {
+            if (b == 0) {
+                document.getElementById("result").innerText = "Phương trình có vô số nghiệm";
+            } else document.getElementById("result").innerText = "Phương trình có nghiệm là" + (-c /b);
+        } else {
+            let d = Math.pow(b,2) - (4*a*c);
+            let s = Math.sqrt(d);
+
+            if (d < 0) {
+                document.getElementById("result").innerText = "Phương trình vô nghiệm";
+            } else if (d == 0)
+            {
+                document.getElementById("result").innerHTML = "Phương trình có nghiệm là x<sub>1</sub> = x<sub>2</sub>= "
+                    + (-b / (2*a));
+            } else
+                {
+                document.getElementById("result").innerHTML=
+                    "Phương trình có 2 nghiệm là: x<sub>1</sub> = " + (-b+s)/(2*a) + "và x<sub>2</sub>= " +(-b -s)/(2*a);
+            }
+        }
+    }
+</script>
+</body>
+</html>

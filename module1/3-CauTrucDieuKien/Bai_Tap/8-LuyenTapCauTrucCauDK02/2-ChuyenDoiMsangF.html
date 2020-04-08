@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi Meter sang Feet</title>
+</head>
+<body>
+<table border="1" >
+    Đây là bài chuyển đổi mét sang feet- vui lòng di chuột vào ô feet
+    <tr>
+        <td>
+            Meter:
+        </td>
+        <td>
+            <input id ="meter" type="text">
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <p id = "result" style="color: blue" onmouseover="count()">Feet:</p>
+        </td>
+    </tr>
+</table>
+<script>
+    let meter = document.getElementById("meter");
+    function count()
+    {
+    let feet= parseInt(meter.value)/3.2808;
+    document.getElementById("result").innerText= "Kết quả: Feet= " +feet.toFixed(2);
+    }
+</script>
+</body>
+</html>

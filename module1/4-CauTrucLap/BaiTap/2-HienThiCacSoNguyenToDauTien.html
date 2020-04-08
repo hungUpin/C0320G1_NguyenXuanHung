@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị các số nguyên tố đầu tiên</title>
+</head>
+<body>
+<script>
+    //let numbers = parseInt(prompt("Nhập số lượng số nguyên tố cần in ra:"));
+    let count = 0;
+    let n = 3;
+
+    function kiemTraSoNguyenTo(num)
+    {
+            let flag=true; let i;
+            if(num<2)
+            {
+                flag=false
+            }
+             else
+                 for(i=2;i<n-1;i++)
+                 {
+
+                     if (num % i == 0)
+                     {
+                         flag=false;
+                         break;
+                     }
+
+                 }
+                 alert(flag)
+    }
+
+    kiemTraSoNguyenTo(parseInt(prompt("nhập số")));
+
+
+
+
+
+</script>
+</body>
+</html>

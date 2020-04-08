@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính lãi vay ngân hàng</title>
+</head>
+<body>
+<script>
+    let rentMoney= parseInt(prompt("Mời nhập số tiền vay:"));
+    let rate= parseInt(prompt("Mời nhập lãi suất cho vay theo tháng:"));
+    let month = parseInt(prompt("Mời nhập số tháng cho vay:"));
+    let rentMoneyAfter=rentMoney;
+    let monthRate;
+    let i;
+    //payment=(rentMoney/month+(rentMoney*rate/100))*month;
+    //alert("Số tiền lãi phải trả là: "+(payment-rentMoney).toFixed(3));
+    for(i=1;i <= month;i++)
+    {
+        rentMoneyAfter=rentMoneyAfter+(rentMoneyAfter*rate/100);
+    }
+    alert("Số tiền lãi phải trả là: "+(rentMoneyAfter-rentMoney).toFixed(3));
+</script>
+</body>
+</html>
