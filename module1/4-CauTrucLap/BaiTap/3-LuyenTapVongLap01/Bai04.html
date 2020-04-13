@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 04</title>
+</head>
+<body>
+<script>
+    function fibonacci(n)
+    {
+        let a1=1,a2=1,a;
+        let i=3;
+        if(n==1||n==2)
+        {
+            return 1;
+        }
+        while (i<=n)
+        {
+            a=a1+a2;
+            a1=a2;
+            a2=a;
+            i++
+        }
+        return a;
+    }
+    let count=1;
+    while(fibonacci(count)%5!=0)
+    {
+        count++;
+    }
+    document.write("Số fibonacci đầu tiên chia hết cho 5 là: " +count);
+
+</script>
+</body>
+</html>

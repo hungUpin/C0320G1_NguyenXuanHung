@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 06</title>;
+</head>
+<body>
+<script>
+    let a=parseInt(prompt("Mời bạn nhập số phần tử của mảng"));
+    let mang = new Array(a);
+    let n="";
+
+    for(let i=0;i<a;i++){
+        mang[i] = prompt("Mời bạn nhập phần tử thứ " +(i+1));
+    }
+    let b =mang.join("");
+   /* for(let j=0;j<b.length;j++){
+        if(b[j]=="-"){
+            n+="_";
+        }else{
+        n += b[j];}
+    }*/
+    for(let j=0;j<b.length;j++){
+           b = b.replace("-","_");
+    }
+    alert("Mảng sau khi được thay thế là: " +b);
+
+</script>
+</body>
+</html>

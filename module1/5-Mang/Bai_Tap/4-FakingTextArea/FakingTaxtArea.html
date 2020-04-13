@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Faking text area</title>
+</head>
+<body>
+<h3 align="center">Type anything slowly</h3>
+<form align = "center">
+    <textarea id="txt" rows="10" cols="70" onkeydown="changeCharacters();"></textarea>
+</form>
+<script>
+    let array =["T","Ô","I"," ","L","À"," ","M","Ộ","T"," ","Đ","Ứ","A"," ","N","G","Ố","C","!","!","!"];
+    let n = "";
+
+    function changeCharacters() {
+        alert("1")
+        let text = document.getElementById("txt");
+        let t=text.value.length;
+        text.value="";
+            for (let i = 0; i < t; i++) {
+                text.value += array[i];
+                if (i > 21) {
+                    text.value = "";
+                    n = "";
+                }
+            }
+
+        setTimeout("changeCharacters()",10)
+    }
+
+</script>
+</body>
+</html>

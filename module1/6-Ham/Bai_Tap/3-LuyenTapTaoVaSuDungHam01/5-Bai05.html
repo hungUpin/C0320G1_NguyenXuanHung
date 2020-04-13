@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 05</title>
+</head>
+<body>
+<script>
+    let a = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let b =["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major" , "Leo"];
+    let starName = prompt("Vui lòng nhập tên ngôi sao:");
+    if(findStar(starName)!==-1){
+        let n =b[findStar(starName)];
+        alert("Chòm sao của "+starName+" là: "+n);
+    }else {
+        alert("Không tìm thấy chòm sao tương ứng!!!");
+    }
+    function findStar(name) {
+        let d = a.indexOf(name);
+        if(a.indexOf(name) !== -1){
+            return a.indexOf(name);
+        } else {
+            return -1;
+        }
+
+    }
+</script>
+</body>
+</html>

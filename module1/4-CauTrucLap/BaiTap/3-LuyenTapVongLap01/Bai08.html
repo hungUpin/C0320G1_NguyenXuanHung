@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game đoán số</title>
+</head>
+<body>
+<button type="button" onclick="play()">Chơi</button>
+<script>
+    function play()
+    {
+    let min = parseInt(prompt("Mời bạn nhập vào giá trị min: "));
+    let max = parseInt(prompt("Mời bạn nhập vào giá trị max: "));
+    if(min>=max)
+    {
+        alert("Vui lòng nhập giá trị min nhỏ hơn giá trị max");
+
+    }
+    else
+    {
+        let num = Math.floor(Math.random()*(max-min+1)) +min;
+
+        let count=0;
+        while (count<3)
+        {
+            let num2= parseInt(prompt("Mời nhập vào giá trị bạn muốn đoán từ " +min +"và " +max ));
+            if(num===num2)
+            {
+                alert("Chúc mừng bạn đã đoán chính xác!!!");
+                break;
+            }
+            else if(num2>num)
+            {
+                alert("Lớn hơn rồi!! Vui lòng chọn số nhỏ hơn");
+            }
+            else {
+                alert("Bé hơn rồi!! Vui lòng chọn số lớn hơn");
+            }
+            count++;
+        }
+        alert("Số random từ máy là: " +num);
+
+    }
+    }
+</script>
+</body>
+</html>

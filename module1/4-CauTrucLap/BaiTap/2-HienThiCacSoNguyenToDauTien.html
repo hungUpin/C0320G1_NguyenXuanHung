@@ -6,32 +6,44 @@
 </head>
 <body>
 <script>
-    //let numbers = parseInt(prompt("Nhập số lượng số nguyên tố cần in ra:"));
+    let numbers = parseInt(prompt("Nhập số lượng số nguyên tố cần in ra:"));
     let count = 0;
-    let n = 3;
+    let n = 0;
+    let result="";
+    while (count<numbers)
+    {
+
+        if(kiemTraSoNguyenTo(n))
+        {
+            result+=n+"&nbsp";
+            count++;
+        }
+        n++;
+    }
+    document.write("Bạn muốn hiện thị " +numbers +" số nguyên tố là: " +result);
 
     function kiemTraSoNguyenTo(num)
     {
-            let flag=true; let i;
+            let flag=true;
             if(num<2)
             {
-                flag=false
+                flag=false;
             }
-             else
-                 for(i=2;i<n-1;i++)
-                 {
+             else {
+                for (let i = 2; i <= num - 1; i++)
+                {
 
-                     if (num % i == 0)
-                     {
-                         flag=false;
-                         break;
-                     }
+                    if (num % i == 0) {
+                        flag = false;
+                        break;
+                    }
 
-                 }
-                 alert(flag)
+                }
+            }
+                 return flag;
     }
 
-    kiemTraSoNguyenTo(parseInt(prompt("nhập số")));
+
 
 
 

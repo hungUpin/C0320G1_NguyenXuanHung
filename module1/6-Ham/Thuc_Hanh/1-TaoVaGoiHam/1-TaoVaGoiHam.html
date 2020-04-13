@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo và gọi hàm</title>
+</head>
+<body>
+<script>
+    let conf = confirm("Shall we play game???");
+    let answer = confirmGame(conf);
+    alert(answer);
+    function confirmGame(answer) {
+        let result="";
+        if(answer){
+            result="Excellent. We'll play a nice game of chess.";
+        } else {
+            result = "Maybe later then.";
+        }
+        return result;
+    }
+</script>
+</body>
+</html>

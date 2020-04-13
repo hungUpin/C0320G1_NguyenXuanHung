@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 06</title>
+</head>
+<body>
+<script>
+    function soChiaHetCho7(n) {
+        if (n % 7 === 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    let count = 1;
+    let result = "";
+    for (let i = 1; count <= 30; i++) {
+
+        if (soChiaHetCho7(i))
+        {
+            if (count != 30)
+            {
+                result += i + "+";
+                count++;
+            }
+            else
+                {
+                result += i;
+                break;
+                }
+        }
+
+    }
+    document.write("Tổng của 30 số chia hết cho 7: " + result + " = " + eval(result));
+</script>
+</body>
+</html>

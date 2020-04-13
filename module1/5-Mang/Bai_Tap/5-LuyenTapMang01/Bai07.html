@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 07</title>
+</head>
+<body>
+<script>
+let a = [];
+for(let i=0;i<10;i++){
+    a[i]= parseInt(prompt("Mời bạn nhập số thứ: " +(i+1)));
+}
+let b = parseInt(prompt("Mời nhập số để xóa: "));
+for(let i =0; i<a.length;i++){
+    if(a[i]==b){
+        for(let j =i;j<a.length;j++){
+            a[j]=a[j+1];
+        }
+        a.pop();
+
+    }
+}
+for(let j =0;j<a.length;j++) {
+    document.write("a[" + j + "]" + "=" + a[j] +"<br>");
+}
+</script>
+</body>
+</html>

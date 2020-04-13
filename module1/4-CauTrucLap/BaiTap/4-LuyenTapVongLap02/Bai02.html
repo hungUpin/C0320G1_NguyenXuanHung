@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính giai thừa số nguyên dương</title>
+</head>
+<body>
+<script>
+    function giaiThua(n) {
+        let a = 1, result = 1;
+        if (n == 0) {
+            return 1;
+        } else {
+            while (a <= n) {
+                result *= a;
+                a++;
+            }
+            return result;
+        }
+    }
+
+    alert(giaiThua(parseInt(prompt("Nhập vào số muốn tính giai thừa:"))))
+</script>
+</body>
+</html>

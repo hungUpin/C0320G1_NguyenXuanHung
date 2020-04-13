@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<body>
+<h3>Dictionary</h3>
+English: &nbsp; <input id="english" type="text"><br><br>
+<button type="button" onclick="translateViet()">Translate</button><br>
+<p id="result"></p>
+<script>
+    let eng = ["Hello", "House", "Cake", "Sweet"];
+    //let str=eng.toString();
+
+    let viet = ["Xin chào", "Ngôi nhà", "Bánh", "Ngọt"];
+    function translateViet() {
+    let value = document.getElementById("english").value;
+    let result = document.getElementById("result");
+    let i=0;
+    let flag;
+    while (i<eng.length)
+    {
+        flag=false;
+        if(eng[i]===value)
+        {
+            result.innerText= viet[i];
+            flag=true;
+            break;
+        }
+        else {
+            i++;
+        }
+    }
+    if(flag===false){
+        result.innerText="Can not found!!";
+    }
+    }
+</script>
+</body>
+</html>

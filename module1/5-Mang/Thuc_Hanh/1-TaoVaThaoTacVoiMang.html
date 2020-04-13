@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo và thao tác với mảng</title>
+</head>
+<body>
+<h2>Sample Screen</h2><br>
+<input id = "text" type="text"> &nbsp&nbsp
+<button type="button" onclick="add()">Add</button> &nbsp&nbsp
+<button type="button" onclick="display()">Display</button><br>
+<p id="result"></p>
+<script>
+    let x=0;
+    let array = Array();
+    function add()
+    {
+    array[x] = document.getElementById("text").value;
+    alert("Phần tử thứ: " + array[x]+" đã được thêm vào vị trí index thứ: " +x);
+    x++;
+    document.getElementById("text").value="";
+    }
+    function display()
+    {
+        let e = "<hr/>"
+        for(let i=0;i<array.length;i++)
+        {
+            e += "Element " + i +" = " +array[i] + "<br/>";
+        }
+        document.getElementById("result").innerHTML = e;
+    }
+</script>
+</body>
+</html>

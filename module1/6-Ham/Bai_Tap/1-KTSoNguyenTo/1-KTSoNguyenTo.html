@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra số nguyên tố</title>
+</head>
+<body>
+<script>
+    function isPrime(num) {
+        let flag = true;
+        if (num < 2) {
+            flag = false;
+        } else if (num == 2) {
+            flag = true;
+        } else {
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i == 0) {
+                    flag = false;
+                    break;
+                }
+            }
+        }
+        return flag;
+    }
+
+    let dis = "";
+    for (let i = 0; i < 10000; i++) {
+        if (isPrime(i)) {
+            dis += i + "&nbsp&nbsp";
+        }
+    }
+    document.write("Các số nguyên tố nhỏ hơn 10000 là: " + dis);
+</script>
+</body>
+</html>

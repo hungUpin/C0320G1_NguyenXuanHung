@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tic tac toe</title>
+</head>
+<body>
+<h3>Tic tac toe game</h3>
+<p id="caro"></p> <br>
+<button type="button" onclick="changeA();">Change A</button> &emsp;
+<button type="button" onclick="changeB();">Change B</button>
+<script>
+    let caro = [];
+    let value = "";
+    let display = document.getElementById("caro");
+    for (let i = 0; i < 5; i++) {
+        caro[i] = [" . ", " . ", " . ", " . ", " . "];
+    }
+
+    for (let i = 0; i < 5; i++) {
+        value += "<br>";
+        for (let j = 0; j < 5; j++) {
+            value += caro[i][j] + "&nbsp;&nbsp";
+        }
+    }
+    display.innerHTML = value;
+
+    function changeA() {
+        let positionX = parseInt(prompt("Mời nhập tọa độ x: (0-4): "));
+        let positionY = parseInt(prompt("Mời nhập tọa độ y (0-4): "));
+
+        if ((caro[positionX][positionY] == "x") || (caro[positionX][positionY] == "o")) {
+            alert("Vị trí đã có người chơi chọn!!!");
+        } else {
+            value = "";
+            caro[positionX][positionY] = "x";
+            for (let i = 0; i < 5; i++) {
+                value += "<br>";
+                for (let j = 0; j < 5; j++) {
+                    value += caro[i][j] + "&nbsp;&nbsp;"
+                }
+            }
+
+        }
+        if(checkwinA())
+        {
+            alert("Người chơi A chiến thắng!!!");
+            location.reload();
+        }
+
+        display.innerHTML = value;
+
+    }
+
+    function changeB() {
+        let X = parseInt(prompt("Mời nhập tọa độ X: (0-4)"));
+        let Y = parseInt(prompt("Mời nhập tọa độ Y: (0-4)"));
+        if (caro[X][Y] == "x" || caro[X][Y] == "o") {
+            alert("Vị trí đã có người chơi chọn!!!");
+        } else {
+            value = "";
+            caro[X][Y] = "o";
+            for (let i = 0; i < 5; i++) {
+                value += "<br>";
+                for (let j = 0; j < 5; j++) {
+                    value += caro[i][j] + "&nbsp;&nbsp;"
+                }
+            }
+        }
+        if(checkwinB())
+        {
+            alert("Người chơi B chiến thắng!!!");
+            location.reload();
+        }
+        display.innerHTML = value;
+    }
+
+    function checkwinA() {
+        for (let i = 0; i < 5; i++) {
+            for (let j = 0; j < 5; j++) {
+                if (caro[i][j] == "x") {
+                    if (caro[i][j + 1] == "x" && caro[i][j + 2] == "x") {
+                        return true;
+                        break;
+                    } else if (caro[i + 1][j] == "x" && caro[i + 2][j] == "x") {
+                        return true;
+                        break;
+                    } else if (caro[i + 1][j + 1] == "x" && caro[i + 2][j + 2] == "x") {
+                        return true;
+                        break;
+                    } else if(caro[i+1][j-1]=="x"&&caro[i+2][j-2]=="x"){
+                        return true;
+                        break;
+                    } else {
+                        return false;
+                    }
+
+                }
+            }
+        }
+
+    }
+    function checkwinB() {
+        for(let i=0;i<5;i++){
+            for(let j=0;j<5;j++){
+                if(caro[i][j]=="o"){
+                    if (caro[i][j+1]=="o"&&caro[i][j+2]=="caro"){
+                        return true;
+                        break;
+                    }else if(caro[i+1][j]=="o"&&caro[i+2][j]=="o"){
+                        return true;
+                        break;
+                    } else if(caro[i+1][j+1]=="o"&&caro[i+2][j+2]=="o"){
+                        return  true;
+                        break;
+                    } else if(caro[i+1][j-1]=="o"&&caro[i+2][j-2]=="o"){
+                        return true;
+                        break;
+                    } else {
+                        return false;
+                    }
+                }
+            }
+        }
+
+    }
+
+</script>
+</body>
+</html>

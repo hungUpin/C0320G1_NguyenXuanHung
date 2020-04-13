@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra ký tự có trong mảng</title>
+</head>
+<body>
+<script>
+    let amount = parseInt(prompt("Mời nhập số lượng phần tử của mảng: "));
+    let array = new Array(amount);
+    for( let i =0;i<array.length;i++){
+        array[i] = prompt("Mời nhập phần tử thứ " +(i+1));
+    }
+    let check = prompt("Mời nhập ký tự kiểm tra: ");
+    alert(kiemTraKyTuTrongMang(check,array));
+    function kiemTraKyTuTrongMang(kyTu,mang) {
+    let mang1 = mang.join("");
+    let count=0;
+    for(let i=0;i<mang1.length;i++){
+        if(kyTu===mang1[i]){
+            count++;
+        }
+    }
+    if(count===0){
+        return -1;
+    } else{
+        return count;
+    }
+    }
+</script>
+</body>
+</html>

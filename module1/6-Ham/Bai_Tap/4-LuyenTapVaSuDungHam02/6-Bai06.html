@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra số nguyên dương</title>
+</head>
+<body>
+<script>
+    let num = parseInt(prompt("Mời nhập số để kiểm tra: "));
+    let b = kiemTraSoDuong(num);
+    if(num!==0){
+        if(b){
+            alert("Số " +num +" là số dương!!!")
+        } else{
+            alert("Số " +num +" là số âm!!!")
+        }
+    } else {
+        alert("Số 0!!!");
+    }
+
+    function kiemTraSoDuong(n) {
+    if(n>0){
+        return true;
+    } else if(n<0){
+        return false;
+    }
+    }
+</script>
+</body>
+</html>

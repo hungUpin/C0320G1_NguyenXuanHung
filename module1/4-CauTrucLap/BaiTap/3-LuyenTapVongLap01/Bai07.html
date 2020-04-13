@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 07</title>
+</head>
+<body>
+<script>
+let result="";
+    for(let i=1;i<=100;i++) {
+        if (i % 3 == 0)
+        {
+            if (i % 5 == 0)
+            {
+                result += "FizzBuzz"+"&nbsp";
+            }
+            else
+                {
+                result += "Fizz"+"&nbsp";
+                }
+        } else if (i % 5 == 0)
+        {
+            result += "Buzz"+"&nbsp";
+        }
+        else result+=i + "&nbsp";
+    }
+
+        document.write(result);
+</script>
+</body>
+</html>

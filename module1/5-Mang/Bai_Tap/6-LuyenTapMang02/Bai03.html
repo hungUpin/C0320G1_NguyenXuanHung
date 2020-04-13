@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 03</title>
+</head>
+<body>
+<script>
+    let a =[];
+    let j=0,count=0;
+    for(let i=0;i<5;i++){
+        a[i]= prompt("Nhập phần tử thứ "+(i+1));
+    }
+
+    while (j<a.length){
+        if(Number.isInteger(parseInt(a[j]))){
+            count++;
+        }
+        j++;
+    }
+    alert(count)
+</script>
+</body>
+</html>

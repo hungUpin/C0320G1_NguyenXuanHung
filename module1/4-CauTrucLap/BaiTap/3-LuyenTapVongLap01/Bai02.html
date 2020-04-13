@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 02</title>
+</head>
+<body>
+<script>
+    let temp = parseInt(prompt("Nhiệt độ hiện tại là: "));
+    while (temp>100||temp<20)
+    {
+        if(temp>100)
+        {
+            alert("Mời bạn tăng nhiệt độ");
+        }
+        else if(temp<20)
+        {
+            alert("Mời bạn giảm nhiệt độ");
+        }
+        temp = parseInt(prompt("Nhiệt độ hiện tại là: "));
+    }
+</script>
+</body>
+</html>

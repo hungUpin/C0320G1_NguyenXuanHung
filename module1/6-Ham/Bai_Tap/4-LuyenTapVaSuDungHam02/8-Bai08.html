@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đảo ngược mảng</title>
+</head>
+<body>
+<script>
+    let amount = parseInt(prompt("Vui lòng nhập số lượng phần tử của mảng: "));
+    let array = new Array(amount);
+    for(let i=0; i<amount;i++){
+        array[i] = parseInt(prompt("Mời nhập phần tử thứ " +(i+1)));
+    }
+    alert("Mảng : " +array +" sau khi được đảo ngược là: " +daoNguocMang(array));
+    function daoNguocMang(n) {
+    for(let j=0;j<=(n.length)/2;j++){
+        let temp = n[j];
+        n[j]= n[(n.length-1)-j];
+        n[(n.length-1)-j] = temp;
+    }
+    return n;
+    }
+</script>
+</body>
+</html>

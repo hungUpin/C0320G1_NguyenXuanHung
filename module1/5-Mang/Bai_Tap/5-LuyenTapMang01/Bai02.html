@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 02</title>
+</head>
+<body>
+<script>
+    let a =[];
+    let max;
+    let index;
+    for(let i=0;i<10;i++){
+        a[i] = parseInt(prompt("Vui lòng nhập số thứ: " +(i+1)));
+    }
+    max=a[0];
+    for(let j=1;j<a.length;j++){
+        if(a[j]>max){
+            max = a[j];
+            index = j;
+        }
+    }
+    alert("Số lớn nhất là: " +max +" ở vị trí: " +index);
+</script>
+</body>
+</html>

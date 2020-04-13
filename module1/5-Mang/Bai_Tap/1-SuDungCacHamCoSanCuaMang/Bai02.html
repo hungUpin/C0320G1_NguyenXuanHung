@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 02</title>
+</head>
+<body>
+<script>
+    let value = prompt("Nhập vào dãy số: ");
+    let str = value.toString();
+    let result = [str[0]];
+    for(let i=1;i<str.length;i++)
+    {
+        if((str[i-1]%2==0)&&(str[i]%2==0))
+        {
+            result.push("-",str[i]);
+        }
+        else {
+            result.push(str[i]);
+        }
+    }
+  //join mất dấu phẩy
+    alert(result.join(""));
+
+
+</script>
+</body>
+</html>

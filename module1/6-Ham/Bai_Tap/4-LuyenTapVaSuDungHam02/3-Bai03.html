@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 03</title>
+</head>
+<body>
+<script>
+    let number = parseInt(prompt("Nhập vào số muốn tính giai thừa:"));
+    alert("Giai thừa của " +number +" là: " +(tinhGiaiThua(number)));
+    function tinhGiaiThua(num) {
+    let a=1;
+    for(let i=1;i<=num;i++){
+            a *= i;
+    }
+    return a;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chương trình đếm số nguyên âm</title>
+</head>
+<body>
+<script>
+    let a = [];
+    let count = 0;
+    let num="";
+    for(let i=0;i<5;i++){
+        a[i] = parseInt(prompt("Mời bạn nhập vào số thứ: " +(i+1)));
+    }
+    for(let j=0;j<a.length;j++){
+        if(a[j]<0)
+        {
+            num += a[j] + "  ";
+            count++;
+        }
+    }
+    alert("Có "+count +" số nguyên âm trong mảng. Là các số: "+num)
+</script>
+</body>
+</html>

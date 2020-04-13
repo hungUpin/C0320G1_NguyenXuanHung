@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 04</title>
+</head>
+<body>
+<script>
+    let num = prompt("Vui lòng nhập vào giá trị muốn kiểm tra: ");
+    if(checknumber(num)){
+        alert(num + " là số");
+    } else {
+        alert(num + " không là số");
+    }
+    function checknumber(check) {
+    if(isNaN(check)){
+        return false;
+    } else {
+        return true;
+    }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 05</title>
+</head>
+<body>
+<script>
+    let num1 = parseInt(prompt("Mời nhập số thứ nhất: "));
+    let num2 = parseInt(prompt("Mời nhập số thứ hai: "));
+    let num3 = parseInt(prompt("Mời nhập số thứ ba: "));
+    let arr=[num1,num2,num3];
+    alert("Số nhỏ nhất trong 3 số: " +arr +" là: " +findMin(arr));
+    function findMin(a) {
+        let min = a[0];
+        for(let i=1;i<3;i++){
+            if(a[i]<min){
+                min = a[i];
+            }
+        }
+        return min;
+    }
+</script>
+</body>
+</html>

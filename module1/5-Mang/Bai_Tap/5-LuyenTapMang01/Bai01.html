@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 01</title>
+</head>
+<body>
+<script>
+    let a =[];
+    let count=0;
+    let n =""
+    for(let i=0;i<10;i++)
+    {
+        a[i] = parseInt(prompt("Vui lòng nhập số thứ " +(i+1)));
+    }
+    for(let i=0;i<a.length;i++)
+    {
+        if(a[i]>=10){
+            n += a[i] + "  ";
+            count++
+        }
+    }
+    alert("Có: " +count +" số nguyên lớn hơn hoặc bắng 10. Bao gồm các số: " +n);
+</script>
+</body>
+</html>

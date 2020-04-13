@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yêu cầu 2</title>
+</head>
+<body>
+
+<script>
+    let name = "Nguyễn Văn A";
+    let id = "23045647";
+    let dayOfBirth = "23/07/2001";
+    let email = "abcd@gmail.com";
+    let address = "Đà Nẵng";
+    let typeOfCustomer = "Platinum";
+    let discount = "0";
+    let quantityIncluded = "0";
+    let rentDays = "5";
+    let typeOfService = "Villa";
+    let typeOfRoom = "Vip";
+    while (2) {
+        let choose = parseInt(prompt("1.Show Information Customer: \n" +
+            "2.Edit Information Customer \n" +
+            "3.Show the amount to be paid after discount"));
+        if (choose == 1) {
+            alert("1.Họ và tên: " + name + "\n"
+                + "2.CMND: " + id + "\n" +
+                "3.Ngày,Tháng,Năm sinh: " + dayOfBirth + "\n" +
+                "4.Email: " + email + "\n" +
+                "5.Địa chỉ: " + address + "\n" +
+                "6.Loại khách hang: " + typeOfCustomer + "\n" +
+                "7. Giảm giá: " + discount + "\n" +
+                "8. Số lượng đi kèm: " + quantityIncluded + "\n" +
+                "9. Số ngày thuê: " + rentDays + "\n" +
+                "10. Loại dịch vụ: " + typeOfService + "\n" +
+                "11. Loại phòng: " + typeOfRoom + "\n"
+            )
+        } else if (choose == 2) {
+            let edit = parseInt(prompt("Vui lòng chọn thông tin thay đổi: \n" +
+                "1.Họ và tên: " + name + "\n"
+                + "2.CMND: " + id + "\n" +
+                "3.Ngày,Tháng,Năm sinh: " + dayOfBirth + "\n" +
+                "4.Email: " + email + "\n" +
+                "5.Địa chỉ: " + address + "\n" +
+                "6.Loại khách hang: " + typeOfCustomer + "\n" +
+                "7. Giảm giá: " + discount + "\n" +
+                "8. Số lượng đi kèm: " + quantityIncluded + "\n" +
+                "9. Số ngày thuê: " + rentDays + "\n" +
+                "10. Loại dịch vụ: " + typeOfService + "\n" +
+                "11. Loại phòng: " + typeOfRoom + "\n"))
+            switch (edit) {
+                case 1:
+                    name = prompt("Nhập họ và tên: ");
+                    break;
+                case 2:
+                    id = prompt("Nhập CMND: ");
+                    break;
+                case 3:
+                    dayOfBirth = prompt("Nhập ngày tháng năm sinh: ");
+                    break;
+                case 4:
+                    email = prompt("Nhập địa chỉ email: ");
+                    break;
+                case 5:
+                    address = prompt("Nhập địa chỉ: ");
+                    break;
+                case 6:
+                    typeOfCustomer = prompt("Nhập loại khách hàng Diamond, Platinum, Gold, Silver, Member ");
+                    break;
+                case 7:
+                    discount = prompt("Nhập giảm giá:");
+                    break;
+                case 8:
+                    quantityIncluded = prompt("Nhập số lượng đi kèm:");
+                    break;
+                case 9:
+                    rentDays = prompt("Số ngày thuê:");
+                    break;
+                case 10:
+                    typeOfCustomer = prompt("Nhập loại dịch vụ Villa, House, Room");
+                    break;
+                case 11:
+                    typeOfRoom = prompt("Nhập loại phòng thuê: Vip, Business, Normal");
+                    break;
+                default:
+                    alert("Failed!!!");
+                    break;
+            }
+            alert("Thông tin của khách hàng sau khi chỉnh sửa là: \n" +
+                "1.Họ và tên: " + name + "\n"
+                + "2.CMND: " + id + "\n" +
+                "3.Ngày,Tháng,Năm sinh: " + dayOfBirth + "\n" +
+                "4.Email: " + email + "\n" +
+                "5.Địa chỉ: " + address + "\n" +
+                "6.Loại khách hang: " + typeOfCustomer + "\n" +
+                "7. Giảm giá: " + discount + "\n" +
+                "8. Số lượng đi kèm: " + quantityIncluded + "\n" +
+                "9. Số ngày thuê: " + rentDays + "\n" +
+                "10. Loại dịch vụ: " + typeOfService + "\n" +
+                "11. Loại phòng: " + typeOfRoom + "\n")
+        } else if (choose == 3) {
+            let discountAddress, discountRentDays, discountCustomer, moneyService;
+            switch (address) {
+                case "Đà Nẵng":
+                    discountAddress = 20;
+                    break;
+                case "Huế":
+                    discountAddress = 10;
+                    break;
+                case "Quảng Nam":
+                    discountAddress = 5;
+                    break;
+
+            }
+            switch (typeOfCustomer) {
+                case "Diamond":
+                    discountCustomer = 15;
+                    break;
+                case "Platinum":
+                    discountCustomer = 10;
+                    break;
+                case "Gold":
+                    discountCustomer = 5;
+                    break;
+                case "Silver":
+                    discountCustomer = 2;
+                    break;
+                case "Member":
+                    discountCustomer = 0;
+
+            }
+            switch (typeOfService) {
+                case "Villa":
+                    moneyService = 500;
+                    break;
+                case "House":
+                    moneyService = 300;
+                    break;
+                case "Room":
+                    moneyService = 100;
+                    break;
+
+            }
+            if (rentDays >= 2 && rentDays <= 4) {
+                discountRentDays = 10;
+            }
+            if (rentDays >= 5 && rentDays <= 7) {
+                discountRentDays = 20;
+            }
+            ;
+            if (rentDays > 7) {
+                discountRentDays = 30;
+            }
+            discount = discountCustomer + discountRentDays + discountAddress;
+            let payment = moneyService*rentDays-discount;
+            alert("Số tiền bạn phải trả là: " +payment);
+
+        }
+        else alert("Vui lòng chọn mục 1,2,3 theo mong muốn!!!");
+
+
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 05</title>
+</head>
+<body>
+<script>
+    let a = prompt("Mời nhập vào chuỗi thứ nhất: ");
+    let b = prompt("Mời nhập vào chuỗi thứ hai: ");
+    let flag ;
+    for (let i = 0; i < a.length; i++) {
+        flag = true;
+        if((a.length!=b.length)||(a[i]!==b[i])){
+            flag = false;
+            break;
+        }
+
+
+    }
+    if (flag) {
+        alert("Chuỗi " + a + " và chuỗi " + b + " giống nhau");
+    } else {
+        alert("Chuỗi " + a + " và chuỗi " + b + " khác nhau");
+    }
+</script>
+</body>
+</html>

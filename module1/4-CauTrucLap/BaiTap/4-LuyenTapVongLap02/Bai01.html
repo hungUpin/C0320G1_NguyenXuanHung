@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 01</title>
+</head>
+<body>
+<script>
+    let numbers= parseInt(prompt("Vui lòng chọn số lượng dãy fibonacci muốn hiển thị: "));
+    let n=1;
+    let result = "";
+    function fibonacci(n)
+    {
+        let a1=1;
+        let a2=1;
+        let a;
+    if(n==1||n==2) {
+        return 1;
+    }
+    else
+    {
+        for(let i=3;i<=n;i++)
+        {
+            a=a1+a2;
+            a1=a2;
+            a2=a;
+        }
+        return a;
+    }
+    }
+    while (n<=numbers)
+    {
+        result += fibonacci(n) +"&nbsp";
+        n++;
+    }
+    document.write("Dãy fibonacci là: " +result);
+</script>
+</body>
+</html>
