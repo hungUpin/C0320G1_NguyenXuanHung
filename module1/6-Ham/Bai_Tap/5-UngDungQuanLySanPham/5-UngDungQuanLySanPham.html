@@ -5,8 +5,54 @@
     <title>Ứng dụng quản lý sản phẩm</title>
 </head>
 <body>
-<h2>Ứng dụng quản lý sản phẩm</h2>
+<h2>Add New Product</h2>
+<input type="text" id ="product" placeholder="New Product"> &nbsp;&nbsp;
+<button type="button" onclick="addProduct()" style="background-color: seagreen;border-radius: 10%">Add</button>
+<h2>Display All Product</h2>
+<table><tr>
+    <td colspan="3"><b>Product Name</b></td>
+    <td id="totalProduct"></td>
+</tr></table>
+
+<p id="table"></p>
 <script>
+    let productArray = [];
+    let display="";
+    let table=document.getElementById("table");
+    function addProduct() {
+        display="";
+        let product = document.getElementById("product").value;
+        productArray.push(product);
+        displayProduct();
+        document.getElementById("product").value = "";
+        document.getElementById("totalProduct").innerText=productArray.length + " products";
+    }
+    function editItem(n) {
+        display="";
+        productArray[n] = prompt("Tên bạn muốn sửa là: ");
+        displayProduct();
+        document.getElementById("totalProduct").innerText=productArray.length + " products";
+    }
+    function deleteItem(n) {
+        display="";
+        for(let i=n;i<productArray.length;i++){
+            productArray[i]=productArray[i+1];
+        }
+        productArray.pop();
+        displayProduct();
+        document.getElementById("totalProduct").innerText=productArray.length + " products";
+
+    }
+ function displayProduct() {
+     for(let i=0;i<productArray.length;i++){
+         display += "<table border='1'>"+ "<tr>"+"<td style='width: 70%;text-align: center'>" + productArray[i] + "</td>" +
+             "<td>" + "<button type='button'  onclick='editItem("+i+")' style='background-color: seagreen;border-radius: 10%;'>Edit</button>" + "</td>" +
+             "<td>"+"<button type='button' onclick='deleteItem("+i+")' style='background-color: seagreen;border-radius: 10%;'>Delete</button>" + "</td>"
+             +"</tr>"
+     }
+     display += "</table>";
+     table.innerHTML=display;
+ }
 
 </script>
 </body>

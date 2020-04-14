@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 01</title>
+</head>
+<body>
+<script>
+    let name ;
+    let id ;
+    let dayOfBirth;
+    let email ;
+    let address;
+    let typeOfCustomer;
+    let discount ;
+    let quantityIncluded;
+    let rentDays = "5";
+    let typeOfService = "Villa";
+    let typeOfRoom = "Vip";
+    let choose = parseInt(prompt("Vui lòng chọn dữ liệu muốn thêm vào hệ thống \n" +
+        "1.Họ và tên: \n"+
+        "2.CMND:  \n" +
+        "3.Ngày,Tháng,Năm sinh:\n" +
+        "4.Email: \n" +
+        "5.Địa chỉ: \n" +
+        "6.Loại khách hang:\n" +
+        "7. Giảm giá: \n" +
+        "8. Số lượng đi kèm:\n" +
+        "9. Số ngày thuê:\n" +
+        "10. Loại dịch vụ:\n" +
+        "11. Loại phòng:\n"
+    ));
+    switch(choose){
+        case 1:
+        name = prompt("Mời bạn nhập họ và tên:");
+        break;
+        case 4:
+            email= prompt("Mời bạn nhập địa chỉ email: ");
+            let test = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            break;
+        case 2:
+            do{
+                id=false;
+                id = prompt("Vui lòng nhập số CMND(9 số):").trim();
+                if(isNaN(id)===false){
+                    id = true;
+                }
+
+            } while (id===false);
+
+    }
+</script>
+</body>
+</html>

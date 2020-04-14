@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0fa7c5cc-aa32-4493-bd26-5f47cddd4ffd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1-NhapMonLapTrinhCoBan/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/1-NhapMonLapTrinhCoBan/test.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/3-CauTrucDieuKien/Bai_Tap/a.html" beforeDir="false" afterPath="$PROJECT_DIR$/3-CauTrucDieuKien/Bai_Tap/a.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4-CauTrucLap/BaiTap/2-HienThiCacSoNguyenToDauTien.html" beforeDir="false" afterPath="$PROJECT_DIR$/4-CauTrucLap/BaiTap/2-HienThiCacSoNguyenToDauTien.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaseStudy/1-YeuCau01.html" beforeDir="false" afterPath="$PROJECT_DIR$/CaseStudy/1-YeuCau01/1-YeuCau01.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6-Ham/Bai_Tap/5-UngDungQuanLySanPham/5-UngDungQuanLySanPham.html" beforeDir="false" afterPath="$PROJECT_DIR$/6-Ham/Bai_Tap/5-UngDungQuanLySanPham/5-UngDungQuanLySanPham.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +34,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="E:/example/test/C0220G1-TranChiHieu/Module1/6-Ham/BaiTap/5-UngDungQuanLySanPhamSuDungHam/UngDungQuanLySanPhamSuDungHam.html" />
+    <property name="last_opened_file_path" value="E:/example/test/C0220G1-TranChiHieu/Module1/CaseStudy/3-YeuCau3/InputInformation.html" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
@@ -117,7 +114,8 @@
       <workItem from="1586667484365" duration="134000" />
       <workItem from="1586676030510" duration="740000" />
       <workItem from="1586740043452" duration="13418000" />
-      <workItem from="1586760709644" duration="5418000" />
+      <workItem from="1586760709644" duration="12160000" />
+      <workItem from="1586826027399" duration="5496000" />
     </task>
     <servers />
   </component>
@@ -129,10 +127,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="423" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1586058527046" />
-    <state x="463" y="120" key="FileChooserDialogImpl" timestamp="1586765791846">
+    <state x="463" y="120" key="FileChooserDialogImpl" timestamp="1586830677331">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="120" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1586765791846" />
+    <state x="463" y="120" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1586830677331" />
     <state width="1344" height="216" key="GridCell.Tab.0.bottom" timestamp="1586597431386">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
