@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Remote điều khiển tivi</title>
+</head>
+<body>
+<script>
+    class Remote{
+        constructor(tivi) {
+            this.tivi = tivi;
+        }
+        setChanel(num){
+            if(this.tivi.getStatus()) {
+                this.tivi.changeChanel(num);
+            } else {
+                alert("Tivi is Off");
+            }
+        }
+        setVolumeUp(num){
+            let count=0;
+            while(count<num) {
+                if (this.tivi.getStatus()) {
+                    this.tivi.changeVolumeUp();
+                } else {
+                    alert("Tivi is Off");
+                    break;
+                }
+                count++;
+            }
+        }
+        setVolumeDown(num) {
+            let count = 0;
+            while (count < num) {
+                if (this.tivi.getStatus()) {
+                    this.tivi.changeVolumeDown();
+                } else {
+                    alert("Tivi is Off");
+                    break;
+                }
+                count++;
+            }
+        }
+        setStatusTivi(status){
+            this.tivi.setStatus(status);
+        }
+    }
+    class Television{
+        constructor(chanel,volume,status) {
+            this.chanel = chanel;
+            this.volume = volume;
+            this.status = status;
+        }
+        getStatus(){
+           return this.status;
+        }
+        getVolume(){
+            return this.volume;
+        }
+        setStatus(status){
+            if(status===true){
+                this.status = true;
+            } else {
+                this.status = false;
+            }
+        }
+        changeChanel(chanel){
+             this.chanel = chanel;
+        }
+        changeVolumeUp(){
+            this.volume++;
+        }
+        changeVolumeDown(){
+            this.volume--;
+        }
+    }
+    tivi = new Television(0,30,false);
+    remote = new Remote(tivi);
+    tivi.setStatus(true);
+    alert(tivi.status);
+    alert(tivi.chanel);
+    tivi.changeChanel(7);
+    alert(tivi.chanel);
+    remote.setChanel(3);
+    alert(tivi.chanel);
+    remote.setVolumeUp(2);
+    alert(tivi.getVolume());
+    remote.setStatusTivi(false);
+    alert(tivi.getStatus());
+
+</script>
+</body>
+</html>

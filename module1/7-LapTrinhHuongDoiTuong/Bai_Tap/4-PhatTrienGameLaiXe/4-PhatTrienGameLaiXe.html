@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phát triển game lái xe</title>
+</head>
+<body onload="init()">
+<div id="game" ></div>
+<script>
+    class Car {
+        constructor(imageSrc, top, left, speed) {
+            this.imageSrc = imageSrc;
+            this.top = top;
+            this.left = left;
+            this.speed = speed;
+        }
+            getCarElement(){
+                return '<img width="' + 50 + '"' +
+                    ' height="' + 50 + '"' +
+                    ' src="' + this.imageSrc + '"' +
+                    ' style="top: ' + this.top + 'px; left:' + this.left + 'px;position:absolute;" />';
+            }
+
+            moveTop(){
+                this.top -= this.speed;
+            }
+            moveDown(){
+                this.top+=this.speed;
+            }
+            moveLeft(){
+                this.left -= this.speed;
+            }
+            moveRight(){
+                this.left += this.speed;
+            }
+
+    }
+
+    let direction ="";
+    let car = new Car("car.png", 500, 500, 10);
+    function move(){
+        switch (direction) {
+            case "right":
+                car.moveRight();
+                break;
+            case "left":
+                car.moveLeft();
+                break;
+            case "down":
+                car.moveDown();
+                break;
+            case "up":
+                car.moveTop();
+                break;
+        }
+
+        document.getElementById("game").innerHTML = car.getCarElement();
+        setTimeout(move, 500)
+    }
+    function init() {
+        window.addEventListener("keydown",move);
+        move();
+    }
+    function start(evt) {
+        switch (evt.keyCode) {
+            case 37:
+                direction = "left";
+                car.imageSrc="carL.png";
+                break;
+            case 38:
+                direction = "up";
+                car.imageSrc="car.png";
+                break;
+            case 39:
+                direction ="right";
+                car.imageSrc="carR.png";
+                break;
+            case 40:
+                direction = "down";
+                car.imageSrc="carD.png";
+                break;
+        }
+    }
+
+
+</script>
+</body>
+</html>

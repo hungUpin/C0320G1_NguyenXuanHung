@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 01</title>
+</head>
+<body>
+<script>
+    let name;
+    let id;
+    let dayOfBirth;
+    let email;
+    let address;
+    let typeOfCustomer;
+    let discount;
+    let amountOfPeople;
+    let rentDays = "5";
+    let typeOfService = "Villa";
+    let typeOfRoom = "Vip";
+    let choose = parseInt(prompt("Vui lòng chọn dữ liệu muốn thêm vào hệ thống \n" +
+        "1.Họ và tên: \n" +
+        "2.CMND:  \n" +
+        "3.Ngày,Tháng,Năm sinh:\n" +
+        "4.Email: \n" +
+        "5.Địa chỉ: \n" +
+        "6.Loại khách hang:\n" +
+        "7. Giảm giá: \n" +
+        "8. Số người đi kèm:\n" +
+        "9. Số ngày thuê:\n" +
+        "10. Loại dịch vụ:\n" +
+        "11. Loại phòng:\n"
+    ));
+    let flag;
+    let temp="";
+    switch (choose) {
+        case 1:
+            do{
+                flag = false;
+                name = prompt("Vui lòng nhập tên: ").trim();
+                for(let i=0;i<name.length;i++){
+                    if(name[i]===" "&& name[i+1]===" "){
+
+                } else
+                    {
+                        if (i===0){
+                            temp += name[i].toUpperCase();
+                        } else if(name[i-1]===" "){
+                            temp += name[i].toUpperCase();
+                        } else {
+                            temp += name[i].toLowerCase();
+                        }
+                    }
+            }
+                name = temp;
+                if(name!==""){
+                    alert("Họ và tên là:" +name);
+                    flag=true;
+                } else {
+                    alert("Nhập sai thông tin!!!")
+                }
+    } while (!flag);
+            break;
+        case 2:
+            do {
+                flag = false;
+                id = prompt("Vui lòng nhập số CMND(9 số):").trim();
+                if (isNaN(id) === false) {
+                    if (Number.isInteger(parseFloat(id))) {
+                        if (id >= 100000000 && id <= 999999999) {
+                            alert("Số CMND là: " + id);
+                            flag = true;
+                        }
+                    }
+                }
+                if (flag === false) {
+                    alert("Bạn đã nhập sai định dạng");
+                }
+
+            } while (!flag);
+            break;
+        case 3:
+            do {
+                flag = false;
+                let day, month, year;
+                dayOfBirth = prompt("Mời nhập ngày, tháng, năm sinh(dd/mm/yyyy)").trim();
+                day = dayOfBirth.substring(0, 2);
+                month = dayOfBirth.substring(3, 5);
+                year = dayOfBirth.substring(6, 10);
+                if (dayOfBirth.substring(2, 3) === "/" && dayOfBirth.substring(5, 6) === "/") {
+                    if (day >= 1 && day <= 31 && month >= 1 && month <= 12 && year >= 1900) {
+                        alert("Ngày tháng năm sinh vừa nhập là: " + dayOfBirth);
+                        flag = true;
+                    }
+                }
+                if (flag === false) {
+                    alert("Bạn đã nhập sai định dạng");
+                }
+            } while (!flag);
+            break;
+        case 4:
+            do {
+                flag=false;
+                email = prompt("Mời bạn nhập địa chỉ email:(abc@abc.com) ");
+                if (validateEmail(email)) {
+                    alert("Email: " + email);
+                    flag=true;
+                } else {
+                    alert("Nhập sai email.Vui lòng thử lại");
+                }
+            }while (!flag);
+            break;
+        case 5:
+            do{
+                flag=false;
+                address = prompt("Vui lòng nhập địa chỉ: ").trim();
+                for(let i=0; i<address.length;i++){
+                    if(address[i]===" "&& address[i+1]===" "){
+                        continue;
+                    } else {
+                        if(address[i]==0){
+                            temp += address[i].toUpperCase();
+                        } else if(address[i-1]=== " "){
+                            temp += address[i].toUpperCase();
+                        } else {
+                            temp += address[i].toLowerCase();
+                        }
+                    }
+                }
+                address = temp;
+                if(address!== ""){
+                    alert("Địa chỉ là: " +address);
+                    flag=true;
+                } else {
+                    alert("Bạn đã nhập sai. Vui lòng nhập lại");
+                }
+            }while (!flag);
+            break;
+        case 6:
+            do{
+                flag=false;
+                typeOfCustomer = prompt("Vui lòng nhập loại khách hàng: (Diamond, Platinum, Gold, Silver, Member)").trim();
+                for( let i=0;i<typeOfCustomer.length;i++){
+                    if(typeOfCustomer[i]===" "&&typeOfCustomer[i+1]=== " "){
+                        continue;
+                    } else {
+                        if(i===0){
+                            temp+=typeOfCustomer[i].toUpperCase();
+                        } else if(typeOfCustomer[i-1]===" "){
+                            temp+=typeOfCustomer[i].toUpperCase();
+                        } else {
+                            temp+=typeOfCustomer[i].toLowerCase();
+                        }
+                    }
+                }
+                typeOfCustomer = temp;
+                if(typeOfCustomer==="Diamond"||typeOfCustomer==="Platinum"||typeOfCustomer==="Gold"||
+                    typeOfCustomer==="Silver"||typeOfCustomer==="Member"){
+                    flag=true;
+                    alert("Loại khách hàng: " +typeOfCustomer )
+                } else {
+                    alert("Nhập sai dữ liệu. Vui lòng nhập lại");
+                }
+
+            } while (!flag);
+            break;
+        case 7:
+            do{
+                flag=false;
+                discount = prompt("Nhập giảm giá");
+                if(!isNaN(discount)){
+                    if(Number.isInteger(parseInt(discount))){
+                        flag = true;
+                        alert("Giảm giá: "+discount);
+                    } else {
+                        alert("Nhập sai dữ liệu");
+                    }
+                }
+            }while (!flag);
+            break;
+        case 8:
+            do {
+                flag = false;
+                amountOfPeople = parseInt(prompt("Mời nhập số người đi kèm: "));
+                if (!isNaN(amountOfPeople)) {
+                    if (Number.isInteger(parseFloat(amountOfPeople))) {
+                        alert("Số người đi kèm là: " + amountOfPeople);
+                    }
+                }
+                if (!flag) {
+                    alert("Bạn nhập sai dữ liệu");
+                }
+            } while (!flag);
+            break;
+        case 9:
+            do {
+                flag = false;
+                rentDays = prompt("Mời nhập số ngày thuê: ");
+                if (!isNaN(rentDays)) {
+                    if (Number.isInteger(parseFloat(rentDays))&&rentDays>0) {
+                        alert("Số ngày thuê:" +rentDays);
+                        flag = true;
+                    }
+                }
+                if (!flag) {
+                    alert("Bạn nhập sai dữ liệu");
+                }
+            } while (!flag);
+            break;
+        case 10:
+            do{
+                flag=false;
+                typeOfService = prompt("Vui lòng nhập loại dịch vụ: (Villa, House, Room)");
+                let regex = /^([a-zA-z])+$/;
+                if(typeOfService.match(regex)){
+                    flag=true;
+                    alert("Loại dịch vụ là: "+typeOfService);
+                }
+                if (!flag){
+                    alert("Nhập sai dữ liệu!!!");
+                }
+
+            }while (!flag);
+            break;
+         case 11:
+             do{
+                 flag= false;
+                 typeOfRoom = prompt("Vui lòng nhập loại phòng: (Vip, Business,  Normal)");
+                 let regex = /^([a-zA-Z])+$/;
+                 if(typeOfRoom.match(regex)){
+                     flag=true;
+                     alert("Loại phòng là: "+typeOfRoom);
+                 }
+                 if(!flag){
+                     alert("Nhập sai dữ liệu!!!");
+                 }
+             }while (!flag);
+             break;
+    }
+
+    function validateEmail(email){
+        let test = /^([a-zA-Z0-9\_\.\-])+\@([a-zA-Z0-9\-\_])+\.([a-zA-Z0-9]){2,5}$/;
+        return test.test(email);
+    }
+</script>
+</body>
+</html>

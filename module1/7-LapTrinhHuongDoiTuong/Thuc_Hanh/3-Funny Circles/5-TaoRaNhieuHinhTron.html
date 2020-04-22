@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo ra nhiều hình tròn</title>
+</head>
+<body>
+<canvas id = "myCanvas" width="1300px" height="800px" style="border: 5px;solid-color: #2196F3"></canvas>
+<script>
+    let ctx = document.getElementById("myCanvas").getContext("2d");
+    let canvas = document.getElementById("myCanvas");
+    let a=100,b=100;
+    function Circle(x,y,radius) {
+        this.x = x;
+        this.y = y;
+        this.radius =radius;
+    }
+    function getRandomColor() {
+        let red = Math.floor(Math.random()*255);
+        let green = Math.floor(Math.random()*255);
+        let blue = Math.floor(Math.random()*255);
+        return "grb(" +red +"," +green+"," +blue +",";
+    }
+   function createCircle() {
+
+        let x = Math.floor(Math.random()*window.innerWidth);
+        let y = Math.floor(Math.random()*window.innerHeight);
+        let radius = Math.floor(Math.random()*80);
+        let circle = new Circle(x,y,radius);
+        let color = getRandomColor();
+        ctx.beginPath();
+            ctx.arc(circle.x+i,circle.y+i,circle.radius,0,Math.PI*2);
+            ctx.fillStyle=color;
+            ctx.fill();
+
+   }
+  function drawBall() {
+        let circle = new Circle(a,b,50);
+        ctx.beginPath();
+        ctx.arc(circle.x,circle.y,circle.radius,0,Math.PI*2);
+        ctx.fillStyle="red";
+        ctx.fill();
+  }
+  setInterval(function () {
+      ctx.clearRect(0,0,canvas.width,canvas.height);
+      drawBall();
+      a+=2;
+      b+=2;
+
+  }, 200);
+</script>
+</body>
+</html>

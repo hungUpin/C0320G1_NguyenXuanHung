@@ -2,40 +2,68 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>test thoi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
-<body>
-<p> This is the first example</p>
+<img id="hero" style="width: 30px; height: 30px;position: absolute;" src="">
+<body onload="init()">
 <script>
-    let b = document.getElementById("carogame ");
-
-    let board = [];
-    let data = "";
-    for (let i = 0; i < 5; i++) {
-        board[i] = new Array(0, 0, 0, 0, 0);
-    }
-
-    for (let i = 0; i < 5; i++) {
-        data += "<br/>";
-        for (let j = 0; j < 5; j++) {
-            data += board[i][j] + "&nbsp;&nbsp;";
+    class Hero {
+        constructor(srcImage, speed, left, top) {
+            this.srcImage = srcImage;
+            this.speed = speed;
+            this.left = left;
+            this.top = top;
+            document.getElementById("hero").src=this.srcImage;
+            document.getElementById("hero").style.left=this.left +"px";
+            document.getElementById("hero").style.top=this.top +"px";
+            document.getElementById("hero").style.position="absolute";
+        }
+        moveRight() {
+            this.left += 20;
+            document.getElementById("hero").style.left=this.left+"px";
+        }
+        moveDown() {
+            this.top += 20;
+            document.getElementById("hero").style.top=this.top+"px"
+        }
+        moveTop() {
+            this.top -= 20;
+            document.getElementById("hero").style.top=this.top+"px";
+        }
+        moveLeft() {
+            this.left -= 20;
+            document.getElementById("hero").style.left=this.left+"px";
         }
     }
-    document.write(data);
-    let positionX = 0;
-    let positionY = 2;
-    data = "";
-    board[positionX][positionY] = "x";
-    for (let i = 0; i < 5; i++) {
-        data += "<br/>";
-        for (let j = 0; j < 5; j++) {
-            data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+    let hero;
+    function init() {
+        hero = new Hero("pikachu.png", 50, 0, 0);
+        window.addEventListener("keydown", move)
+    }
+    function move(evt) {
+
+        switch (evt.keyCode) {
+            case 38: {
+                hero.moveTop();
+                break;
+            }
+            case 37: {
+                hero.moveLeft();
+                break;
+            }
+            case 39: {
+                hero.moveRight();
+                break;
+            }
+            case 40: {
+                hero.moveDown();
+                break;
+            }
         }
     }
-    document.write(data);
-    data += "<br/><br/><input type='button' value='Change Value' onclick='changeValue()'>"
-
-
 </script>
 </body>
 </html>
+
+

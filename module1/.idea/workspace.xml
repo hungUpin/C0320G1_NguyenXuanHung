@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="0fa7c5cc-aa32-4493-bd26-5f47cddd4ffd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1-NhapMonLapTrinhCoBan/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/1-NhapMonLapTrinhCoBan/test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/4-CauTrucLap/BaiTap/4-LuyenTapVongLap02/Bai03.html" beforeDir="false" afterPath="$PROJECT_DIR$/4-CauTrucLap/BaiTap/4-LuyenTapVongLap02/Bai03.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/6-Ham/Bai_Tap/5-UngDungQuanLySanPham/5-UngDungQuanLySanPham.html" beforeDir="false" afterPath="$PROJECT_DIR$/6-Ham/Bai_Tap/5-UngDungQuanLySanPham/5-UngDungQuanLySanPham.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6-Ham/Bai_Tap/6-KiemTraTinhDoiXung/6-KiemTraTinhDoiXung.html" beforeDir="false" afterPath="$PROJECT_DIR$/6-Ham/Bai_Tap/6-KiemTraTinhDoiXung/6-KiemTraTinhDoiXung.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaseStudy/3-YeuCau03/1-Task01.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,16 +38,19 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="E:/example/test/C0220G1-TranChiHieu/Module1/CaseStudy/3-YeuCau3/InputInformation.html" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/1-NhapMonLapTrinhCoBan" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\C0320G1_NguyenXuanHung\module1\1-NhapMonLapTrinhCoBan" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\C0320G1_NguyenXuanHung\module1\8-LapTrinhHuongDoiTuong02\Thuc_Hanh" />
+      <recent name="E:\C0320G1_NguyenXuanHung\module1\7-LapTrinhHuongDoiTuong\Bai_Tap\4-PhatTrienGameLaiXe" />
       <recent name="E:\C0320G1_NguyenXuanHung\module1\6-Ham\Bai_Tap\4-LuyenTapVaSuDungHam02" />
       <recent name="E:\C0320G1_NguyenXuanHung\module1\6-Ham\Bai_Tap" />
       <recent name="E:\C0320G1_NguyenXuanHung\module1\5-Mang\Bai_Tap\3-TicTacToe" />
-      <recent name="E:\C0320G1_NguyenXuanHung\module1\1-NhapMonLapTrinhCoBan\5-Mang" />
-      <recent name="E:\C0320G1_NguyenXuanHung\module1\CaseStudy\1-YeuCau01" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.FakingTaxtArea.html">
@@ -115,7 +122,25 @@
       <workItem from="1586676030510" duration="740000" />
       <workItem from="1586740043452" duration="13418000" />
       <workItem from="1586760709644" duration="12160000" />
-      <workItem from="1586826027399" duration="5496000" />
+      <workItem from="1586826027399" duration="14182000" />
+      <workItem from="1586846751092" duration="6282000" />
+      <workItem from="1586869053045" duration="2064000" />
+      <workItem from="1586912854916" duration="8379000" />
+      <workItem from="1586934340094" duration="4317000" />
+      <workItem from="1586963801369" duration="674000" />
+      <workItem from="1586999811778" duration="11068000" />
+      <workItem from="1587019061700" duration="4971000" />
+      <workItem from="1587044186866" duration="1160000" />
+      <workItem from="1587047972036" duration="1950000" />
+      <workItem from="1587086346696" duration="20304000" />
+      <workItem from="1587130912231" duration="415000" />
+      <workItem from="1587182301072" duration="7710000" />
+      <workItem from="1587284734008" duration="2708000" />
+      <workItem from="1587307293810" duration="2684000" />
+      <workItem from="1587344871484" duration="17089000" />
+      <workItem from="1587390057513" duration="2058000" />
+      <workItem from="1587432141568" duration="19258000" />
+      <workItem from="1587480726062" duration="999000" />
     </task>
     <servers />
   </component>
@@ -127,10 +152,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="423" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1586058527046" />
-    <state x="463" y="120" key="FileChooserDialogImpl" timestamp="1586830677331">
+    <state x="463" y="120" key="FileChooserDialogImpl" timestamp="1587443630415">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="120" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1586830677331" />
+    <state x="463" y="120" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1587443630415" />
     <state width="1344" height="216" key="GridCell.Tab.0.bottom" timestamp="1586597431386">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -203,13 +228,13 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="251" y="89" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1366.728@0.0.1366.728" timestamp="1586263417851" />
-    <state x="339" y="157" key="run.anything.popup" timestamp="1586753112839">
+    <state x="339" y="157" key="run.anything.popup" timestamp="1587377128034">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1586753112839" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1586061677634">
+    <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1587377128034" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1587022589909">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1586061677634" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1587022589909" />
   </component>
 </project>

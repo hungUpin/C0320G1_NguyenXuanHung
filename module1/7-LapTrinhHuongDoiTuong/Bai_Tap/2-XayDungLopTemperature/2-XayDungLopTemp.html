@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp temp</title>
+</head>
+<body>
+<script>
+    function Temperature(c) {
+        if(c>=-273){
+            this.c = c;
+        } else{
+            return alert("Nhập sai nhiệt độ C");
+        }
+        this.convertCtoF = function () {
+            return c*1.8+32;
+        }
+        this.convertCtoK = function () {
+            return c*273.15;
+        }
+    }
+    let temp = new Temperature(20);
+    alert("Độ F là: " +temp.convertCtoF() +", độ K là: "+temp.convertCtoK());
+</script>
+</body>
+</html>

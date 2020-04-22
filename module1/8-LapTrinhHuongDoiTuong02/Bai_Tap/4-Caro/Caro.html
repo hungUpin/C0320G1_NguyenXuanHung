@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caro</title>
+</head>
+<body>
+<div id="table"></div>
+<script>
+    let array =[];
+    for(let i=0;i<20;i++){
+        for(let j=0;j<20;j++){
+            array[i][j] = "&nbsp;&nbsp";
+        }
+    }
+    alert(array)
+    function displayTable() {
+        let table= "<table style='text-align:center;border:1px;position: absolute' cellpadding='10' cellspacing='0'>";
+        for(let i=0;i<20;i++){
+            table+= "<tr>";
+            for(let j=0;j<20;j++){
+                table += "<td >" +array[i][j]+ "</td>";
+            }
+            table+= "</tr>";
+        }
+        table += "</table>";
+        console.log(table)
+        document.getElementById("table").innerHTML=table;
+    }
+    displayTable()
+</script>
+</body>
+</html>

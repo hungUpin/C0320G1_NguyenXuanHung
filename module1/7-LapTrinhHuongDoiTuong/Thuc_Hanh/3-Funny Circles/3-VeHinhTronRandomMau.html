@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vẽ hình tòn Random màu</title>
+</head>
+<body>
+<canvas id="myCanvas" width="800px" height="500px" style="border: 1px;solid-color: #2196F3"></canvas>
+<script>
+    function Circle(x,y,radius) {
+        this.x =x;
+        this.y = y;
+        this.radius = radius;
+    }
+    function getRandomHex() {
+        return Math.floor(Math.random()*255);
+    }
+    function getRandomColor() {
+        let red = getRandomHex();
+        let green = getRandomHex();
+        let blue = getRandomHex();
+        return "rgb(" +red +"," +green +"," +blue +")";
+
+    }
+    function createCircle() {
+        let ctx = document.getElementById("myCanvas").getContext("2d");
+        let circle = new Circle(100,100,90);
+        ctx.beginPath();
+        ctx.arc(circle.x,circle.y,circle.radius,0,Math.PI*2);
+        let color = getRandomColor();
+        ctx.fillStyle = color;
+        ctx.fill();
+    }
+    createCircle();
+</script>
+</body>
+</html>

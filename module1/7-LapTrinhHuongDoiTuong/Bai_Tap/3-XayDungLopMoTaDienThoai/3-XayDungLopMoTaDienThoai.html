@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả điện thoại</title>
+</head>
+<body>
+<script>
+    let space = "";
+
+    class Mobile {
+        constructor(mobileStatus, batterry, name) {
+            this.batterry = batterry;
+            this.mobileStatus = mobileStatus;
+            this.send = [];
+            this.receive = [];
+            this.writing = [];
+            this.name = name;
+        }
+
+        checkStatus() {
+            if (this.mobileStatus === true && this.batterry > 0) {
+                return true;
+            } else if (this.mobileStatus === false || this.batterry === 0) {
+                alert("Phone is off.Please turn on the phone");
+                return false;
+            }
+
+        }
+
+        onOrOffMobile() {
+            if (this.checkStatus()) {
+                this.mobileStatus = false;
+            } else {
+                this.mobileStatus = true;
+            }
+            this.batterry--;
+        }
+
+        setStatus(status) {
+            if (this.batterry === 0 && this.mobileStatus) {
+                this.mobileStatus = false;
+            } else {
+                this.mobileStatus = status;
+            }
+        }
+
+        chargePhone() {
+            if (this.batterry < 5) {
+                alert("Low battery. Please charge your phone!!!");
+                while (this.batterry <= 100) {
+                    this.batterry += 0.001;
+                }
+            }
+        }
+
+        writeSms() {
+            if (this.checkStatus()) {
+                this.chargePhone();
+                let sms = prompt("Input your sms: ");
+                this.writing.push(sms);
+                this.batterry--;
+            }
+        }
+
+        displaySms() {
+            if (this.checkStatus()) {
+                this.chargePhone();
+                let temp = [];
+                let tempSms = "";
+                // hiển thị ra danh sách số mobile đã gửi tin nhắn đến điện thoại này?
+                for (let i = 0; i < this.receive.length; i++) {
+                    let flag = false;
+                    for (let j = 0; j < this.receive[i].length; j++) {
+                        if (this.receive[i].charAt(j) === ":") {
+                            let tempSentPerson = "";
+                            for (let k = j+1; k < this.receive[i].length; k++) {
+                                if (this.receive[i].charAt(k) === ".") {
+                                    temp.push(tempSentPerson);
+                                    flag = true;
+                                    break;
+                                } else {
+                                    tempSentPerson += this.receive[i].charAt(k)
+                                }
+                            }
+                            //Kiểm tra biến check có biến true. Nếu như là true thì break vòng lặp 2 để kiểm tra tin nhắn tiếp theo trong vùng nhớ hộp thư đến
+                            if (flag) {
+                                break;
+                           }
+                        }
+                    }
+                }
+                // Hiển thị danh sách các tin nhắn được gửi tới từ điện thoại nào?
+                for (let i = 0; i < temp.length; i++) {
+                    tempSms += i + ": " + temp[i] + "\n";
+                }
+                let index = parseInt(prompt("Please input the message want to see: \n" + tempSms));
+                alert(this.receive[index]);
+                this.batterry--;
+
+            }
+        }
+
+        sendSms(mobile) {
+            if (this.checkStatus()) {
+                this.chargePhone();
+                if (this.writing.length === 0) {
+                    this.writeSms();
+                    mobile.receive.push("Người gửi: " + this.name + "." + this.writing[0]);
+                    this.send.push("Gửi đến:" + mobile.name + "." + this.writing[0]);
+                    this.writing.splice(0, 1);
+                } else {
+                    //tương tự như trên nhưng trước khi gửi sẽ cho phép người dùng lựa chọn tin nhắn ở vùng nhớ đang soạn thảo để gửi đi
+                    let temp = "";
+                    for (let i = 0; i < this.writing.length; i++) {
+                        temp += i + ":" + this.writing[i] + "\n";
+                    }
+                    let index = parseInt(prompt("Please input the message wanted to send: \n" + temp));
+                    mobile.receive.push("Người gửi: " + this.name + "." + this.writing[index]);
+                    this.send.push("Gửi đến:" + mobile.name + "." + this.writing[index]);
+                    this.writing.splice(index, 1);
+                }
+                this.batterry--;
+            }
+        }
+
+        displaySentSms() {
+            let temp = [];
+            let temp2="";
+            for (let i = 0; i < this.send.length; i++) {
+                for (let j = 0; j < this.send[i].length; j++) {
+                    let flag = false;
+                    if (this.send[i].charAt(j) === ":") {
+                        let tempReceivePerson = "";
+                        for (let k = j+1; k < this.send[i].length; k++) {
+                            if (this.send[i].charAt(k) === ".") {
+                                flag = true;
+                                temp.push(tempReceivePerson);
+                                break;
+                            } else {
+                                tempReceivePerson+= this.send[i].charAt(k);
+                            }
+                        }
+                        if(flag){
+                            break;
+                        }
+                    }
+                }
+            }
+            for (let i = 0; i < temp.length; i++) {
+                temp2 += i + ": " + temp[i] + "\n";
+            }
+            let index = parseInt(prompt("Please input message want to read: \n" +temp2));
+            alert(this.send[index]);
+            this.batterry--;
+
+        }
+    }
+
+
+    let iphone = new Mobile(true, 80, "iphone");
+    let nokia = new Mobile(true, 50, "nokia");
+    iphone.sendSms(nokia);
+    nokia.displaySms();
+    iphone.displaySentSms();
+
+</script>
+</body>
+</html>

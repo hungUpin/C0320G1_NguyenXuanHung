@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yêu cầu 04</title>
+</head>
+<body>
+<script>
+    let arrNameCustomers = [];
+
+    while (1) {
+        let choose = parseInt(prompt("Please input function: \n" +
+            "1.Add name customer \n" +
+            "2.Delete customer: \n"));
+        switch (choose) {
+            case 1:
+                let customerNumber = parseInt(prompt("Please input the amount of customer to add:"));
+                for (let i = 0; i < customerNumber; i++) {
+                    arrNameCustomers[i] = prompt("Please input customer " + (i + 1));
+                }
+                break;
+            case 2:
+                let flag=false;
+                let deleteCustomer = prompt("Please input customer that you want to delete: \n" + arrNameCustomers);
+                for (let i = 0; i < arrNameCustomers.length; i++) {
+                    if (deleteCustomer === arrNameCustomers[i]) {
+                        arrNameCustomers[i] = arrNameCustomers[i + 1];
+                        arrNameCustomers.pop();
+                        flag = true;
+                        break;
+                    }
+                    if(!flag){
+                        alert("Name is not existed!!!");
+                    }
+                }
+                arrNameCustomers = arrNameCustomers.sort(function (s, t) {
+                    let a = s.toLowerCase();
+                    let b = t.toLowerCase();
+                    if (a > b) return 1;
+                    if (a < b) return -1;
+                    return 0;
+                })
+                alert("The list of customer: " + arrNameCustomers);
+                break;
+            default:
+                alert("Please input function existed" +
+                    "!!!");
+        }
+    }
+</script>
+</body>
+</html>

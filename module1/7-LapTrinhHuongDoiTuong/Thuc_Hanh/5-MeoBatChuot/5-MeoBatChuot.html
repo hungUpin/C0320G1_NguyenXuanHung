@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mèo bắt chuột</title>
+</head>
+<body>
+<script>
+    class Rat{
+        constructor(name,weight,speed,status) {
+            this.name = name;
+            this.weight = weight;
+            this.speed = speed;
+            this.status = status;
+        }
+        speak(a){
+            alert(a);
+        }
+        setStatus(a){
+            if(a){
+                this.status = true;
+            }else {
+                this.status = false;
+            }
+        }
+        getStatus(){
+            return this.status;
+        }
+    }
+    class Cat{
+        constructor(name,weight,maxSpeed) {
+            this.name = name;
+            this.weight = weight;
+            this.maxSpeed = maxSpeed;
+        }
+        speak(a){
+            alert(a);
+        }
+        catchRat(rat){
+            if(this.maxSpeed>rat.speed){
+                return true;
+            } else {
+                alert("Speed is not enough to catch rat!!!")
+                return false;
+            }
+        }
+        eatRat(rat){
+            if(rat.getStatus()) {
+                if (this.catchRat(rat)) {
+                    rat.setStatus(false);
+                    this.weight += rat.weight;
+                    rat.weight=0;
+                    rat.setStatus(false);
+                }
+            } else {
+                alert("rat is dead!!!");
+            }
+        }
+
+    }
+    rat = new Rat("jerry",3,10,true);
+    cat = new Cat("Tom",10,15);
+    cat.catchRat(rat);
+    cat.eatRat(rat);
+    alert("Cat weight: "+cat.weight);
+    alert("rat weight: " +rat.weight);
+
+</script>
+</body>
+</html>

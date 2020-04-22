@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả Hình chữ nhật</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1300px" height="850px" style="border: 1px; solid-color: #2196F3"></canvas>
+<script>
+    function Rectangle(x,y) {
+        this.x = x;
+        this.y = y;
+        this.chieuDai = function () {
+            return x;
+        }
+        this.chieuRong = function () {
+            return y;
+        }
+        this.dienTich = function () {
+            return x*y;
+        }
+        this.chuVi = function () {
+            return (x+y)*2;
+        }
+    }
+    let hcn = new Rectangle(20,10);
+    //alert("Chiều dài là: " +hcn.chieuDai() +", chiều rộng là: " +hcn.chieuRong());
+    //alert("Diện tích là: " +hcn.dienTich() +", Chu vi là: " +hcn.chuVi());
+    function drawRectangle() {
+        let rectangle = new Rectangle(100,50);
+        let ctx = document.getElementById("myCanvas").getContext("2d");
+        ctx.beginPath();
+        ctx.rect(100,100,rectangle.x,rectangle.y);
+        ctx.fill();
+    }
+    drawRectangle();
+</script>
+</body>
+</html>

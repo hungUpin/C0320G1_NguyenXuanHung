@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adam và eva</title>
+</head>
+<body>
+<script>
+    class Apple{
+        constructor() {
+            let weight =10;
+            this.weight = weight;
+        }
+        decrease(){
+            if(!this.isEmpty()){
+                this.weight--;
+            } else {
+                alert("Apple is empty!!!")
+            }
+        }
+        isEmpty(){
+            if(this.weight===0){
+                return true;
+            } else {
+                return false;
+            }
+        }
+        getWeight(){
+            return this.weight
+        }
+    }
+    class Human{
+        constructor(name,gender,weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+        isMale(){
+            if(this.gender==="Male"){
+                return true;
+            } else {
+                return false
+            }
+        }
+        setGender(temp){
+            this.gender = temp
+        }
+        checkApple(Apple){
+            this.Apple = Apple;
+            if(this.Apple.isEmpty()){
+                return false
+            } else {
+                return true;
+            }
+        }
+        eat(Apple){
+            this.Apple = Apple;
+            this.weight++;
+            this.Apple.decrease();
+        }
+        say(a){
+            alert(a);
+        }
+        getName(){
+            return this.name;
+        }
+        setName(){
+            this.name = a;
+        }
+        getWeight(){
+            return this.weight;
+        }
+        setWeight(a){
+            this.weight = a;
+        }
+    }
+    Adam = new Human("Adam","Male",65);
+    Eva = new Human("Eva","Female",50);
+    apple = new Apple();
+    while (!apple.isEmpty()){
+        Adam.eat(apple);
+        Eva.eat(apple);
+        alert("Adam weight: "+Adam.getWeight());
+        alert("Eva weight: "+Eva.getWeight());
+        alert("Apple weight: "+apple.getWeight());
+    }
+</script>
+</body>
+</html>
