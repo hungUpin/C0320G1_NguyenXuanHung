@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra chữ in hoa đầu tiên</title>
+</head>
+<body>
+<script>
+    let regexp = /^[A-Z]/;
+    let str = prompt("Please input the string to test ");
+    if(regexp.test(str)){
+        alert("String's first character is UpperCase!!!");
+    } else {
+        alert("String's first character is LowerCase!!!");
+    }
+</script>
+</body>
+</html>

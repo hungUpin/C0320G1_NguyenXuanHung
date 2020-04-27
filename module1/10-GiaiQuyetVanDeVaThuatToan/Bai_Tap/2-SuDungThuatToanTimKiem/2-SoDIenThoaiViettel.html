@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Số điện thoại Viettel</title>
+</head>
+<body>
+<script>
+    let phoneNumber=["0905123456","0962456789","0978123456","0983456123","0708973215"];
+    function checkViettel(phone){
+        let regexp = /^(096|097|098)[0-9]{7}$/;
+        if(regexp.test(phone)){
+            return true;
+        } else {
+            return false;
+        }
+    }
+    let temp ="";
+    for(let i=0;i<phoneNumber.length;i++){
+        if(checkViettel(phoneNumber[i])){
+            temp += phoneNumber[i] + " ";
+        }
+    }
+    alert("Số điện thoại Viettel là: "+temp)
+
+
+</script>
+</body>
+</html>

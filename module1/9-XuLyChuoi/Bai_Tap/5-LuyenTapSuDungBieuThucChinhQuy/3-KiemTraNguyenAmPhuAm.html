@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra nguyên âm phụ âm</title>
+</head>
+<body>
+<script>
+    let countNguyenAm =0;
+    let countPhuAm = 0;
+    hEllo cOdegym
+    function checkNguyenAmPhuAm(str) {
+        let nguyenAm = /^[aAeEoOiIuU]$/;
+        let phuAm = /^[bBcCdDfFgGHhjJkKlLmMnNpPqQrRsStTvVwWxXyYzZ]$/;
+        if(nguyenAm.test(str)){
+            countNguyenAm++;
+        }
+        if(phuAm.test(str)){
+            countPhuAm++;
+        }
+    }
+    let str = prompt("Mời bạn nhập chuỗi để test: ");
+    for(let i=0;i<str.length;i++){
+        checkNguyenAmPhuAm(str.charAt(i));
+    }
+    console.log("So luong nguyen am: "+ countNguyenAm);
+    console.log("So luong phu am: "+ countPhuAm);
+</script>
+</body>
+</html>

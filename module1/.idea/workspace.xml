@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa7c5cc-aa32-4493-bd26-5f47cddd4ffd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/1-NhapMonLapTrinhCoBan/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/1-NhapMonLapTrinhCoBan/test.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4-CauTrucLap/BaiTap/4-LuyenTapVongLap02/Bai03.html" beforeDir="false" afterPath="$PROJECT_DIR$/4-CauTrucLap/BaiTap/4-LuyenTapVongLap02/Bai03.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/6-Ham/Bai_Tap/5-UngDungQuanLySanPham/5-UngDungQuanLySanPham.html" beforeDir="false" afterPath="$PROJECT_DIR$/6-Ham/Bai_Tap/5-UngDungQuanLySanPham/5-UngDungQuanLySanPham.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/6-Ham/Bai_Tap/6-KiemTraTinhDoiXung/6-KiemTraTinhDoiXung.html" beforeDir="false" afterPath="$PROJECT_DIR$/6-Ham/Bai_Tap/6-KiemTraTinhDoiXung/6-KiemTraTinhDoiXung.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaseStudy/3-YeuCau03/1-Task01.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/10-GiaiQuyetVanDeVaThuatToan/Bai_Tap/3-Debug/debug/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/10-GiaiQuyetVanDeVaThuatToan/Bai_Tap/3-Debug/debug/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/7-LapTrinhHuongDoiTuong/Thuc_Hanh/5-MeoBatChuot/5-MeoBatChuot.html" beforeDir="false" afterPath="$PROJECT_DIR$/8-LapTrinhHuongDoiTuong02/Bai_Tap/5-MeoBatChuot/5-MeoBatChuot.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/7-LapTrinhHuongDoiTuong/Thuc_Hanh/6-RemoteDieuKhienTivi/6-Remote.html" beforeDir="false" afterPath="$PROJECT_DIR$/8-LapTrinhHuongDoiTuong02/Bai_Tap/6-RemoteDieuKhienTivi/6-Remote.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/8-LapTrinhHuongDoiTuong02/Bai_Tap/4-Caro/Caro.html" beforeDir="false" afterPath="$PROJECT_DIR$/8-LapTrinhHuongDoiTuong02/Bai_Tap/4-Caro/Caro.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaseStudy/3-YeuCau03/1-Task01-02.html" beforeDir="false" afterPath="$PROJECT_DIR$/CaseStudy/3-YeuCau03/1-Task01-02.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +40,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/1-NhapMonLapTrinhCoBan" />
+    <property name="last_opened_file_path" value="E:/example/test/C0220G1-TranChiHieu/Module1/CaseStudy/6-YeuCau6/YeuCau6_huongdoituong.html" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
@@ -46,11 +48,11 @@
       <recent name="E:\C0320G1_NguyenXuanHung\module1\1-NhapMonLapTrinhCoBan" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\C0320G1_NguyenXuanHung\module1\8-LapTrinhHuongDoiTuong02\Bai_Tap" />
+      <recent name="E:\C0320G1_NguyenXuanHung\module1\7-LapTrinhHuongDoiTuong\Thuc_Hanh" />
       <recent name="E:\C0320G1_NguyenXuanHung\module1\8-LapTrinhHuongDoiTuong02\Thuc_Hanh" />
       <recent name="E:\C0320G1_NguyenXuanHung\module1\7-LapTrinhHuongDoiTuong\Bai_Tap\4-PhatTrienGameLaiXe" />
       <recent name="E:\C0320G1_NguyenXuanHung\module1\6-Ham\Bai_Tap\4-LuyenTapVaSuDungHam02" />
-      <recent name="E:\C0320G1_NguyenXuanHung\module1\6-Ham\Bai_Tap" />
-      <recent name="E:\C0320G1_NguyenXuanHung\module1\5-Mang\Bai_Tap\3-TicTacToe" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.FakingTaxtArea.html">
@@ -141,6 +143,12 @@
       <workItem from="1587390057513" duration="2058000" />
       <workItem from="1587432141568" duration="19258000" />
       <workItem from="1587480726062" duration="999000" />
+      <workItem from="1587519096275" duration="21699000" />
+      <workItem from="1587605218167" duration="14522000" />
+      <workItem from="1587690456174" duration="19179000" />
+      <workItem from="1587739563088" duration="506000" />
+      <workItem from="1587870141601" duration="13401000" />
+      <workItem from="1587950300366" duration="1693000" />
     </task>
     <servers />
   </component>
@@ -152,10 +160,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="423" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1586058527046" />
-    <state x="463" y="120" key="FileChooserDialogImpl" timestamp="1587443630415">
+    <state x="463" y="120" key="FileChooserDialogImpl" timestamp="1587891433948">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="120" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1587443630415" />
+    <state x="463" y="120" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1587891433948" />
     <state width="1344" height="216" key="GridCell.Tab.0.bottom" timestamp="1586597431386">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -228,13 +236,13 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="251" y="89" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1366.728@0.0.1366.728" timestamp="1586263417851" />
-    <state x="339" y="157" key="run.anything.popup" timestamp="1587377128034">
+    <state x="339" y="157" key="run.anything.popup" timestamp="1587699736889">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1587377128034" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1587022589909">
+    <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1587699736889" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1587875139439">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1587022589909" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1587875139439" />
   </component>
 </project>

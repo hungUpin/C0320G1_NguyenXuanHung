@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng QLSP</title>
+</head>
+<body onload="displayProducts()">
+<h2>Add new product</h2>
+<input type="text" id ="product" style="width: 200px;height: 40px" placeholder="New Product"> &nbsp;
+<button type="button"  style="background-color: green;width: 70px;height: 40px;border-radius: 10%" onclick="addProduct()">ADD</button>
+<br>
+<h2>Display all products</h2>
+<p id = "result"></p>
+<p id="table"></p>
+</body>
+<script>
+    let arr = ["Nokia", "SamSung", "Iphone", "BlackBerry", "Xiaomi"];
+
+    function displayProducts() {
+        let result = "<table><tr><td><b>Product Name</b></td><td style='width: 330px;text-align: right'>"+arr.length+" products</td></tr>"
+        let tab = "<table border='1' cellspacing='0' cellpadding='3'>";
+        for (let i = 0; i < arr.length; i++) {
+            tab += "<tr><td style='width: 30px;text-align: center'>" + (i + 1) + "</td><td style='width: 60%;text-align: center'>" + arr[i] + "</td>"
+                + "<td style='width: 50px;text-align: center'>" +
+                "<button type='button' style='background-color: green;border-radius: 10%;' onclick='editProduct(" +i +")'>Edit</button></td>"
+                + "<td style='width: 70px;text-align: center'>" +
+                "<button type='button'style='background-color: green;border-radius: 10%;' onclick='deleteProduct(" + i + ")'>Delete</button></td>" + "</tr>";
+        }
+        tab += "</table>";
+        document.getElementById("result").innerHTML = result;
+        document.getElementById("table").innerHTML = tab;
+    }
+
+    function addProduct() {
+        let product = document.getElementById("product");
+        arr.push(product.value);
+        alert("Add: " + product.value + " successfully!!!");
+        product.value = "";
+        displayProducts();
+    }
+    function editProduct(num) {
+        arr[num] = prompt("Change name "+arr[num]+" to: ");
+        displayProducts();
+    }
+    function deleteProduct(num) {
+        let a = confirm("Do you want to delete "+arr[num]+" ???");
+        if(a) {
+            arr.splice(num, 1);
+            alert("Delete successfully !!! ");
+        }
+        displayProducts();
+    }
+</script>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm số từ trong một chuỗi</title>
+</head>
+<body>
+<script>
+    function isCharacter(char){
+        let regexp = /^[a-zA-z]$/;
+        if(regexp.test(char)){
+            return true;
+        } else {
+            return false;
+        }
+    }
+    let str = prompt("Mời bạn nhập chuỗi ");
+    let count = 0;
+    for(let i=0;i<str.length;i++){
+        if(isCharacter(str[i])){
+            count++;
+        }
+    }
+    alert("Số từ trong chuỗi "+str +" là: " +count);
+</script>
+</body>
+</html>

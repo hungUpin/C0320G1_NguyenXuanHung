@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Làm việc với Date</title>
+</head>
+<body>
+<script>
+    let myDate = new Date(2005,7,15,7,30,30);
+    let year = new Date().getFullYear();
+    year = year-myDate.getFullYear();
+    let month = year*12;
+    let day = month*30;
+    let hours = day*24;
+    let minutes = hours*60;
+    let seconds = minutes*60;
+
+
+    console.log("Tôi đã sống " +year +" năm");
+    console.log("Tôi đã sống " +month +" tháng");
+    console.log("Tôi đã sống " +day +" ngày");
+    console.log("Tôi đã sống " +(hours) +" giờ");
+    console.log("Tôi đã sống " +(minutes) +" phút");
+    console.log("Tôi đã sống " +(seconds) +" giây");
+
+</script>
+</body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yêu cầu 05 - Hàm</title>
+</head>
+<body>
+<script>
+    let name;
+    let id;
+    let dayOfBirth;
+    let email;
+    let address;
+    let typeOfCustomer;
+    let discount;
+    let amountOfPeople;
+    let rentDays;
+    let typeOfService ;
+    let typeOfRoom;
+    let arrListCustomers =[];
+    arrListCustomers[0] = ["hello","123456798","18/05/2003","abc@gmail.com","Đà Nẵng","Diamond", "10", "20", "15", "Villa", "Vip"];
+    let arrCustomer = [];
+    let flag = false;
+    let temp = "";
+
+    function displayMainMenu() {
+        while (true) {
+            let choose = parseInt(prompt("Please input the function you want: \n" +
+                "1. Add New Customer \n" +
+                "2. Display Information Customer \n" +
+                "3. Edit Information Customer \n" +
+                "4. Delete Customer \n" +
+                "5. Exit"));
+            switch (choose) {
+                case 1:
+                    addNewCustomer();
+                    break;
+                case 2:
+                    displayCustomers();
+                    break;
+                case 3:
+                    editCustomer();
+                    break;
+                case 4:
+                    deleteCustomer();
+                    break;
+                case 5:
+                    break;
+                default:
+                    alert("Please select function existed in the menu!!!");
+            }
+            if(choose === 5){
+                break;
+            }
+        }
+    }
+    function  addNewCustomer() {
+
+                do{
+                    flag = false;
+                    name = prompt("Please input customer name: ").trim();
+                    for( let i = 0;i<name.length;i++){
+                        if(name[i]===" "&&name[i+1]===" "){
+                        } else {
+                            if(i===0){
+                                temp += name[i].toUpperCase();
+                            } else if(name[i-1] === " "){
+                                temp += name[i].toUpperCase();
+                            } else {
+                                temp+= name[i].toLowerCase();
+                            }
+                        }
+                    }
+                    name =temp;
+                    if(name!==" "){
+                        alert("Customer Name:" +name);
+                        arrCustomer.push(name);
+                        flag = true;
+                    }else{
+                        alert("Invalid name!!!");
+                    }
+
+                }while (!flag);
+                flag = false;
+                temp = "";
+                do{
+                    id = prompt("Please input customer's Id number: ");
+                    if(!isNaN(id)){
+                        if(Number.isInteger(parseFloat(id))){
+                            if(id<999999999&&id>=100000000){
+                                alert("Customer Id:" +id );
+                                arrCustomer.push(id);
+                                flag = true;
+                            }
+                        }
+                    }
+                    if(!flag){
+                        alert("Invalid customer id!!!");
+                    }
+                } while (!flag);
+                flag = false;
+
+                do {
+                    let nowYear = new Date();
+                    dayOfBirth = prompt("Please input day of birth (dd/mm/yyyy)").trim();
+                    let day = dayOfBirth.substring(0, 2);
+                    let month = dayOfBirth.substring(3, 5);
+                    let year = dayOfBirth.substring(6, 10);
+                    if (dayOfBirth.substring(2,3)==="/"&&dayOfBirth.substring(5,6)==="/") {
+                        if (day > 0 && day <= 31) {
+                            if (month > 0 && month <= 12) {
+                                if (year >= 1900 && year <= nowYear.getFullYear()) {
+                                    alert("Customer day of birth: " + dayOfBirth);
+                                    arrCustomer.push(dayOfBirth);
+                                    flag = true;
+                                }
+                            }
+                        }
+                    }
+                    if(!flag){
+                        alert("Invalid day of birth");
+                    }
+                }while (!flag);
+                flag = false;
+                temp = "";
+                do{
+                    email = prompt("Please input your email: abc@abc.com");
+                    let test = /^([a-zA-Z0-9\_\.\-])+\@([a-zA-Z0-9\-\_])+\.([a-zA-Z0-9]){2,5}$/;
+                    if(test.test(email)){
+                        alert("Email: "+email);
+                        arrCustomer.push(email);
+                        flag = true;
+                    } else {
+                        alert("Invalid email");
+                    }
+                }while (!flag);
+                flag=false;
+                do{
+                    address = prompt("Please input the address: ").trim();
+                    for(let i=0; i<address.length;i++){
+                        if(address[i]===" "&& address[i+1]===" "){
+                            continue;
+                        } else {
+                            if(address[i]==0){
+                                temp += address[i].toUpperCase();
+                            } else if(address[i-1]=== " "){
+                                temp += address[i].toUpperCase();
+                            } else {
+                                temp += address[i].toLowerCase();
+                            }
+                        }
+                    }
+                    address = temp;
+                    if(address!==" "){
+                        alert("Address: "+address);
+                        flag = true;
+                    } else {
+                        alert("Invalid address!!!");
+                    }
+
+                } while (!flag);
+                flag = false;
+                temp= "";
+                do{
+                    typeOfCustomer =prompt("Please input type of customer (Diamond, Platinum, Gold, Silver, Member)");
+                    let regex = /^([a-zA-Z])+$/;
+                    if (typeOfCustomer.match(regex)) {
+                        for (let i = 0; i < typeOfCustomer.length; i++) {
+                            if (typeOfCustomer[i] === " " && typeOfCustomer[i + 1] === " ") {
+
+                            } else {
+                                if (i === 0) {
+                                    temp += typeOfCustomer[i].toUpperCase();
+                                } else if (typeOfCustomer[i - 1] === " ") {
+                                    temp += typeOfCustomer[i].toUpperCase();
+                                } else {
+                                    temp += typeOfCustomer[i].toLowerCase();
+                                }
+                            }
+                        }
+                    }
+
+                    typeOfCustomer = temp;
+                    if(typeOfCustomer!==" "){
+                        alert("Type of customer:" +typeOfCustomer );
+                        flag = true;
+                        arrCustomer.push(typeOfCustomer);
+                    }
+                } while (!flag);
+                flag = false;
+                temp = "";
+                do{
+                    discount = prompt("Please input discount: ");
+                    if(!isNaN(discount)){
+                        if(Number.isInteger(parseFloat(discount))){
+                            alert("Discount: " +discount);
+                            flag = true;
+                            arrCustomer.push(discount);
+                        }
+                    }
+                    if(!flag){
+                        alert("Invalid discount!!!");
+                    }
+                }while (!flag);
+                flag = false;
+                do{
+                    amountOfPeople = prompt("Please input amount of people: ");
+                    if(!isNaN(amountOfPeople)){
+                        if(Number.isInteger(parseFloat(amountOfPeople))){
+                            alert("Amount of people: " +amountOfPeople);
+                            arrCustomer.push(amountOfPeople);
+                            flag = true;
+                        }
+                    }
+                }while (!flag);
+                flag = false;
+                do{
+                    rentDays = prompt("Please input rent days: " );
+                    if(!isNaN(rentDays)){
+                        if(Number.isInteger(parseFloat(rentDays))){
+                            alert("RentDays: " +rentDays);
+                            arrCustomer.push(rentDays);
+                            flag = true;
+                        }
+                    }
+                }while (!flag);
+                flag = false;
+                do{
+                    typeOfService = prompt("Please input type of service (Villa, House, Room)").trim();
+                    let regex = /^([a-zA-Z])+$/;
+                    if(regex.test(typeOfService)){
+                        if(typeOfService==="Villa"||typeOfService==="House"||typeOfService==="Room") {
+                            alert("Type of service: " + typeOfService);
+                            flag = true;
+                            arrCustomer.push(typeOfService);
+                        }
+                    }
+                    if(!flag){
+                        alert("Invalid type of service!!!");
+                    }
+                } while (!flag);
+                flag = false;
+                do{
+                    typeOfRoom = prompt("Please input type of room (Vip, Business,  Normal)").trim();
+                    let regex = /^([a-zA-Z])+$/;
+                    if(typeOfRoom.match(regex)){
+                        if(typeOfRoom==="Vip"||typeOfRoom==="Business"||typeOfRoom==="Normal"){
+                            alert("Type of room: " +typeOfRoom);
+                            flag=true;
+                            arrCustomer.push(typeOfRoom);
+                        }
+                    }
+                    if(!flag){
+                        alert("Invalid type of room!!!");
+                    }
+                } while (!flag);
+                arrListCustomers.push(arrCustomer);
+
+    }
+    function displayCustomers(){
+            let temp = "";
+            for(let i=0;i<arrListCustomers.length;i++){
+                temp += i +". " +arrListCustomers[i] +"\n";
+            }
+            alert("Customer Information: \n" + temp);
+    }
+    function editCustomer(){
+        temp = "";
+        let temp2 = "";
+        for(let i=0;i<arrListCustomers.length;i++){
+            temp += i +". " +arrListCustomers[i][0] +"\n";
+        }
+        let choose = parseInt(prompt("Please select customer to edit: \n" +temp));
+        for(let i=0;i<arrListCustomers[choose].length;i++){
+            temp2 += i +". " +arrListCustomers[choose][i] +"\n";
+        }
+        let choose2 = parseInt(prompt("Please input the value to edit: \n" +temp2));
+        //["hello","123456798","18/05/2003","abc@gmail.com","Đà Nẵng","Diamond", "10", "20", "15", "Villa", "Vip"]
+        switch (choose2) {
+            case 0:
+                arrListCustomers[choose][0] = prompt("Input name: ");
+                break;
+            case 1:
+                arrListCustomers[choose][1] = prompt("Input Id: ");
+                break;
+            case 2:
+                arrListCustomers[choose][2] = prompt("Input day of birth ");
+                break;
+            case 3:
+                arrListCustomers[choose][3] = prompt("Input email: ");
+                break;
+            case 4:
+                arrListCustomers[choose][4]= prompt("Input address: ");
+                break;
+            case 5:
+                arrListCustomers[choose][5] = prompt("Input type of customer: Diamond, Platinum, Gold, Silver, Member ");
+                break;
+            case 6:
+                arrListCustomers[choose][6] = prompt("Input discount:");
+                break;
+            case 7:
+                arrListCustomers[choose][7] = prompt("Input the number of people");
+                break;
+            case 8:
+                arrListCustomers[choose][8] = prompt("Input rent day: ");
+                break;
+            case 9:
+                arrListCustomers[choose][9] = prompt("Input type of service: Villa, House, Room");
+                break;
+            case 10:
+                arrListCustomers[choose][10] = prompt("Input type of room: Vip, Business, Normal");
+                break;
+            default:
+                alert("Failed!!!");
+                break;
+        }
+        alert("The information of customer after edited: \n" +arrListCustomers[choose]);
+
+    }
+    function deleteCustomer(){
+        temp = "";
+        for(let i=0;i<arrListCustomers.length;i++){
+            temp += i +". " +arrListCustomers[i][0] + "\n";
+        }
+        let choose = parseInt(prompt("Please select customer to delete: \n" +temp));
+        arrListCustomers.splice(choose,1);
+        alert("The list of customer after deleted: \n" +arrListCustomers);
+    }
+    displayMainMenu();
+</script>
+</body>
+</html>

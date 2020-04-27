@@ -4,66 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .cssBoard {
+            width: 10px;
+            height: 10px;
+        }
+    </style>
 </head>
-<img id="hero" style="width: 30px; height: 30px;position: absolute;" src="">
-<body onload="init()">
+<body>
 <script>
-    class Hero {
-        constructor(srcImage, speed, left, top) {
-            this.srcImage = srcImage;
-            this.speed = speed;
-            this.left = left;
-            this.top = top;
-            document.getElementById("hero").src=this.srcImage;
-            document.getElementById("hero").style.left=this.left +"px";
-            document.getElementById("hero").style.top=this.top +"px";
-            document.getElementById("hero").style.position="absolute";
+    class Board {
+        constructor(col, row) {
+            this.col = col;
+            this.row = row;
+            this.board = [];
+            this.initBoard();
         }
-        moveRight() {
-            this.left += 20;
-            document.getElementById("hero").style.left=this.left+"px";
+        initBoard() {
+            for (let i = 0; i < this.row; i++) {
+                this.board[i] = new Array();
+                for (let j = 0; j < this.row; j++) {
+                    this.board[i][j] = ""
+                }
+            }
         }
-        moveDown() {
-            this.top += 20;
-            document.getElementById("hero").style.top=this.top+"px"
+        draw() {
+            let temp = "<table border= 1>"
+            for (let i = 0; i < this.row; i++) {
+                temp += "<tr>"
+                for (let j = 0; j < this.row; j++) {
+                    temp += "<td style='height:30px;width:30px; text-align: center;' onclick='play(" + i + "," + j + ")'>" + this.board[i][j] + "</td>"
+                }
+                temp += "</tr>"
+            }
+            temp += "</table>"
+            return temp;
         }
-        moveTop() {
-            this.top -= 20;
-            document.getElementById("hero").style.top=this.top+"px";
+        playGame(i, j, char) {
+            this.board[i][j] = char;
+            document.body.innerHTML = ""
+            document.write(this.draw());
+            this.checkWin(char);
         }
-        moveLeft() {
-            this.left -= 20;
-            document.getElementById("hero").style.left=this.left+"px";
+        checkWin(char) {
+            let check = false;
+            for (let i = 0; i < this.row; i++) {
+                for (let j = 0; j < this.row; j++) {
+                    if (this.board[i][j] === char && this.board[i][j + 1] === char && this.board[i][j + 2] === char) {
+                        check = true;
+                    }
+                    if (this.board[i][j] === char && this.board[i + 1][j] === char && this.board[i + 2][j] === char) {
+                        check = true;
+                    }
+                    if (this.board[i][j] === char && this.board[i + 1][j + 1] === char && this.board[i + 2][j + 2] === char) {
+                        check = true;
+                    }
+                    if (this.board[i][j] === char && this.board[i - 1][j - 1] === char && this.board[i - 2][j - 2] === char) {
+                        check = true;
+                    }
+                }
+            }
+            if (check) {
+                alert("Bạn " + char + " đã thắng")
+                this.initBoard();
+                this.draw();
+            }
         }
     }
-    let hero;
-    function init() {
-        hero = new Hero("pikachu.png", 50, 0, 0);
-        window.addEventListener("keydown", move)
-    }
-    function move(evt) {
-
-        switch (evt.keyCode) {
-            case 38: {
-                hero.moveTop();
-                break;
+    let count = 0;
+    let banCo = new Board(10, 10);
+    document.write(banCo.draw())
+    function play(i, j) {
+        if (banCo.board[i][j] != "X" && banCo.board[i][j] != "O") {
+            if (count % 2 === 0) {
+                banCo.playGame(i, j, "X");
+            } else {
+                banCo.playGame(i, j, "O")
             }
-            case 37: {
-                hero.moveLeft();
-                break;
-            }
-            case 39: {
-                hero.moveRight();
-                break;
-            }
-            case 40: {
-                hero.moveDown();
-                break;
-            }
+            count++
+        } else {
+            alert("Ô này đã được đánh. Yêu cầu bạn đánh ô khác.")
         }
     }
 </script>
 </body>
 </html>
-
-

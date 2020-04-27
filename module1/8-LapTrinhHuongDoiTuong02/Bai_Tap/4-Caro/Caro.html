@@ -5,29 +5,80 @@
     <title>Caro</title>
 </head>
 <body>
-<div id="table"></div>
 <script>
-    let array =[];
-    for(let i=0;i<20;i++){
-        for(let j=0;j<20;j++){
-            array[i][j] = "&nbsp;&nbsp";
+    class Board{
+        constructor(col,row) {
+            this.col = col;
+            this.row = row;
+            this.board = [];
+            this.initBoard();
         }
-    }
-    alert(array)
-    function displayTable() {
-        let table= "<table style='text-align:center;border:1px;position: absolute' cellpadding='10' cellspacing='0'>";
-        for(let i=0;i<20;i++){
-            table+= "<tr>";
-            for(let j=0;j<20;j++){
-                table += "<td >" +array[i][j]+ "</td>";
+        initBoard(){
+            for(let i=0; i<this.row;i++){
+                this.board[i] = [];
+                for(let j=0;j<this.col;j++){
+                    this.board[i][j]="";
+                }
             }
-            table+= "</tr>";
         }
-        table += "</table>";
-        console.log(table)
-        document.getElementById("table").innerHTML=table;
+        drawBoard(){
+            let caro = "<table border='1' cellspacing='0' cellpadding='3'>";
+            for(let i =0;i<this.row;i++){
+                caro += "<tr>";
+                for(let j=0;j<this.col;j++){
+                    caro += "<td style='width: 30px;height: 30px;text-align: center;background-color: deepskyblue' onclick='play("+i+","+j+")'>"+this.board[i][j]+"</td>";
+                }
+                caro += "</tr>";
+            }
+            caro += "</table>";
+            return caro;
+        }
+        playGame(i,j,char){
+            this.board[i][j] = char;
+            document.body.innerHTML="";
+            document.write(this.drawBoard());
+            this.checkWin(char);
+        }
+        checkWin(char){
+            let check = false;
+            for(let i=0;i<this.row;i++){
+                for(let j=0;j<this.col;j++){
+                    if(this.board[i][j]===char&&this.board[i][j+1]===char&&this.board[i][j+2]===char){
+                        check = true;
+                     }
+                    if(this.board[i][j]===char&&this.board[i+1][j]===char&&this.board[i+2][j]===char){
+                        check = true;
+                    }
+                    if(this.board[i][j]===char&&this.board[i+1][j+1]===char&&this.board[i+2][j+2]===char){
+                        check =true;
+                    }
+                    if(this.board[i][j]===char&&this.board[i+1][j-1]===char&&this.board[i+2][j-2]===char){
+                        check = true;
+                    }
+                }
+            }
+            if(check){
+                alert(+char +" is win!!!!");
+                this.initBoard();
+                this.drawBoard();
+            }
+        }
     }
-    displayTable()
+    let caroGame = new Board(20,20);
+    let count =0;
+    document.write(caroGame.drawBoard());
+    function play(i,j) {
+        if (caroGame.board[i][j] !== "X" && caroGame.board[i][j] !== "O") {
+            if (count % 2 === 0) {
+                caroGame.playGame(i, j, "X");
+            } else {
+                caroGame.playGame(i, j, "O");
+            }
+            count++;
+        } else {
+            alert("The position have been selected!!!!");
+        }
+    }
 </script>
 </body>
 </html>

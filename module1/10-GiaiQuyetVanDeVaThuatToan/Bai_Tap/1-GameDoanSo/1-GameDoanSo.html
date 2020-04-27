@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game đoán số</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let timeTT,timeNP;
+    let count;
+    let flag = false;
+    for (let i = 0;i<1000;i++){
+        arr[i] =i;
+    }
+    let timeNow = new Date();
+    tuyenTinh(arr,970);
+    let timeNow2 = new Date();
+    nhiPhan(arr,970);
+
+    function tuyenTinh(arr,num) {
+        count = 0;
+        for(let i=0;i<arr.length;i++){
+            if(arr[i]===num){
+                flag = true;
+                timeTT = new Date();
+                alert("The number loop to check is: "+count +" with the time: " +(timeTT-timeNow));
+            }
+            count++;
+        }
+        if(!flag){
+            alert("The number is not existed in the array!!!");
+        }
+    }
+    function nhiPhan(arr,num) {
+        count=0;
+        flag = false;
+        let right = arr.length-1;
+        let left = 0;
+        while (left<=right){
+            let mid = parseInt((left+right)/2);
+            if(arr[mid] === num){
+                timeNP = new Date();
+                flag=true;
+                alert("The number loop to check is: "+count +" with the time: " +(timeNP-timeNow2));
+                break;
+            }
+            if(arr[mid]>num){
+                right = mid-1;
+            }
+            if(arr[mid]<num){
+                left = mid+1;
+            }
+            count++;
+        }
+        if(!flag){
+            alert("The number is not existed in the array!!!");
+        }
+    }
+</script>
+</body>
+</html>

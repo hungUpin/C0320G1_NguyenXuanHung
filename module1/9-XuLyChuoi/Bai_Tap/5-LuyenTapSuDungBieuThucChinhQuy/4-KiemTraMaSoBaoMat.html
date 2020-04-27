@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra mã số bảo mật</title>
+</head>
+<body>
+<script>
+    let flag= false;
+    do{
+        let regexp = /^[\.\*\&\%\$\#\@]+[0-9]{6}$/;
+        let pass = prompt("Mời nhập mật mã: ");
+        if(regexp.test(pass)){
+            alert("Right!!!");
+            flag=true;
+        }
+        if(!flag) {
+            alert("You're wrong!!!");
+        }
+
+    }while (!flag)
+</script>
+</body>
+</html>

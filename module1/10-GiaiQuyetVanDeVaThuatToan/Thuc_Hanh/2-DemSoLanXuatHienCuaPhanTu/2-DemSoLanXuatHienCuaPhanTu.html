@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm số lần xuất hiện của phần tử</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let count = 0;
+    let index = "";
+    let num = parseInt(prompt("Enter a value to search for: "));
+    for (let i = 0; i < 100; i++) {
+        arr[i] = Math.floor(Math.random() * 101);
+    }
+    let temp = "";
+    for (let j = 0; j < arr.length; j++) {
+        if (j % 9 === 0&&j!==0) {
+            temp += arr[j] + "<br>";
+        } else {
+            temp += arr[j] + " ";
+        }
+    }
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === num) {
+            count++;
+            index += i + " ";
+        }
+    }
+
+    document.write(temp +"<br>");
+    document.write("Enter a value to search for: " + num +"<br>");
+    document.write("Found " + count + " at position " + index);
+
+</script>
+</body>
+</html>

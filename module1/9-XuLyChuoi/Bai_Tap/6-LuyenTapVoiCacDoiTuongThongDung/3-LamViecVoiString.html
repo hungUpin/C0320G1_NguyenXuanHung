@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Làm việc với string</title>
+</head>
+<body>
+<script>
+    //Bước 01:
+    let str =  "Tôi yêu ngôn ngữ lập trình Javascript";
+    let count=0;
+    for(let i = 0;i<str.length;i++){
+        if(str.charAt(i)==="a"){
+            count++;
+        }
+    }
+    console.log("Trong chuỗi " +str +" có " +count+" chữ a.");
+    //Bước 2:
+    let arr = str.split(" ");
+    console.log("Mảng: "+arr);
+    //Bước 3:
+    let regexp = /^[a-zA-Z]$/;
+    count = 0;
+    for(let i=0;i<str.length;i++){
+        if(regexp.test(str.charAt(i))){
+            count++;
+        }
+    }
+    console.log("số lượng từ có trong chuỗi " +str +" là: "+count);
+    //Bước 4:
+    let newStr = str.replace("Javascript","Typescript");
+    console.log("Chuỗi thay thế là: " +newStr);
+</script>
+</body>
+</html>

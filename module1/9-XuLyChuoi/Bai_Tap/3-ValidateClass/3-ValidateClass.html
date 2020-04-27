@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validate Class</title>
+</head>
+<body>
+<script>
+    function isClass(className) {
+            let regexp = /^[CAP][0-9]{1,4}[GHIKLM]$/;
+            if(regexp.test(className)){
+                return true;
+            } else {
+                return false;
+            }
+    }
+    let className = "C0318G";
+    console.log(isClass(className));
+    className = "A3H";
+    console.log(isClass(className));
+    className="P98M";
+    console.log(isClass(className));
+    className = "AM";
+    console.log(isClass(className));
+    className = "312H";
+    console.log(isClass(className));
+    className = "D124K";
+    console.log(isClass(className));
+    className = "M0318G";
+    console.log(isClass(className));
+    className = "P0323A";
+    console.log(isClass(className));
+</script>
+</body>
+</html>
