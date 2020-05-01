@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 03</title>
+</head>
+<body>
+<script>
+    /*3.	Viết chương trình tính :
+        S=1+1/2+1/3+....+1/n */
+    function count(n) {
+        let result=1;
+        for(let i=2;i<=n;i++){
+            result+= 1/i;
+        }
+        return result;
+    }
+    alert(count(3))
+</script>
+</body>
+</html>

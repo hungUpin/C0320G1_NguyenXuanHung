@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ball game</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1000px" height="500px" style="border: 3px solid green"></canvas>
+<script>
+    let canvas = document.getElementById("myCanvas");
+    let ctx = canvas.getContext("2d");
+    let dx = 5, dy = 2;
+    let isGameOver = false;
+
+    class Circle {
+        constructor(x, y, radius) {
+            this.x = x;
+            this.y = y;
+            this.radius = radius;
+        }
+
+        drawCircle() {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+            ctx.fillStyle = "red";
+            ctx.fill();
+            ctx.closePath();
+        }
+    }
+
+    class Paddle {
+        constructor(width, height, x, y, speed) {
+            this.width = width;
+            this.height = height;
+            this.x = x;
+            this.y = y;
+            this.speed = speed;
+        }
+
+        drawPaddle() {
+            ctx.beginPath();
+            ctx.rect(this.x, this.y, this.width, this.height);
+            ctx.fill();
+            ctx.closePath();
+        }
+    }
+
+    document.addEventListener("keydown", function (event) {
+        if (event.keyCode === 37) {
+            paddle.x -= paddle.speed;
+        } else if (event.keyCode === 39) {
+            paddle.x += paddle.speed;
+        }
+    });
+
+    function updatePaddlePosition() {
+        if (circle.x < circle.radius || circle.x > (canvas.width - circle.radius)) {
+            dx = -dx;
+        }
+        if (circle.y < circle.radius) {
+            dy = -dy;
+        }
+        if (paddle.x < 0) {
+            paddle.x = 0;
+        } else if (paddle.x > canvas.width - paddle.width) {
+            paddle.x = canvas.width - paddle.width;
+        }
+        if (circle.x + circle.radius > paddle.x && circle.x + circle.radius <= paddle.x + paddle.width &&
+            circle.y + circle.radius >= canvas.height - paddle.height) {
+            dy = -dy;
+        }
+    }
+
+    function updateCircle() {
+        if (circle.y > (canvas.height - circle.radius)) {
+            isGameOver = true;
+        }
+        circle.x += dx;
+        circle.y += dy;
+    }
+
+    circle = new Circle(20, 20, 20);
+    paddle = new Paddle(150, 20, canvas.width / 2, canvas.height - 15, 15);
+
+    function draw() {
+        if (!isGameOver) {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            circle.drawCircle();
+            paddle.drawPaddle();
+            updatePaddlePosition();
+            updateCircle();
+            requestAnimationFrame(draw);
+        } else {
+            alert("Game Over!!!");
+        }
+    }
+
+    draw()
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra số hoàn hảo</title>
+</head>
+<body>
+<script>
+    // 6 =1+2+3
+    function kiemTraSoHoanHao(num) {
+        let temp=0;
+        for(let i=0;i<num;i++){
+            if(num%i===0){
+                temp+=i;
+            }
+        }
+        if(temp===num){
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+    alert(kiemTraSoHoanHao(12));
+</script>
+</body>
+</html>

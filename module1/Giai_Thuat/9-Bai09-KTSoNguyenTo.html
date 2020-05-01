@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra số nguyên tố</title>
+</head>
+<body>
+<script>
+    function kiemTraSNT(num) {
+        let flag = true;
+        if(num<2){
+            flag = false;
+        }else {
+            for(let i=2;i<num;i++){
+                if(num%i===0){
+                    flag = false;
+                    break;
+                }
+            }
+        }
+        return flag;
+    }
+    alert(kiemTraSNT(2))
+</script>
+</body>
+</html>

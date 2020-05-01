@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra số chính phương</title>
+</head>
+<body>
+<script>
+    function kiemTraSoChinhPhuong(num) {
+        let flag;
+        let num2 = Math.sqrt(num);
+
+        if (Number.isInteger(num2)) {
+            flag = true;
+        } else {
+            flag = false;
+        }
+        return flag;
+    }
+    alert(kiemTraSoChinhPhuong(233))
+</script>
+</body>
+</html>

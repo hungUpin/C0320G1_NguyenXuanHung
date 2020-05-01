@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tổng và tích 1 số nguyên dương</title>
+</head>
+<body>
+<script>
+    function tongVaTichSoNguyenDuong(m) {
+        m = m.toString();
+        let tong=0;
+        let tich = 1;
+        if(m>=0){
+            for(let i=0;i<m.length;i++){
+                tong += m[i]*1;
+                tich *= m[i];
+            }
+            alert("Tổng của "+m +" là: " +tong);
+            alert("Tích của: " +m +" là: "+tich);
+        }else {
+            alert("m không phải số nguyên dương!!!");
+        }
+    }
+    tongVaTichSoNguyenDuong(234);
+</script>
+</body>
+</html>

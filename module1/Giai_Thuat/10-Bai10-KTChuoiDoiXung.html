@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra chuỗi đối xứng</title>
+</head>
+<body>
+<script>
+    function kiemTraChuoiDoiXung(str) {
+        let flag = true;
+        for(let i=0;i<str.length;i++){
+            if(str[i]!==str[str.length-1-i]){
+                flag = false;
+                break;
+            }
+        }
+        return flag;
+    }
+    alert(kiemTraChuoiDoiXung("TETA"))
+</script>
+</body>
+</html>

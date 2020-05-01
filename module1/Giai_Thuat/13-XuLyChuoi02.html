@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xử lý chuỗi 02</title>
+</head>
+<body>
+<script>
+    //In mỗi từ trên mỗi dòng
+    function printEachCharacter(str) {
+        let temp = "";
+        for (let i = 0; i < str.length; i++) {
+            temp += str.charAt(i) + "<br>";
+        }
+        return temp;
+    }
+
+    //document.write(printEachCharacter("Xin ChàO NGÀY mới"));
+    //Đếm số từ có trong chuổi đã cho.
+    function countWords(str) {
+        let reg = /^[a-zA-Z]+$/u;
+        let count = 0;
+        for (let i = 0; i < str.length; i++) {
+            if (reg.test(str.charAt(i))) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    //alert("The words displays in string:(\"Xin chào các bạn!!!\") " +countWords("Xin chào các bạn!!!"));
+    //Đưa ra bảng tần số xuất hiện của các từ.
+    function getFrequencyWord(str) {
+        let reg = /^\w+$/;
+        let freq = [];
+        let char = "";
+        let count = 0;
+        str = str.toLowerCase();
+        for (let i = 0; i < str.length; i++) {
+            if (freq.indexOf(str.charAt(i))!==-1) {
+                continue;
+            } else {
+                if (reg.test(str.charAt(i))) {
+                    count = 1;
+                    freq.push(str.charAt(i));
+                    for (let j = i + 1; j < str.length; j++) {
+                        if (str.charAt(i) === str.charAt(j)) {
+                            count++;
+                        }
+                    }
+                    char += str.charAt(i) + " frequency: " + count + "<br>";
+                }
+            }
+        }
+        return char;
+    }
+
+    document.write("Frequency (aabbbaakjhu) <br>" + getFrequencyWord("aabbbaakjhu"));
+</script>
+</body>
+</html>

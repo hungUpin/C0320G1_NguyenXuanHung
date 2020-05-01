@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yêu cầu 6 task 2</title>
+</head>
+<body>
+<script>
+    let listEmployee = [];
+    let flag = false;
+    let temp = "";
+
+    class Employee {
+        constructor(name, idNumber, dayOfBirth,phoneNumber, email, level, position, salary) {
+            this.name = name;
+            this.idNumber = idNumber;
+            this.dayOfBirth = dayOfBirth;
+            this.phoneNumber = phoneNumber;
+            this.email = email;
+            this.level = level;
+            this.position = position;
+            this.salary = salary;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setIdNumber(id) {
+            this.idNumber = id;
+        }
+
+        getIdNumber() {
+            return this.idNumber;
+        }
+
+        setDayOfBirth(day) {
+            this.dayOfBirth = day;
+        }
+
+        getDayOfBirth() {
+            return this.dayOfBirth;
+        }
+        setPhoneNumber(phone){
+            this.phoneNumber = phone;
+        }
+        getPhoneNumber(){
+            return this.phoneNumber;
+        }
+
+        setEmail(email) {
+            this.email = email;
+        }
+
+        getEmail() {
+            return this.email;
+        }
+
+        setLevel(level) {
+            this.level = level;
+        }
+
+        getLevel() {
+            return this.level;
+        }
+
+        setPosition(position) {
+            this.position = position;
+        }
+
+        getPosition() {
+            return this.position;
+        }
+
+        setSalary(salary) {
+            this.salary = salary;
+        }
+
+        getSalary() {
+            return this.salary;
+        }
+
+        getTotalSalary() {
+            if (this.position === "Manager") {
+                return this.salary + 500;
+            } else if (this.position === "Sale") {
+                return this.salary + 300;
+            } else if (this.position === "Marketing") {
+                return this.salary + 200;
+            }
+        }
+    }
+
+    let regexpId = /^[1-9][0-9]{8}$/;
+    let regexpDayOfBirth = /^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$/;
+    let regexpEmail = /^([a-zA-Z0-9\+\_\-]+)\@+([a-zA-Z0-9\-])+\.([a-zA-Z0-9]+)$/;
+    let regexpNumber = /^[0-9]+$/;
+    let regexpPhone = /^0[0-9]+$/;
+
+    function addName() {
+        do {
+            flag = false;
+            temp = "";
+            let name = prompt("Input your name: ").trim();
+            for (let i = 0; i < name.length; i++) {
+                if (name[i] === " " && name[i + 1] === " ") {
+                    continue;
+                } else {
+                    if (i === 0) {
+                        temp += name[i].toUpperCase();
+                    } else if (name[i - 1] === " ") {
+                        temp += name[i].toUpperCase();
+                    } else {
+                        temp += name[i].toLowerCase();
+                    }
+                }
+            }
+            name = temp;
+            if (name !== "") {
+                return name;
+            } else {
+                alert("Invalid name!!!");
+            }
+        } while (!flag);
+    }
+
+    function addIdNumber() {
+        do {
+            flag = false;
+            let idNumber = prompt("Input Id Number: ");
+            if (regexpId.test(idNumber)) {
+                return idNumber;
+            } else {
+                alert("Invalid Id Number!!!!");
+            }
+        } while (!flag);
+    }
+
+    function addDayOfBirth() {
+        do {
+            let birth = prompt("Input day of birth: (dd/mm/yyyy):");
+            let day = birth.substring(0, 2);
+            let month = birth.substring(3, 5);
+            let year = birth.substring(6, 10);
+            if (regexpDayOfBirth.test(birth)) {
+                if (day <= 31 && month <= 12 && year >= 1900) {
+                    return birth;
+                }
+            }
+            alert("Invalid Day of Birth!!!");
+        } while (!flag);
+    }
+    function addPhoneNumber() {
+        do{
+            let phone = prompt("Input phone number: ");
+            if(regexpPhone.test(phone)){
+                return phone;
+            } else {
+                alert("Invalid Phone number!!!");
+            }
+        }while (!flag)
+    }
+    function addEmail() {
+        do {
+            let email = prompt("Input email: (abc@abc.abc)");
+            if (regexpEmail.test(email)) {
+                return email;
+            } else {
+                alert("Invalid Email!!!");
+            }
+        } while (!flag);
+    }
+
+    function addLevel() {
+        do {
+            let level = prompt("Input address: ").trim();
+            if (level !== "") {
+                return level;
+            } else {
+                alert("Invalid level!!!");
+            }
+        } while (!flag);
+    }
+
+    function addPosition() {
+        let position = prompt("Input employee position: ").trim();
+        temp = "";
+        for (let i = 0; i < position.length; i++) {
+            if (i === 0) {
+                temp += position[i].toUpperCase();
+            } else {
+                temp += position[i].toLowerCase();
+            }
+        }
+        position = temp;
+        if (position !== "") {
+            return position;
+        } else {
+            alert("Invalid position!!!");
+        }
+    }
+
+    function addSalary() {
+        do {
+            let salary = prompt("Input salary: ");
+            if (regexpNumber.test(salary)) {
+                return salary;
+            } else {
+                alert("Invalid salary!!!");
+            }
+        } while (!flag);
+    }
+
+    listEmployee[0] = new Employee("Nguyễn Văn A", 123456123, "18/05/2009","0738654789", "hello@kj.co", "Đại học", "Manager", 4500);
+
+    //name, idNumber, dayOfBirth,phoneNumber, email, level, position, salary
+    function addNewEmployee() {
+        listEmployee[listEmployee.length] = new Employee(addName(), addIdNumber(), addDayOfBirth(),addPhoneNumber(), addEmail(), addLevel(), addPosition(), addSalary());
+    }
+
+    function displayEmployee() {
+        let temp = "";
+        for (let i = 0; i < listEmployee.length; i++) {
+            temp += i + ". " + listEmployee[i].getName() + "\n";
+        }
+        let choose = parseInt(prompt("Input the employee to display detail: \n" + temp));
+        alert("The information: \n" +
+            "1. Name: " + listEmployee[choose].getName() + "\n" +
+            "2. Id: " + listEmployee[choose].getIdNumber() + "\n" +
+            "3. Day of birth: " + listEmployee[choose].getDayOfBirth() + "\n" +
+            "4. Day of birth: " + listEmployee[choose].getPhoneNumber() + "\n" +
+            "5. Email: " + listEmployee[choose].getEmail() + "\n" +
+            "6. Level: " + listEmployee[choose].getLevel() + "\n" +
+            "7. Position: " + listEmployee[choose].getPosition() + "\n" +
+            "8. Salary: " + listEmployee[choose].getSalary() + "\n");
+    }
+    function displaySalary() {
+        let temp = "";
+        for (let i = 0; i < listEmployee.length; i++) {
+            temp += i + ". " + listEmployee[i].getName() + "\n";
+        }
+        let choose = parseInt(prompt("Input the employee to display salary: \n" + temp));
+        alert("Salary of "+listEmployee[choose].getName()+" is: "+listEmployee[choose].getTotalSalary());
+    }
+
+    function displayMenu() {
+        while (true) {
+            let choose = parseInt(prompt("Please select the function: \n" +
+                "1. Add new employee. \n" +
+                "2. Display information employees. \n" +
+                "3. Salary of Employee. \n" +
+                "4. Exit"));
+            switch (choose) {
+                case 1:
+                    addNewEmployee();
+                    break;
+                case 2:
+                    displayEmployee();
+                    break;
+                case 3:
+                    displaySalary();
+                    break;
+                case 4:
+                    break;
+                default:
+                    alert("Invalid function!!!");
+            }
+            if (choose === 4) {
+                break;
+            }
+        }
+    }
+
+    displayMenu();
+</script>
+</body>
+</html>
