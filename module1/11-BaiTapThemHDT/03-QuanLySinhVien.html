@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý sinh viên</title>
+</head>
+<body>
+<script>
+    /*Xây dựng một chương trình quản  lý danh  sách các  sinh viên  của một lớp. Mỗi sinh viên gồm các thông tin:
+    mã số sinh viên (MSSV),  họ  tên, ngày sinh, giới tính, tên lớp, khóa. Chương trình sẽ thực hiện các chức năng cụ thể như sau:
+-	Add(student, p): Bổ sung thêm một sinh viên student vào vị trí  cuối của danh sách.
+-	Remove(mssv): Loại bỏ một sinh viên với MSSV được nhập từ bàn phím.
+-	Remove(p): Loại bỏ sinh viên ở vị trí thứ p bất  kỳ trong danh  sách (phần tử  đầu tiên có vị trí là 1).
+-	Search(s): Tìm một sinh viên theo MSSV hoặc theo tên (với một thông tin s  vào thì trước tiên tìm sinh viên có MSSV =  s, nếu không thấy thì  tìm sinh  viên có Họ tên = s.
+-	Print(): In ra nội dung danh sách sinh viên.
+-	Sort(type): sắp xếp danh sách theo MSSV.
+*/
+    class Student {
+        constructor(studentId, name, dayOfBirth, gender, className, course) {
+            this.studentId = studentId;
+            this.name = name;
+            this.dayOfBirth = dayOfBirth;
+            this.gender = gender;
+            this.className = className;
+            this.course = course;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setStudentId(id) {
+            this.studentId = id;
+        }
+
+        getStudentId() {
+            return this.studentId;
+        }
+
+        setDayOfBirth(date) {
+            this.dayOfBirth = date;
+        }
+
+        getDayOfBirth() {
+            return this.dayOfBirth;
+        }
+
+        setGender(gender) {
+            this.gender = gender;
+        }
+
+        getGender() {
+            return this.gender;
+        }
+
+        setClassName(classname) {
+            this.className = classname;
+        }
+
+        getClassName() {
+            return this.className;
+        }
+
+        setCourse(course) {
+            this.course = course;
+        }
+
+        getCourse() {
+            return this.course;
+        }
+    }
+
+    function displayMenu() {
+            let choose = parseInt(prompt("Please select the function: \n" +
+                "1.Add student\n" +
+                "2.Remove student by student id\n" +
+                "3.Remove student by position\n" +
+                "4.Search student by id\n" +
+                "5.Print student list\n" +
+                "6.Sort student by id\n" +
+                "7.Exit"));
+            switch (choose) {
+                case 1:
+                    addStudent();
+                    break;
+                case 2:
+                    removeStudentById();
+                    break;
+                case 3:
+                    removeStudentByPosition();
+                    break;
+                case 4:
+                    searchStudent();
+                    break;
+                case 5:
+                    printStudentList();
+                    break;
+                case 6:
+                    sortStudentById();
+                    break;
+                case 7:
+                    break;
+
+            }
+    }
+
+    let studentList = [];
+
+    function addStudent() {
+        let student = new Student();
+        student.setStudentId(prompt("Input student id: "));
+        student.setName(prompt("Input name: "));
+        student.setDayOfBirth(prompt("Input day of birth: "));
+        student.setGender(prompt("Input gender: "));
+        student.setClassName(prompt("Input class name: "));
+        student.setCourse(prompt("Input course: "));
+        studentList.push(student);
+    }
+
+    function removeStudentById() {
+        let temp = "";
+        for (let i = 0; i < studentList.length; i++) {
+            temp += "Student Id: " + studentList[i].getStudentId() + ". Name: " + studentList[i].getName() + "\n";
+        }
+        let choose = prompt("Please input the student id to delete student: \n" + temp);
+        for (let i = 0; i < studentList.length; i++) {
+            if (studentList[i].getStudentId() === choose) {
+                let a = confirm("Are you sure to delete student id: " + studentList[i].getStudentId());
+                if (a) {
+                    studentList.splice(i, 1);
+                    alert("Delete complete!!!");
+                } else {
+                    alert("Cancel delete!!!");
+                    break;
+                }
+            }
+        }
+    }
+
+    function removeStudentByPosition() {
+        let temp = "";
+        for (let i = 0; i < studentList.length; i++) {
+            temp += (i + 1) + ". " + studentList[i].getName() + "\n";
+        }
+        let choose = parseInt(prompt("Please select the student to delete: " + temp));
+        let a = confirm("Are you sure to delete???: ");
+        if (a) {
+            studentList.splice((choose - 1), 1);
+            alert("Delete complete!!!!");
+        } else {
+            alert("Cancel delete!!!");
+        }
+    }
+
+    function searchStudent() {
+        let temp = "";
+        let count = 0;
+        for (let i = 0; i < studentList.length; i++) {
+            temp += "Student Id: " + studentList[i].getStudentId() + ". Name: " + studentList[i].getName() + "\n";
+        }
+        let id = prompt("Please input student id to search: \n" + temp);
+        for (let i = 0; i < studentList.length; i++) {
+            if (studentList[i].getStudentId() === id) {
+                alert("Student Information: \n" +
+                    "1. Student Id:" + studentList[i].getStudentId() + "\n" +
+                    "2.Name: " + studentList[i].getName() + "\n" +
+                    "3.Day of birth: " + studentList[i].getDayOfBirth() + "\n" +
+                    "4. Gender: " + studentList[i].getGender() + "\n" +
+                    "5.Class: " + studentList[i].getClassName() + "\n" +
+                    "6.Course: " + studentList[i].getCourse());
+                count++;
+            }
+        }
+        if (count === 0) {
+            let name = prompt("Please input name to delete student: \n" + temp);
+            for (let i = 0; i < studentList.length; i++) {
+                if (studentList[i].getName() === name) {
+                    alert("Student Information: \n" +
+                        "1. Student Id:" + studentList[i].getStudentId() + "\n" +
+                        "2.Name: " + studentList[i].getName() + "\n" +
+                        "3.Day of birth: " + studentList[i].getDayOfBirth() + "\n" +
+                        "4. Gender: " + studentList[i].getGender() + "\n" +
+                        "5.Class: " + studentList[i].getClassName() + "\n" +
+                        "6.Course: " + studentList[i].getCourse());
+                }
+            }
+        }
+    }
+
+    function printStudentList() {
+        let temp = "";
+        for (let i = 0; i < studentList.length; i++) {
+            temp += (i + 1) + ". " + " 1. Student Id:" + studentList[i].getStudentId() +
+                " 2.Name: " + studentList[i].getName() +
+                " 3.Day of birth: " + studentList[i].getDayOfBirth() +
+                " 4. Gender: " + studentList[i].getGender() +
+                " 5.Class: " + studentList[i].getClassName() +
+                " 6.Course: " + studentList[i].getCourse() + "\n";
+        }
+        alert("Student list: \n" + temp);
+    }
+
+    function sortStudentById() {
+        let temp = "";
+        let temp1 = [];
+        /*studentList.sort(function (a,b) {
+            return parseInt(a.getStudentId()) - parseInt(b.getStudentId());
+        });*/
+        for (let i = 0; i < studentList.length; i++) {
+            temp1.push(parseInt(studentList[i].getStudentId()));
+        }
+        let max, min, pos;
+        let arrayStudent = [];
+        max = temp1[0];
+        min = temp1[0];
+        for (let i = 0; i < temp1.length; i++) {
+            if (max < temp1[i]) {
+                max = temp1[i];
+            }
+        }
+        for (let i = 0; i < temp1.length; i++) {
+            //findMinValue:
+            for (let j = 0; j < temp1.length; j++) {
+                if (temp1[j] === null) {
+                    continue;
+                }
+                if (min > temp1[j]) {
+                    min = temp1[j];
+                    pos = j;
+                }
+            }
+            arrayStudent[i] = min;
+            min = max;
+            temp1[pos] = null;
+        }
+        let count = 0;
+        while (count < studentList.length) {
+
+            for (let j = 0; j < arrayStudent.length; j++) {
+                for (let i = 0; i < studentList.length; i++) {
+                    if (parseInt(studentList[i].getStudentId()) === arrayStudent[j]) {
+                        temp += (i + 1) + ". " + " 1. Student Id:" + studentList[i].getStudentId() +
+                            " 2.Name: " + studentList[i].getName() +
+                            " 3.Day of birth: " + studentList[i].getDayOfBirth() +
+                            " 4. Gender: " + studentList[i].getGender() +
+                            " 5.Class: " + studentList[i].getClassName() +
+                            " 6.Course: " + studentList[i].getCourse() + "\n";
+                        count++;
+                        break;
+                    }
+                }
+            }
+        }
+
+        alert("Student list after sorted: \n" + temp);
+    }
+
+    displayMenu();
+</script>
+</body>
+</html>

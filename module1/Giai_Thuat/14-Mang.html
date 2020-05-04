@@ -5,6 +5,70 @@
     <title>Mảng</title>
 </head>
 <body>
+<script>
+    /*11.	Viết chương trình thực hiện các công việc như sau :
+a.	Nhập một mảng a gồm n phần tử kiểu nguyên int
+b.	Tính tổng số dương lẻ mảng a
+c.	Nhập phần tử k, tìm xem k có xuất hiện trong mảng a không. Nếu có chỉ ra phần tử ở vị trí đầu tiên
+d.	Sắp sếp mảng a theo thứ tự tăng dần..
+e.	Chèn phần tử p vào mảng a sao cho mảng a vẫn đảm bảo tăng dần và xuất lại mảng a.*/
+    let arr = [];
 
+    function setNumberElementArray(num) {
+        for (let i = 0; i < num; i++) {
+            arr[i] = i;
+        }
+    }
+
+    function tinhSoDuong(arr1) {
+        let count = 0;
+        for (let i = 0; i < arr1.length; i++) {
+            if (arr1[i] % 2 !== 0) {
+                count += arr1[i];
+            }
+        }
+        return count;
+    }
+
+    function findElement(arr1, val) {
+        for (let i = 0; i <= arr1.length; i++) {
+            if (arr1[i] === val) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    setNumberElementArray(20);
+    //alert(arr+": có tổng số dương là: "+tinhSoDuong(arr));
+    //alert(arr+ ": find 25 index: "+ findElement(arr,25));
+    function sortArrayIncrease(array) {
+        array.sort(function (a, b) {
+            return a - b;
+        })
+        return array;
+    }
+
+    function addElementInArray(array, ele) {
+        let arr1, arr2;
+        array.sort(function (a, b) {
+            return a - b;
+        });
+        for (let i = 0; i < array.length; i++) {
+            if (ele <= array[i]) {
+                arr1 = array.slice(0, i);
+                arr2 = array.slice(i, array.length - 1);
+                arr1.push(ele);
+                let arr3 = arr1.concat(arr2);
+                return arr3;
+            }
+        }
+        array.push(ele);
+        return array;
+    }
+
+    alert(addElementInArray(arr, 30))
+    //alert(arr + "sort: "+sortArray(arr));
+</script>
 </body>
 </html>

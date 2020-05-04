@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 02 candidate</title>
+</head>
+<body>
+<script>
+    /*Xây dựng lớp Candidate (Thí sinh) gồm các thuộc tính: mã, tên, ngày tháng năm sinh, điểm thi Toán, Văn, Anh và các phương thức cần thiết.
+Xây dựng lớp TestCandidate để kiểm tra lớp trên:
+– Nhập vào n thí sinh (n do người dùng nhập)
+– In ra thông tin về các thí sinh có tổng điểm lớn hơn 15
+*/
+    let candidateList = [];
+
+    class Candidate {
+        constructor(id, name, dayOfBirth, math, literature, english) {
+            this.id = id;
+            this.name = name;
+            this.dayOfBirth = dayOfBirth;
+            this.math = math;
+            this.literature = literature;
+            this.english = english;
+        }
+
+        getTotalScore() {
+            return this.math + this.english + this.literature;
+        }
+    }
+    class TestCandidate{
+        constructor() {
+        }
+        nhapThiSinh(){
+            addCandidate();
+        }
+        InDTBLonHon15(){
+            printCandidateScore();
+        }
+    }
+
+    function addCandidate() {
+        let candidate = new Candidate();
+        let regId = /^[1-9][0-9]{8}$/;
+        let flag = false;
+        do {
+            let id = prompt("Input ID candidate: ").trim();
+            if (regId.test(id)) {
+                alert("Candidate ID: " + id);
+                candidate.id = id;
+                flag = true;
+            } else {
+                alert("Invalid ID!!!");
+            }
+        } while (!flag);
+        do {
+            flag = false;
+            let temp = "";
+            let name = prompt("Input candidate name: ").trim();
+            for (let i = 0; i < name.length; i++) {
+                if (name.charAt(i) === " " && name.charAt(i + 1) === " ") {
+                    continue;
+                } else {
+                    if (i === 0) {
+                        temp += name.charAt(i).toUpperCase();
+                    } else if (name.charAt(i - 1) === " ") {
+                        temp += name.charAt(i).toUpperCase();
+                    } else {
+                        temp += name.charAt(i).toLowerCase();
+                    }
+                }
+            }
+            if (temp !== "") {
+                alert("Candidate name: " + temp);
+                candidate.name = temp;
+                flag = true;
+            } else {
+                flag = false
+            }
+        } while (!flag);
+        do {
+            flag = false;
+            let birth = prompt("Day of birth: \"dd/mm/yyyy\" ").trim();
+            let day = birth.substring(0, 2);
+            let month = birth.substring(3, 5);
+            let year = birth.substring(6, 10);
+            if (birth.substring(2, 3) === "/" && birth.substring(5, 6) === "/") {
+                if (day <= 31 && month <= 12 && year >= 1900) {
+                    alert("Day of birth: " + birth);
+                    candidate.dayOfBirth = birth;
+                    flag = true;
+                } else {
+                    alert("Invalid name!!!");
+                }
+            } else {
+                alert("Invalid name!!!");
+            }
+
+        } while (!flag);
+        do {
+            flag = false;
+            let math = parseFloat(prompt("Input Math: "));
+            if (!isNaN(math)) {
+                alert("Math score:" + math);
+                candidate.math = math;
+                flag = true;
+            } else {
+                alert("Invalid math score!!!");
+            }
+        } while (!flag);
+        do {
+            flag = false;
+            let literature = parseFloat(prompt("Input literature score: "));
+            if (!isNaN(literature)) {
+                alert("Math score:" + literature);
+                candidate.literature = literature;
+                flag = true;
+            } else {
+                alert("Invalid literature score!!!");
+            }
+        } while (!flag);
+        do {
+            flag = false;
+            let english = parseFloat(prompt("Input English: "));
+            if (!isNaN(english)) {
+                alert("Math score:" + english);
+                candidate.english = english;
+                flag = true;
+            } else {
+                alert("Invalid english score!!!");
+            }
+        } while (!flag);
+        candidateList.push(candidate);
+    }
+
+    function displayMenu() {
+
+        while (true) {
+            let choose = parseInt(prompt("Please select the function: \n" +
+                "1.Add new Candidate.\n" +
+                "2.Display candidates have score more than 15.\n" +
+                "3.Exit. "));
+            switch (choose) {
+                case 1:
+                    addCandidate();
+                    break;
+                case 2:
+                    printCandidateScore();
+                    break;
+                case 3:
+                    break;
+                default:
+                    alert("Invalid function!!!");
+            }
+            if(choose===3){
+                break;
+            }
+        }
+    }
+
+    function printCandidateScore() {
+        let temp ="";
+        for(let i =0;i<candidateList.length;i++){
+            if(candidateList[i].getTotalScore()>=15){
+                temp += candidateList[i].name + " has total score: " +candidateList[i].getTotalScore() +"\n";
+            }
+        }
+        alert(temp);
+    }
+    displayMenu();
+</script>
+</body>
+</html>

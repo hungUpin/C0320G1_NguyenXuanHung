@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quan ly can bo</title>
+</head>
+<body>
+<script>
+    /*a.Thông tin của cán bộ bao gồm thông tin sau:
+    -	Mã cán bộ
+    -	- Họ tên
+    -	Giới tính
+    -	 Quê quán
+    -	Năm sinh
+    -	-Chuyên môn
+    -	Trình độ
+    -	-Hệ số lương
+    -	Phụ cấp
+    -Thực lĩnh :Không nhập dữ liệu vào, tính theo công thức= (HSL + PC)*450000
+*/
+    class CanBo {
+        constructor(maCanBo, hoTen, gioiTinh, queQuan, namSinh, chuyenMon, trinhDo, heSoLuong, phuCap) {
+            this.maCanBo = maCanBo;
+            this.hoTen = hoTen;
+            this.gioiTinh = gioiTinh;
+            this.queQuan = queQuan;
+            this.namSinh = namSinh;
+            this.chuyenMon = chuyenMon;
+            this.trinhDo = trinhDo;
+            this.heSoLuong = heSoLuong;
+            this.phuCap = phuCap;
+        }
+
+        getMaCanBo() {
+            return this.maCanBo;
+        }
+
+        setMaCanBo(maCB) {
+            this.maCanBo = maCB;
+        }
+
+        getHoTen() {
+            return this.hoTen;
+        }
+
+        setHoTen(ten) {
+            this.hoTen = ten;
+        }
+
+        getGioiTinh() {
+            return this.gioiTinh;
+        }
+
+        setGioiTinh(gt) {
+            this.gioiTinh = gt;
+        }
+
+        getQueQuan() {
+            return this.queQuan;
+        }
+
+        setQueQuan(qq) {
+            this.queQuan = qq;
+        }
+
+        getNamSinh() {
+            return this.namSinh;
+        }
+
+        setNamSinh(ns) {
+            this.namSinh = ns;
+        }
+
+        getChuyenMon() {
+            return this.chuyenMon;
+        }
+
+        setChuyenMon(cm) {
+            this.chuyenMon = cm;
+        }
+
+        getTrinhDo() {
+            return this.trinhDo;
+        }
+
+        setTrinhDo(td) {
+            this.trinhDo = td;
+        }
+
+        getHSL() {
+            return this.heSoLuong;
+        }
+
+        setHSL(hsl) {
+            this.heSoLuong = hsl;
+        }
+
+        getPhuCap() {
+            return this.phuCap;
+        }
+
+        setPhuCap(pc) {
+            this.phuCap = pc;
+        }
+
+        getThucLinh() {
+            //(HSL + PC)*450000
+            return (this.heSoLuong + this.phuCap) * 450000;
+        }
+    }
+
+    let danhSachCanBo = [];
+
+
+    function displayMenu() {
+        while (true) {
+            let choose = parseInt(prompt("Vui lòng chọn chức năng \n" +
+                "1. Tạo mới cán bộ. \n" +
+                "2. Hiển thị danh sách cán bộ. \n" +
+                "3. Danh sách cán bộ đến thời điểm nâng lương. \n" +
+                "4. Đếm cán bộ nữ trong cơ quan. \n" +
+                "5. Tổng thu nhập toàn bộ cán bộ. \n" +
+                "6. Liệt kê các cán bộ có chuyên môn CNTT.\n" +
+                "7. Exit."));
+            switch (choose) {
+                case 1:
+                    taoMoiCanBo();
+                    break;
+                case 2:
+                    hienThiDSCanBo();
+                    break;
+                case  3:
+                    hienThiDSCanBoSapLenLuong();
+                    break;
+                case 4:
+                    demCanBoNu();
+                    break;
+                case 5:
+                    hienThiTongThuNhap();
+                    break;
+                case 6:
+                    lietKeCanBoCNTT();
+                    break;
+                case 7:
+                    break;
+
+            }
+
+        }
+
+    }
+    displayMenu();
+
+    function taoMoiCanBo() {
+        let canBo = new CanBo();
+        //maCanBo, hoTen, gioiTinh, queQuan, namSinh, chuyenMon, trinhDo, heSoLuong, phuCap
+        canBo.setMaCanBo(prompt("Nhập mã cán bộ: "));
+        canBo.setHoTen(prompt("Nhập họ và tên: "));
+        canBo.setGioiTinh(prompt("Nhập giới tính: "));
+        canBo.setQueQuan(prompt("Nhập quê quán: "));
+        canBo.setNamSinh(prompt("Nhập năm sinh: "));
+        canBo.setChuyenMon(prompt("Nhập chuyên môn: "));
+        canBo.setTrinhDo(prompt("Nhập trình độ: "));
+        canBo.setHSL(parseFloat(prompt("Nhập HSL: ")));
+        canBo.setPhuCap(parseFloat(prompt("Nhập phụ cấp: ")));
+        danhSachCanBo.push(canBo);
+    }
+    function hienThiDSCanBo() {
+        let temp = "";
+        for(let i=0;i<danhSachCanBo.length;i++){
+            temp+= (i+1) +". Mã cán bộ: " +danhSachCanBo[i].getMaCanBo()+" với tên: " +danhSachCanBo[i].getHoTen() +"\n";
+        }
+        alert(temp);
+    }
+    function hienThiDSCanBoSapLenLuong(){
+        let temp = "";
+        for(let i=0;i<danhSachCanBo.length;i++){
+            if(danhSachCanBo[i].getThucLinh()<5000000){
+                temp+= (i+1) +". Mã cán bộ: " +danhSachCanBo[i].getMaCanBo()+" với tên: " +danhSachCanBo[i].getHoTen()+
+                ". Lương: " +danhSachCanBo[i].getThucLinh() +"\n";
+            }
+        }
+        alert("Danh sách cán bộ đến thời điểm nâng lương: \n"+temp);
+    }
+    function demCanBoNu() {
+        let temp ="";
+        let count =0;
+        for(let i=0; i<danhSachCanBo.length;i++){
+            if(danhSachCanBo[i].getGioiTinh().toLowerCase()==="nữ"){
+                count++;
+                temp+= count +". " +danhSachCanBo[i].getHoTen() +". Giới tính: " +danhSachCanBo[i].getGioiTinh() +"\n";
+            }
+        }
+        alert("Có " +count +" cán bộ giới tính nữ là: \n"+temp);
+    }
+    function hienThiTongThuNhap() {
+        let count =0;
+        for(let i =0;i<danhSachCanBo.length;i++){
+            count+= danhSachCanBo[i].getThucLinh();
+        }
+        alert("Tổng thu nhập cán bộ là: " +count);
+    }
+    function lietKeCanBoCNTT() {
+        let temp="";
+        let count =0;
+        for(let i=0;i<danhSachCanBo.length;i++){
+            if(danhSachCanBo[i].getChuyenMon()=="công nghệ thông tin"){
+                count++;
+                temp+= count +". " +danhSachCanBo[i].getHoTen() +". Chuyên môn: " +danhSachCanBo[i].getChuyenMon() +"\n";
+            }
+        }
+        alert("Có " +count+" cán bộ với chuyên môn CNTT gồm: \n"+temp);
+    }
+</script>
+</body>
+</html>

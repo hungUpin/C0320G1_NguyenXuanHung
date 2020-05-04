@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phân số</title>
+</head>
+<body>
+<script>
+    class PhanSo{
+        constructor(tuSo,mauSo) {
+            this.tuSo = tuSo;
+            this.mauSo = mauSo;
+        }
+        cong(phanSo){
+            if(this.mauSo === phanSo.mauSo){
+                return (this.tuSo+phanSo.mauSo)/phanSo.mauSo;
+            } else {
+                if(this.mauSo%phanSo.mauSo ===0){
+                    let temp = this.mauSo/phanSo.mauSo;
+                    return (this.tuSo + phanSo.tuSo*temp)/this.mauSo;
+                } else if(phanSo.mauSo%this.mauSo===0){
+                    let temp= phanSo.mauSo/this.mauSo;
+                    return (this.tuSo*temp + phanSo.tuSo)/phanSo.mauSo;
+                } else {
+                    return (this.tuSo*phanSo.mauSo + phanSo.tuSo*this.mauSo)/(phanSo.mauSo*this.mauSo);
+                }
+            }
+        }
+        tru(phanSo){
+            if(this.mauSo === phanSo.mauSo){
+                return (this.tuSo-phanSo.mauSo)/phanSo.mauSo;
+            } else {
+                if(this.mauSo%phanSo.mauSo ===0){
+                    let temp = this.mauSo/phanSo.mauSo;
+                    return (this.tuSo - phanSo.tuSo*temp)/this.mauSo;
+                } else if(phanSo.mauSo%this.mauSo===0){
+                    let temp= phanSo.mauSo/this.mauSo;
+                    return (this.tuSo*temp - phanSo.tuSo)/phanSo.mauSo;
+                } else {
+                    return (this.tuSo*phanSo.mauSo - phanSo.tuSo*this.mauSo)/(phanSo.mauSo*this.mauSo);
+                }
+            }
+        }
+        nhan(phanSo){
+            return (this.tuSo*phanSo.tuSo)/(this.mauSo*phanSo.mauSo);
+        }
+        chia(phanSo){
+            return (this.tuSo*phanSo.mauSo)/(this.mauSo*phanSo.tuSo);
+        }
+    }
+    let phanSo1 = new PhanSo(3,7);
+    let phanSo2 = new PhanSo(5,9);
+    document.write(phanSo1.cong(phanSo2) + "<br>");
+    document.write(phanSo1.tru(phanSo2)+ "<br>");
+    document.write(phanSo1.nhan(phanSo2)+ "<br>");
+    document.write(phanSo1.chia(phanSo2)+ "<br>");
+</script>
+</body>
+</html>
