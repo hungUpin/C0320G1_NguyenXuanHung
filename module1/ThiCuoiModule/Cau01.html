@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu 01</title>
+</head>
+<body>
+<script>
+    let flag = false;
+    let arr;
+    while (!flag) {
+        let arrElements = parseInt(prompt("Mời nhập số lượng phần tử của mảng(không lớn hơn 50): "));
+        if (arrElements <= 50&&arrElements>0) {
+            flag = true;
+            let count = 0;
+            arr = new Array(arrElements);
+            for (let i = 0; i < arrElements; i++) {
+                arr[i] = parseInt(prompt("Mời nhập phần tử thứ: " + (i + 1)));
+            }
+            alert("Mảng vừa nhập là: "+arr);
+        }else {
+            alert("Số lượng phần tử không đúng");
+        }
+    }
+    //Hiển thị TBC các số chia hết cho 3:
+    let sum =0;
+    let count =0;
+    for(let i=0;i<arr.length;i++){
+        if(arr[i]%3===0){
+            sum+= arr[i];
+            count++;
+        }
+    }
+    alert("Trung bình cộng của các số chia hết cho 3 là: "+(sum/count));
+
+</script>
+</body>
+</html>

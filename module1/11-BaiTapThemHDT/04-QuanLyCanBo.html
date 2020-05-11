@@ -7,15 +7,15 @@
 <body>
 <script>
     /*a.Thông tin của cán bộ bao gồm thông tin sau:
-    -	Mã cán bộ
-    -	- Họ tên
-    -	Giới tính
-    -	 Quê quán
-    -	Năm sinh
-    -	-Chuyên môn
-    -	Trình độ
-    -	-Hệ số lương
-    -	Phụ cấp
+    -  Mã cán bộ
+    -  - Họ tên
+    -  Giới tính
+    -   Quê quán
+    -  Năm sinh
+    -  -Chuyên môn
+    -  Trình độ
+    -  -Hệ số lương
+    -  Phụ cấp
     -Thực lĩnh :Không nhập dữ liệu vào, tính theo công thức= (HSL + PC)*450000
 */
     class CanBo {
@@ -110,7 +110,9 @@
     }
 
     let danhSachCanBo = [];
-
+    danhSachCanBo[0] = new CanBo("123","Nguyễn văn nam","Nam","Đà Nẵng","1987","Công nghệ thông tin","Đại học",7,10);
+    danhSachCanBo[1] = new CanBo("1234","Nguyễn Thị Tuyết","Nữ","Quảng Nam","1986","Kế toán","Cao đẳng",6,1);
+    danhSachCanBo[2] = new CanBo("1","Nguyễn Trung Tuấn","Nam","Quy Nhơn","1999","công Nghệ thông tin","Trung Cấp",5,0.5);
 
     function displayMenu() {
         while (true) {
@@ -143,9 +145,12 @@
                     break;
                 case 7:
                     break;
-
+                default:
+                    alert("Sai chức năng!!!");
             }
-
+            if (choose === 7) {
+                break;
+            }
         }
 
     }
@@ -177,7 +182,7 @@
         for(let i=0;i<danhSachCanBo.length;i++){
             if(danhSachCanBo[i].getThucLinh()<5000000){
                 temp+= (i+1) +". Mã cán bộ: " +danhSachCanBo[i].getMaCanBo()+" với tên: " +danhSachCanBo[i].getHoTen()+
-                ". Lương: " +danhSachCanBo[i].getThucLinh() +"\n";
+                    ". Lương: " +danhSachCanBo[i].getThucLinh() +"\n";
             }
         }
         alert("Danh sách cán bộ đến thời điểm nâng lương: \n"+temp);
@@ -204,7 +209,7 @@
         let temp="";
         let count =0;
         for(let i=0;i<danhSachCanBo.length;i++){
-            if(danhSachCanBo[i].getChuyenMon()=="công nghệ thông tin"){
+            if(danhSachCanBo[i].getChuyenMon().toLowerCase()==="công nghệ thông tin"){
                 count++;
                 temp+= count +". " +danhSachCanBo[i].getHoTen() +". Chuyên môn: " +danhSachCanBo[i].getChuyenMon() +"\n";
             }

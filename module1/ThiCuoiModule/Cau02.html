@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu 02</title>
+</head>
+<body>
+<script>
+    let numb = prompt("Mời bạn nhập số để kiểm tra: ");
+
+    function kiemTraSoHoanHao(num) {
+        let temp = 0;
+        for (let i = 0; i < num; i++) {
+            if (num % i === 0) {
+                temp += i;
+            }
+        }
+        if (temp === num) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    if (!isNaN(numb)) {
+        if (Number.isInteger(parseFloat(numb)) && numb > 0) {
+            alert(kiemTraSoHoanHao(parseInt(numb)));
+        }else {
+            alert(numb + " không phải là số nguyên dương");
+        }
+    } else {
+        alert(numb + " không phải là số");
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý công nhân</title>
+</head>
+<h2>Add new employee</h2>
+<button type="button"  style="background-color: green;width: 70px;height: 40px;border-radius: 10%" onclick="addEmployee();">ADD</button>
+<br>
+<h2>Display all employees</h2>
+<p id="table"></p>
+<body onload="displayEmployee()">
+<script>
+    let employeeList = [];
+    class Employee{
+        constructor(hoTen,ngaySinh,diaChi,luong,chucVu) {
+            this.hoTen = hoTen;
+            this.ngaySinh = ngaySinh;
+            this.diaChi = diaChi;
+            this.luong = luong;
+            this.chucVu = chucVu;
+        }
+        getHoTen(){
+            return this.hoTen;
+        }
+        setHoTen(hoten){
+            this.hoTen = hoten;
+        }
+        getNgaySinh(){
+            return this.ngaySinh;
+        }
+        setNgaySinh(ns){
+            this.ngaySinh = ns;
+        }
+        getDiaChi(){
+            return this.diaChi;
+        }
+        setDiaChi(dc){
+            this.diaChi = dc;
+        }
+        getLuong(){
+            return this.luong;
+        }
+        setLuong(luong){
+            this.luong = luong;
+        }
+        getChucVu(){
+            return this.chucVu;
+        }
+        setChucVu(cv){
+            this.chucVu = cv;
+        }
+    }
+    let hoTen,ngaySinh,diaChi,luong,chucVu;
+    employeeList[0] = new Employee("Trần văn a","07/08/2008","Đà Nẵng",150,"Abc");
+    employeeList[1] = new Employee("Nguyễn văn a","07/08/2003","Đà Nẵng",200,"Abc");
+    employeeList[2] = new Employee("a","07/08/2003","Đà Nẵng",200,"Abc");
+
+    function displayEmployee() {
+        let newList = [];
+        let arrHoVaTen = [];
+        for(let i=0;i<employeeList.length;i++){
+            arrHoVaTen.push(employeeList[i].getHoTen());
+        }
+        arrHoVaTen.sort(function (s,t) {
+            let a = s.toLowerCase();
+            let b = t.toLowerCase();
+            if(a<b) return -1;
+            if(a>b) return 1;
+            return 0;
+        })
+        for(let i=0;i<arrHoVaTen.length;i++){
+            for(let j=0;j<employeeList.length;j++) {
+                if (employeeList[j].getHoTen() === arrHoVaTen[i]) {
+                    newList.push(employeeList[j]);
+                }
+            }
+        }
+        let tab = "<table border='1' cellspacing='0' cellpadding='3'>"+"<tr>"+"<td style='text-align: center'>STT</td>" +"<td style='text-align: center'>Họ và tên</td>" +"<td style='text-align: center'>Ngày sinh</td>" +
+            "<td style='text-align: center'>Địa chỉ</td>"+ "<td style='text-align: center'>Lương</td>"+"<td style='text-align: center'>Chức vụ</td>"+"<tr>";
+        for (let i = 0; i < newList.length; i++) {
+            tab += "<tr>"+"<td style='width: 30px;text-align: center'>" + (i + 1) + "</td><td style='text-align: center'>" + newList[i].getHoTen() + "</td>"
+                + "<td style='text-align: center'>" + newList[i].getNgaySinh() + "</td>"
+                + "<td style='text-align: center'>" + newList[i].getDiaChi() + "</td>"
+                + "<td style='text-align: center'>" + newList[i].getLuong() + "</td>"
+                + "<td style='text-align: center'>" + newList[i].getChucVu() + "</td>"+"</tr>";
+        }
+        tab += "</tr>"+"</table>";
+        document.getElementById("table").innerHTML = tab;
+    }
+    function addEmployee() {
+        let employee = new Employee();
+        hoTen = prompt("Mời bạn nhập họ tên: ").trim();
+        ngaySinh = prompt("Mời bạn nhập ngày sinh: ");
+        diaChi = prompt("Mời bạn nhập địa chỉ: ");
+        luong = prompt("Mời bạn nhập lương: ");
+        chucVu = prompt("Mời bạn nhập chức vụ");
+        employee.setHoTen(hoTen);
+        employee.setNgaySinh(ngaySinh);
+        employee.setDiaChi(diaChi);
+        employee.setLuong(luong);
+        employee.setChucVu(chucVu);
+        employeeList.push(employee);
+        displayEmployee();
+    }
+</script>
+</body>
+</html>

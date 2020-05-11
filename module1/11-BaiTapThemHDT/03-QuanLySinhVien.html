@@ -8,12 +8,12 @@
 <script>
     /*Xây dựng một chương trình quản  lý danh  sách các  sinh viên  của một lớp. Mỗi sinh viên gồm các thông tin:
     mã số sinh viên (MSSV),  họ  tên, ngày sinh, giới tính, tên lớp, khóa. Chương trình sẽ thực hiện các chức năng cụ thể như sau:
--	Add(student, p): Bổ sung thêm một sinh viên student vào vị trí  cuối của danh sách.
--	Remove(mssv): Loại bỏ một sinh viên với MSSV được nhập từ bàn phím.
--	Remove(p): Loại bỏ sinh viên ở vị trí thứ p bất  kỳ trong danh  sách (phần tử  đầu tiên có vị trí là 1).
--	Search(s): Tìm một sinh viên theo MSSV hoặc theo tên (với một thông tin s  vào thì trước tiên tìm sinh viên có MSSV =  s, nếu không thấy thì  tìm sinh  viên có Họ tên = s.
--	Print(): In ra nội dung danh sách sinh viên.
--	Sort(type): sắp xếp danh sách theo MSSV.
+-  Add(student, p): Bổ sung thêm một sinh viên student vào vị trí  cuối của danh sách.
+-  Remove(mssv): Loại bỏ một sinh viên với MSSV được nhập từ bàn phím.
+-  Remove(p): Loại bỏ sinh viên ở vị trí thứ p bất  kỳ trong danh  sách (phần tử  đầu tiên có vị trí là 1).
+-  Search(s): Tìm một sinh viên theo MSSV hoặc theo tên (với một thông tin s  vào thì trước tiên tìm sinh viên có MSSV =  s, nếu không thấy thì  tìm sinh  viên có Họ tên = s.
+-  Print(): In ra nội dung danh sách sinh viên.
+-  Sort(type): sắp xếp danh sách theo MSSV.
 */
     class Student {
         constructor(studentId, name, dayOfBirth, gender, className, course) {
@@ -75,6 +75,7 @@
     }
 
     function displayMenu() {
+        while (true) {
             let choose = parseInt(prompt("Please select the function: \n" +
                 "1.Add student\n" +
                 "2.Remove student by student id\n" +
@@ -104,11 +105,19 @@
                     break;
                 case 7:
                     break;
-
+                default:
+                    alert("Invalid function!!!");
             }
+            if (choose === 7) {
+                break;
+            }
+        }
     }
 
     let studentList = [];
+    studentList[0] = new Student("12345", "james", "15/04/1989", "Male", "k16", "40");
+    studentList[1] = new Student("65", "Jessica", "15/04/1979", "Female", "k20", "38");
+    studentList[2] = new Student("12", "Jonas", "07/08/2005", "Male", "k22", "48");
 
     function addStudent() {
         let student = new Student();
