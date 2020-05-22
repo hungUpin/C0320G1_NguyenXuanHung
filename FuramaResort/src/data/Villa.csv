@@ -1,0 +1,8 @@
+id,serviceName,area,rentFee,maxNumOfPerson,typeOfRent,roomStander,otherFacilities,poolArea,floorNumber
+null,hello,250.0,150.0,10,day,vip,bathtub..,50,5
+null,xin cho,154.0,300.0,15,day,vvip,pool,50,7
+123,new,150.0,250.0,15,daily,normal,none,50,3
+1234,hello,300.0,700.0,20,daily,vip,none,150,5
+152,hello,156.0,250.0,15,none,none,none,150,5
+125,khe,250.0,333.0,5,none,none,none,150,3
+SVVL-7984,hello,123.0,250.0,2,love,none,none,150,5
