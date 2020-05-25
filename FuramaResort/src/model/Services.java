@@ -7,17 +7,26 @@ public abstract class Services {
     private double rentFee;
     private int maxNumOfPerson;
     private String typeOfRent;
-
+    private String serviceIncluded;
     public Services() {
     }
 
-    public Services(String id,String serviceName, double area, double rentFee, int maxNumOfPerson, String typeOfRent) {
+    public Services(String id,String serviceIncluded,String serviceName, double area, double rentFee, int maxNumOfPerson, String typeOfRent) {
         this.id = id;
+        this.serviceIncluded = serviceIncluded;
         this.serviceName = serviceName;
         this.area = area;
         this.rentFee = rentFee;
         this.maxNumOfPerson = maxNumOfPerson;
         this.typeOfRent = typeOfRent;
+    }
+
+    public String getServiceIncluded() {
+        return serviceIncluded;
+    }
+
+    public void setServiceIncluded(String serviceIncluded) {
+        this.serviceIncluded = serviceIncluded;
     }
 
     public String getServiceName() {

@@ -1,0 +1,5 @@
+id,customerName,dayOfBirth,gender,idNumber,phoneNumber,email,typeOfCustomer,address,idService,serviceIncluded,serviceName,area,rentFee,maxNumOfPerson,typeOfRent
+null,Nguyen Thi B,28/05/1995,Female,123456,123456,abc@abc.com,vip,none,SVHO-2000,fooddrink,New,150.0,200.0,15,Daily
+null,Nguyen Thi Dhat,28/05/1995,Female,123456,123456,abc@abc.com,vip,none,SVRO-2000,drink food ,New,150.0,275.0,5,None
+null,Nguyen Van Dcon,28/05/1996,Female,123456,123456,abc@abc.com,vip,none,SVVL-2579,massage- karaoke- ,Final,250.0,15.0,15,Vip
+null,Nguyen Thi B,28/05/1995,Female,123456,123456,abc@abc.com,vip,none,SVVL-2579,massage- karaoke- ,Final,250.0,15.0,15,Vip

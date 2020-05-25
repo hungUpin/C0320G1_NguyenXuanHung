@@ -1,0 +1,5 @@
+id,customerName,dayOfBirth,gender,idNumber,phoneNumber,email,typeOfCustomer,address
+null,Nguyen Van A,15/06/2000,Male,123456,123456,abc@abc.com,vip,none
+null,Nguyen Thi Dhat,28/05/1995,Female,123456,123456,abc@abc.com,vip,none
+null,Nguyen Van Dcon,28/05/1996,Female,123456,123456,abc@abc.com,vip,none
+null,Nguyen Thi B,28/05/1995,Female,123456,123456,abc@abc.com,vip,none

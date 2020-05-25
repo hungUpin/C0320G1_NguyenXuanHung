@@ -3,32 +3,32 @@ package service.impl;
 import model.House;
 import model.Services;
 import service.ServiceInterface;
-
-import java.util.Scanner;
+import validation.ValidationTask04;
 
 public class HouseServiceImp implements ServiceInterface {
     @Override
     public Services addNewService() {
-        Scanner sc = new Scanner(System.in);
         Services house = new House();
         System.out.println("Enter id");
-        house.setId(sc.nextLine());
+        house.setId(ValidationTask04.validateId(house));
+        System.out.println("Enter service included: ");
+        house.setServiceIncluded(ValidationTask04.validateServiceIncluded());
         System.out.println("Enter House service name: ");
-        house.setServiceName(sc.nextLine());
+        house.setServiceName(ValidationTask04.standardizedName());
         System.out.println("Enter area of house: ");
-        house.setArea(Double.parseDouble(sc.nextLine()));
+        house.setArea(ValidationTask04.validateAreaAndPoolArea());
         System.out.println("Enter rent fee of house: ");
-        house.setRentFee(Double.parseDouble(sc.nextLine()));
+        house.setRentFee(ValidationTask04.validateRentFee());
         System.out.println("Enter max number of person: ");
-        house.setMaxNumOfPerson(Integer.parseInt(sc.nextLine()));
+        house.setMaxNumOfPerson(ValidationTask04.validateNumberOfPerson());
         System.out.println("Enter type of rent:");
-        house.setTypeOfRent(sc.nextLine());
+        house.setTypeOfRent(ValidationTask04.standardizedName());
         System.out.println("Enter room stander:");
-        ((House) house).setRoomStander(sc.nextLine());
+        ((House) house).setRoomStander(ValidationTask04.standardizedName());
         System.out.println("Enter other facilities: ");
-        ((House) house).setOtherFacilities(sc.nextLine());
+        ((House) house).setOtherFacilities(ValidationTask04.standardizedName());
         System.out.println("Enter floor number: ");
-        ((House) house).setFloorNumber(Integer.parseInt(sc.nextLine()));
+        ((House) house).setFloorNumber(ValidationTask04.validatFloorNumber());
         return house;
     }
 }

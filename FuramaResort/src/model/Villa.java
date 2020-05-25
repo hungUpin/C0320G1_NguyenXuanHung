@@ -3,7 +3,7 @@ package model;
 public class Villa extends Services {
     private String roomStander;
     private String otherFacilities;
-    private Integer poolArea;
+    private double poolArea;
     private int floorNumber;
 
     public Villa() {
@@ -16,8 +16,8 @@ public class Villa extends Services {
         this.floorNumber = floorNumber;
     }
 
-    public Villa(String id,String serviceName, double area, double rentFee, int maxNumOfPerson, String typeOfRent, String roomStander, String otherFacilities, Integer poolArea, int floorNumber) {
-        super(id,serviceName, area, rentFee, maxNumOfPerson, typeOfRent);
+    public Villa(String id, String serviceIncluded, String serviceName, double area, double rentFee, int maxNumOfPerson, String typeOfRent, String roomStander, String otherFacilities, Integer poolArea, int floorNumber) {
+        super(id, serviceIncluded, serviceName, area, rentFee, maxNumOfPerson, typeOfRent);
         this.roomStander = roomStander;
         this.otherFacilities = otherFacilities;
         this.poolArea = poolArea;
@@ -40,11 +40,11 @@ public class Villa extends Services {
         this.otherFacilities = otherFacilities;
     }
 
-    public Integer getPoolArea() {
+    public double getPoolArea() {
         return poolArea;
     }
 
-    public void setPoolArea(Integer poolArea) {
+    public void setPoolArea(double poolArea) {
         this.poolArea = poolArea;
     }
 
@@ -68,8 +68,10 @@ public class Villa extends Services {
 
     @Override
     public String showInfor() {
-        return "Villa{"
-                +"Service name: "+super.getServiceName()+
+        return "Villa{\n"
+                +"Service id: "+super.getId()+
+                ", Service included: "+super.getServiceIncluded()
+                +",Service name: "+super.getServiceName()+
                 ", area: "+super.getArea()+", rent Fee: "+super.getRentFee()+
                 ", max number of person: " +super.getMaxNumOfPerson()+
                 ", type of rent: " +super.getTypeOfRent()+
@@ -77,6 +79,6 @@ public class Villa extends Services {
                 ", otherFacilities='" + otherFacilities + '\'' +
                 ", poolArea='" + poolArea + '\'' +
                 ", floorNumber=" + floorNumber +
-                '}';
+                "\n}";
     }
 }

@@ -1,5 +1,5 @@
-id,serviceName,area,rentFee,maxNumOfPerson,typeOfRent,freeServicesIncluded
-null,vip,150.0,200.0,5,vip,vip
-null,sun,150.25,785.26,20,daily,none
-123,new,200.0,500.0,9,dai,none
-123,Hello new roooo,123.0,123.0,5,none,none
+id,serviceIncluded,serviceName,area,rentFee,maxNumOfPerson,typeOfRent,freeServicesIncluded
+SVRO-2000,drink food ,New,150.0,275.0,5,None,None
+SVRO-2001,drink food ,New2,150.0,275.0,5,None,None
+SVRO-2002,drink food ,New,150.0,275.0,5,None,None
+SVRO-7878,car-  massage-  drink,Final,150.0,35.0,5,Daily,None

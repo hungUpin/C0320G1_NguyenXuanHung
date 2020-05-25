@@ -14,8 +14,8 @@ public class House extends Services {
         this.floorNumber = floorNumber;
     }
 
-    public House(String id, String serviceName, double area, double rentFee, int maxNumOfPerson, String typeOfRent, String roomStander, String otherFacilities, int floorNumber) {
-        super(id,serviceName, area, rentFee, maxNumOfPerson, typeOfRent);
+    public House(String id, String serviceIncluded, String serviceName, double area, double rentFee, int maxNumOfPerson, String typeOfRent, String roomStander, String otherFacilities, int floorNumber) {
+        super(id, serviceIncluded, serviceName, area, rentFee, maxNumOfPerson, typeOfRent);
         this.roomStander = roomStander;
         this.otherFacilities = otherFacilities;
         this.floorNumber = floorNumber;
@@ -57,14 +57,16 @@ public class House extends Services {
 
     @Override
     public String showInfor() {
-        return "House{"
-                +"Service name: "+super.getServiceName()+
+        return "House{\n"
+                +"Service id: "+super.getId()+
+                ", Service included: "+super.getServiceIncluded()+
+                ", Service name: "+super.getServiceName()+
                 ", area: "+super.getArea()+", rent Fee: "+super.getRentFee()+
                 ", max number of person: " +super.getMaxNumOfPerson()+
                 ", type of rent: " +super.getTypeOfRent()+
                 ", roomStander='" + roomStander + '\'' +
                 ", otherFacilities='" + otherFacilities + '\'' +
                 ", floorNumber=" + floorNumber +
-                '}';
+                "\n}";
     }
 }
