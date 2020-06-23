@@ -24,7 +24,7 @@ public class ValidationTask04 {
             if (id.matches(regex)) {
                 return id;
             } else {
-                System.out.println("Id is not valid! Please retype id: ");
+                System.out.println("Id is not valid! Please retype id: ex: SVVL-XXXX,SVHO-XXXX,SVRO-XXXX ");
             }
         }
     }

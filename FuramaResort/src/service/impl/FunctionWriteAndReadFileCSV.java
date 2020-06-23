@@ -371,7 +371,8 @@ public class FunctionWriteAndReadFileCSV {
             fw = new FileWriter(PATH_FILE_BOOKING);
             fw.append(FILE_HEADER_BOOKING);
             fw.append(NEW_LINE_SEPARATOR);
-            for (Customer customer : customers) {
+            for (Customer customer : customers)
+            {
                 //idService,serviceIncluded,serviceName,area,rentFee,maxNumOfPerson,typeOfRent;
                 fw.append(customer.getId());
                 fw.append(COMMA_DELIMITER);

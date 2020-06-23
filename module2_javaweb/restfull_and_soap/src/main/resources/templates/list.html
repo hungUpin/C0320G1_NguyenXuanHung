@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet"/>
+    <title>Customer List</title>
+</head>
+<body>
+<div class="container">
+<p>
+    <a th:href="@{/customers/add}"class="btn btn-primary">Add new customer</a>
+</p>
+<table class="table table-bordered">
+    <tr>
+        <th>First name:</th>
+        <th>Last name:</th>
+    </tr>
+    <tr th:each="c:${customers}">
+        <td th:text="${c.firstName}"></td>
+        <td th:text="${c.lastName}"></td>
+    </tr>
+</table>
+</div>
+</body>
+</html>
