@@ -5,9 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/10-GiaiQuyetVanDeVaThuatToan/Bai_Tap/3-Debug/debug" beforeDir="false" afterPath="$PROJECT_DIR$/10-GiaiQuyetVanDeVaThuatToan/Bai_Tap/3-Debug/debug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/10-GiaiQuyetVanDeVaThuatToan/Bai_Tap/3-Debug/debug/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/10-GiaiQuyetVanDeVaThuatToan/Bai_Tap/3-Debug/debug/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/11-BaiTapThemHDT/02-Candidate.html" beforeDir="false" afterPath="$PROJECT_DIR$/11-BaiTapThemHDT/02-Candidate.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/11-BaiTapThemHDT/03-QuanLySinhVien.html" beforeDir="false" afterPath="$PROJECT_DIR$/11-BaiTapThemHDT/03-QuanLySinhVien.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/11-BaiTapThemHDT/04-QuanLyCanBo.html" beforeDir="false" afterPath="$PROJECT_DIR$/11-BaiTapThemHDT/04-QuanLyCanBo.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +35,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="E:/example/test/C0220G1-TranChiHieu/Module1/BaiTapThemHuongDoiTuong/Bai3_DoiTuongQuanLyHocSinh.html" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
@@ -171,6 +168,9 @@
       <workItem from="1588641869509" duration="10676000" />
       <workItem from="1588681681052" duration="902000" />
       <workItem from="1588745729970" duration="15000" />
+      <workItem from="1594001658950" duration="12000" />
+      <workItem from="1594001820723" duration="19000" />
+      <workItem from="1594003477661" duration="13000" />
     </task>
     <servers />
   </component>

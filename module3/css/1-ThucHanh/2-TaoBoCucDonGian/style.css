@@ -1,0 +1,52 @@
+.header{
+    background-color: blue;
+    width:100%;
+    top: 0;
+    height: 50px;
+}
+.logo {
+    background-color: pink;
+    width: 30%;
+    float: left;
+    height: 50px;
+    top: 0px;
+    display: inline;
+}
+.banner{
+    background-color: aqua;
+    width: 70%;
+    float: right;
+    height: 50px;
+    top:0;
+}
+.head-link{
+    width: 100%;
+    height: 25px;
+    clear: both;
+    background-color: red;
+}
+.footer{
+    background-color: orange;
+
+    width: 100%;
+    height: 50px;
+    clear: both;
+}
+.left{
+    background-color: blue;
+    width: 30%;
+    height: 500px;
+    float: left;
+}
+.center{
+    background-color: pink;
+    width: 50%;
+    height: 500px;
+    float: left;
+}
+.right{
+    float: right;
+    background-color: aquamarine;
+    width: 20%;
+    height: 500px
+}
